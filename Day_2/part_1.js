@@ -31,7 +31,7 @@ let validate = function(line){
 
 // @ts-ignore
 let readInterface = readline.createInterface({
-    input: fs.createReadStream(path.join(".", "input.txt")),
+    input: fs.createReadStream(path.join(__dirname, "input.txt")),
     console: false
 });
 

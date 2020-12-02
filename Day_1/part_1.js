@@ -7,7 +7,7 @@
 let fs = require("fs");
 let path = require("path");
 
-let contentArr = String(fs.readFileSync(path.join(".", "input.txt"))).split("\n").map(Number);
+let contentArr = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n").map(Number);
 
 /**
  * Get the two array entries that sum to target
@@ -29,4 +29,4 @@ let twoSum = function(arr, tar){
 };
 
 let res = twoSum(contentArr, 2020);
-console.log(!res ? "No match" : contentArr[res[0]] * contentArr[res[1]]);
+console.log(!res ? "No match" : "Result: " + contentArr[res[0]] * contentArr[res[1]]);

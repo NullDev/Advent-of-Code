@@ -7,7 +7,7 @@
 let fs = require("fs");
 let path = require("path");
 
-let contentArr = String(fs.readFileSync(path.join(".", "input.txt"))).split("\n").map(Number);
+let contentArr = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n").map(Number);
 
 /**
  * Get the sum of three array elements
@@ -43,4 +43,4 @@ let threeSum = function(array, target){
 };
 
 let res = threeSum(contentArr, 2020);
-console.log(res[1].reduce((p, c) => p*c));
+console.log("Result: " + res[1].reduce((p, c) => p*c));
