@@ -6,13 +6,12 @@
 
 let fs = require("fs");
 let path = require("path");
-let cp = require("child_process");
-let { performance } = require("perf_hooks");
+let { execSync } = require("child_process");
 
 const BC = "\x1b[42m\x1b[30m ✓ \x1b[0m\x1b[32m ";
 const MC = "\x1b[32m - \x1b[33m(took ";
 
-const DIRECTORIES = fs.readdirSync(path.join("."), { withFileTypes: true })
+const DIRECTORIES = fs.readdirSync(path.join(__dirname), { withFileTypes: true })
     .filter(dirEnt => dirEnt.isDirectory() && String(dirEnt.name).toLowerCase().includes("day_"))
     .map(dirEnt => dirEnt.name);
 
@@ -33,11 +32,11 @@ DIRECTORIES.forEach((element, index) => {
     console.log(`\x1b[36m---====[ DAY ${day} ]====---\x1b[0m\n`);
 
     let part1StartTime = process.hrtime();
-    let part1Out = cp.execSync("node " + PART1);
+    let part1Out = execSync("node " + PART1);
     let part1Time = hrt2ms(process.hrtime(part1StartTime));
 
     let part2StartTime = process.hrtime();
-    let part2Out = cp.execSync("node " + PART2);
+    let part2Out = execSync("node " + PART2);
     let part2Time = hrt2ms(process.hrtime(part2StartTime));
 
     console.log(BC + "PART 1: \x1b[0m" + String(part1Out).replace(/\r?\n|\r/g, "") + MC + "\x1b[31m" + part1Time + "\x1b[33m ms)\x1b[0m");
