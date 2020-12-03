@@ -43,4 +43,4 @@ let threeSum = function(array, target){
 };
 
 let res = threeSum(contentArr, 2020);
-console.log("Result: " + res[1].reduce((p, c) => p*c));
+console.log("PRODUCT OF RESULTS: " + res[1].reduce((p, c) => p*c));

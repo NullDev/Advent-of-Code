@@ -54,4 +54,4 @@ let countTrees = function(lines, slope = [1, 1]){
 
 slopes.forEach((element) => RESULT.push(countTrees(LINES, element)));
 
-console.log("RESULT: " + RESULT.reduce((p, c) => p * c));
+console.log("TREE COUNT PRODUCT: " + RESULT.reduce((p, c) => p * c));

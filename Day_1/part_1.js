@@ -29,4 +29,4 @@ let twoSum = function(arr, tar){
 };
 
 let res = twoSum(contentArr, 2020);
-console.log(!res ? "No match" : "Result: " + contentArr[res[0]] * contentArr[res[1]]);
+console.log(!res ? "No match" : "PRODUCT OF RESULTS: " + contentArr[res[0]] * contentArr[res[1]]);
