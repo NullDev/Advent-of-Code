@@ -8,8 +8,6 @@ let fs = require("fs");
 let path = require("path");
 let readline = require("readline");
 
-const LINE_LENGTH = 30;
-
 let TREES_COUNT = 0;
 let CURRENT_LINE = 0;
 let CURRENT_CHAR = 0;
@@ -30,7 +28,7 @@ let overflow = (num, maxima) => (num > maxima) ? (num - maxima) - 1 : num;
  */
 let step = function(line){
     if (line[CURRENT_CHAR] === "#") TREES_COUNT += 1;
-    CURRENT_CHAR = overflow(CURRENT_CHAR + 3, LINE_LENGTH);
+    CURRENT_CHAR = overflow(CURRENT_CHAR + 3, line.length - 1);
     CURRENT_LINE += 1;
 };
 
