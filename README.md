@@ -15,6 +15,8 @@ I've created a script to launch all days in order and display the solutions alon
 
 No dependencies needed. Just launch the script by executing `npm start`.
 
+**Note:** The benchmark currently is too inaccurate. It takes way too much overhead into account. 
+
 Preview:
 
 <p align="center"><img height="auto" width="100%" src="https://i.imgur.com/8lPSPy9.png" /></p>
