@@ -18,15 +18,6 @@ const slopes = [
 ];
 
 /**
- * Calculate overflow 
- *
- * @param {Number} num
- * @param {Number} maxima
- * @returns {Number} num
-*/
-let overflow = (num, maxima) => (num > maxima) ? (num - maxima) - 1 : num;
-
-/**
  * More modular solution than part one
  *
  * @param {Array} lines
@@ -43,7 +34,7 @@ let countTrees = function(lines, slope = [1, 1]){
         if (slope[1] === 2 && (i % 2 === 1)) continue;
         
         let moveRight = position + slope[0];
-        position = overflow(moveRight, line.length - 1);
+        position = moveRight % line.length;
 
         let element = line[position];
         if (element === "#") TREE_COUNT += 1;

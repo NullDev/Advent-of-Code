@@ -13,22 +13,13 @@ let CURRENT_LINE = 0;
 let CURRENT_CHAR = 0;
 
 /**
- * Calculate overflow 
- *
- * @param {Number} num
- * @param {Number} maxima
- * @returns {Number} num
-*/
-let overflow = (num, maxima) => (num > maxima) ? (num - maxima) - 1 : num;
-
-/**
  * Perform step
  *
  * @param {String} line
  */
 let step = function(line){
     if (line[CURRENT_CHAR] === "#") TREES_COUNT += 1;
-    CURRENT_CHAR = overflow(CURRENT_CHAR + 3, line.length - 1);
+    CURRENT_CHAR = (CURRENT_CHAR + 3) % line.length;
     CURRENT_LINE += 1;
 };
 
