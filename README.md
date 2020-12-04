@@ -17,6 +17,6 @@ No dependencies needed. Just launch the script by executing `npm start`.
 
 Preview:
 
-<p align="center"><img height="auto" width="100%" src="https://i.imgur.com/ms3wz79.png" /></p>
+<p align="center"><img height="auto" width="100%" src="https://i.imgur.com/CPko2c8.png" /></p>
 
 <hr>
