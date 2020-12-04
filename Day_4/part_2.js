@@ -13,7 +13,7 @@ const REQUIRED_PROPERTIES = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"];
 const VALID_EYE_COLORS = ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"];
 
 /**
- * Check is the persons passport is valid
+ * Check if the persons passport is valid
  *
  * @param {Object} element
  * @returns {Boolean} valid/invalid
