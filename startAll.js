@@ -36,14 +36,9 @@ DIRECTORIES.forEach((element, index) => {
 
     console.log(`\x1b[36m---====[ DAY ${day} ]====---\x1b[0m\n`);
 
-    let part1S = performance.now();
-    let part1Out = execSync("node " + PART1);
-    let part1E = performance.now();
+    let part1Out = String(execSync("node " + PART1, { stdio: "pipe" })).split("\n").filter(e => !!e);
+    let part2Out = String(execSync("node " + PART2, { stdio: "pipe" })).split("\n").filter(e => !!e);
 
-    let part2S =  performance.now();
-    let part2Out = execSync("node " + PART2);
-    let part2E = performance.now();
-
-    console.log(`${BC}PART 1: \x1b[0m${String(part1Out).replace(/\r?\n|\r/g, "")}${MC}\x1b[31m${Math.round(part1E - part1S)}\x1b[33m ms)\x1b[0m`);
-    console.log(`${BC}PART 2: \x1b[0m${String(part2Out).replace(/\r?\n|\r/g, "")}${MC}\x1b[31m${Math.round(part2E - part2S)}\x1b[33m ms)\x1b[0m\n`);
+    console.log(`${BC}PART 1: \x1b[0m${String(part1Out[0]).replace(/\r?\n|\r/g, "")}${MC}\x1b[31m${Number(part1Out[1]).toFixed(4)}\x1b[33m ms)\x1b[0m`);
+    console.log(`${BC}PART 2: \x1b[0m${String(part2Out[0]).replace(/\r?\n|\r/g, "")}${MC}\x1b[31m${Number(part2Out[1]).toFixed(4)}\x1b[33m ms)\x1b[0m\n`);
 });

@@ -7,6 +7,9 @@
 let fs = require("fs");
 let path = require("path");
 let readline = require("readline");
+let { performance } = require("perf_hooks");
+
+const pStart = performance.now();
 
 let TREES_COUNT = 0;
 let CURRENT_LINE = 0;
@@ -30,4 +33,8 @@ let readInterface = readline.createInterface({
 });
 
 readInterface.on("line", step);
-readInterface.on("close", () => console.log(`TREES COUNT: ${TREES_COUNT}`));
+readInterface.on("close", () => {
+    const pEnd = performance.now();
+    console.log(`TREES COUNT: ${TREES_COUNT}`);
+    console.log(pEnd - pStart);
+});

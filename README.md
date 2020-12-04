@@ -11,11 +11,9 @@ I added a README.md file to each Day, which contains the instructions exactly as
 
 ## :rocket: Launching all solutions with benchmark
 
-I've created a script to launch all days in order and display the solutions along with an approximated benchmark (HR-Time)
+I've created a script to launch all days in order and display the solutions along with an approximated benchmark (the benchmark uses [`performance.now()`](https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now) to measure the execution time and **does not include the actual reading of the file** except when the file is read line-by-line).
 
 No dependencies needed. Just launch the script by executing `npm start`.
-
-**Note:** The benchmark currently is too inaccurate. It takes way too much overhead into account. 
 
 Preview:
 

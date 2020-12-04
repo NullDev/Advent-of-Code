@@ -6,9 +6,13 @@
 
 let fs = require("fs");
 let path = require("path");
+let { performance } = require("perf_hooks");
+
+const LINES = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n");
+
+const pStart = performance.now();
 
 const RESULT = [];
-const LINES = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n");
 const slopes = [
     [1, 1], 
     [3, 1], 
@@ -44,5 +48,7 @@ let countTrees = function(lines, slope = [1, 1]){
 };
 
 slopes.forEach((element) => RESULT.push(countTrees(LINES, element)));
-
 console.log("TREE COUNT PRODUCT: " + RESULT.reduce((p, c) => p * c));
+
+const pEnd = performance.now();
+console.log(pEnd - pStart);

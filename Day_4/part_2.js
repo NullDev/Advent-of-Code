@@ -6,6 +6,11 @@
 
 let fs = require("fs");
 let path = require("path");
+let { performance } = require("perf_hooks");
+
+const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt")));
+
+const pStart = performance.now();
 
 let VALID = 0;
 
@@ -38,8 +43,7 @@ let isValid = function(element){
     return (byrValid && iyrValid && eyrValid && hclValid && eclValid && pidValid && hgtValid);
 };
 
-const CONTENT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
-    .replace(/\n\r/g, "\n")
+const CONTENT = CONTENT_READ.replace(/\n\r/g, "\n")
     .replace(/\r/g, "\n")
     .split(/\n{2,}/g)
     .map(element => element.replace(/\n/g, " "))
@@ -51,4 +55,7 @@ const CONTENT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     ).filter(element => REQUIRED_PROPERTIES.every(prop => prop in element))
     .forEach(element => (isValid(element) && (VALID += 1)));
 
+const pEnd = performance.now();
+
 console.log("VALID PASSPORTS: " + VALID);
+console.log(pEnd - pStart);

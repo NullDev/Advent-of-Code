@@ -7,6 +7,9 @@
 let fs = require("fs");
 let path = require("path");
 let readline = require("readline");
+let { performance } = require("perf_hooks");
+
+const pStart = performance.now();
 
 let VALID_COUNT = 0;
 
@@ -36,4 +39,8 @@ let readInterface = readline.createInterface({
 });
 
 readInterface.on("line", validate);
-readInterface.on("close", () => console.log(`VALID PASSWORDS: ${VALID_COUNT}`));
+readInterface.on("close", () => {
+    const pEnd = performance.now();
+    console.log(`VALID PASSWORDS: ${VALID_COUNT}`);
+    console.log(pEnd - pStart);
+});

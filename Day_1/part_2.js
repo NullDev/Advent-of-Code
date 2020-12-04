@@ -6,8 +6,11 @@
 
 let fs = require("fs");
 let path = require("path");
+let { performance } = require("perf_hooks");
 
 let contentArr = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n").map(Number);
+
+const pStart = performance.now();
 
 /**
  * Get the sum of three array elements
@@ -43,4 +46,8 @@ let threeSum = function(array, target){
 };
 
 let res = threeSum(contentArr, 2020);
+
+const pEnd = performance.now();
+
 console.log("PRODUCT OF RESULTS: " + res[1].reduce((p, c) => p*c));
+console.log(pEnd - pStart);
