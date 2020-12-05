@@ -42,5 +42,5 @@ let res = Math.max(...IDS);
 
 const pEnd = performance.now();
 
-console.log("SEAT ID: " + res);
+console.log("HIGHEST SEAT ID: " + res);
 console.log(pEnd - pStart);
