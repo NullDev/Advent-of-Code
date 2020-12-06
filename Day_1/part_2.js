@@ -8,7 +8,7 @@ let fs = require("fs");
 let path = require("path");
 let { performance } = require("perf_hooks");
 
-let contentArr = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n").map(Number);
+let contentArr = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).map(Number);
 
 const pStart = performance.now();
 

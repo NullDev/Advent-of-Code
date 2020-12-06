@@ -28,7 +28,7 @@ let decode = function(str, lo){
     return value;
 };
 
-const CONTENT = CONTENT_READ.split("\n").filter(e => !!e).forEach(e => {
+const CONTENT = CONTENT_READ.split(require("os").EOL).filter(e => !!e).forEach(e => {
     let rowCode = e.substring(0, 7);
     let colCode = e.substring(7, 10); 
     
