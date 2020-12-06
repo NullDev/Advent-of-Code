@@ -17,9 +17,9 @@ const UNIQUE = CONTENT_READ.replace(/\n\r/g, "\n")
     .split(/\n{2,}/g)
     .map(l => l.trim())
     .reduce((count, group) => {
-		const p = group.split(/\s+/).map((x) => [...x]);
-		return count + p[0].filter((a) => p.every((as) => as.includes(a))).length;
-	}, 0);
+        const p = group.split(/\s+/).map((x) => [...x]);
+        return count + p[0].filter((a) => p.every((as) => as.includes(a))).length;
+    }, 0);
 
 const pEnd = performance.now();
 
