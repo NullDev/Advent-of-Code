@@ -34,6 +34,6 @@ No dependencies needed. Just launch the script by executing `npm start`.
 
 Preview:
 
-<p align="center"><img height="auto" width="100%" src="https://i.imgur.com/3YsXK5P.png" /></p>
+<p align="center"><img height="auto" width="100%" src="https://i.imgur.com/Z5ci7OS.png" /></p>
 
 <hr>
