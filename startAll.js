@@ -10,7 +10,7 @@ let { execSync } = require("child_process");
 let { performance } = require("perf_hooks");
 
 const BC = "\x1b[42m\x1b[30m ✓ \x1b[0m\x1b[32m ";
-const MC = "\x1b[32m - \x1b[33m(took ";
+const MC = "\x1b[32m - \x1b[0m(took ";
 
 const DIRECTORIES = fs.readdirSync(path.join(__dirname), { withFileTypes: true })
     .filter(dirEnt => dirEnt.isDirectory() && String(dirEnt.name).toLowerCase().includes("day_"))
@@ -39,6 +39,6 @@ DIRECTORIES.forEach((element, index) => {
     let part1Out = String(execSync("node " + PART1, { stdio: "pipe" })).split("\n").filter(e => !!e);
     let part2Out = String(execSync("node " + PART2, { stdio: "pipe" })).split("\n").filter(e => !!e);
 
-    console.log(`${BC}PART 1: \x1b[0m${String(part1Out[0]).replace(/\r?\n|\r/g, "")}${MC}\x1b[31m${Number(part1Out[1]).toFixed(4)}\x1b[33m ms)\x1b[0m`);
-    console.log(`${BC}PART 2: \x1b[0m${String(part2Out[0]).replace(/\r?\n|\r/g, "")}${MC}\x1b[31m${Number(part2Out[1]).toFixed(4)}\x1b[33m ms)\x1b[0m\n`);
+    console.log(`${BC}PART 1: \x1b[0m${String(part1Out[0]).replace(/\r?\n|\r/g, "")}${MC}\x1b[32m${Number(part1Out[1]).toFixed(4)}\x1b[0m ms)`);
+    console.log(`${BC}PART 2: \x1b[0m${String(part2Out[0]).replace(/\r?\n|\r/g, "")}${MC}\x1b[32m${Number(part2Out[1]).toFixed(4)}\x1b[0m ms)\n`);
 });
