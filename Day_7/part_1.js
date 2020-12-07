@@ -35,5 +35,5 @@ const RES = countBags(CONTENT_READ, [])("shiny gold");
 
 const pEnd = performance.now();
 
-console.log("TOTAL COUNT: " + RES);
+console.log("BAG COUNT: " + RES);
 console.log(pEnd - pStart);
