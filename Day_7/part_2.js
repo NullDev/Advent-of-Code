@@ -20,6 +20,7 @@ let TOTAL = -1;
  * @param {Array} bags
  * @param {String} bag
  * @param {Number} quantifier
+ * @returns {Number} count
  */
 let countBags = (bags, bag, quantifier) => {
     let line = bags.find(row => row.indexOf(`${bag} bags contain `) === 0);
@@ -31,11 +32,12 @@ let countBags = (bags, bag, quantifier) => {
             countBags(bags, `${adjective} ${color}`, quantifier * Number(amount));
         });
     }
+    return TOTAL;
 };
     
-countBags(CONTENT_READ, "shiny gold", 1);
+const RES = countBags(CONTENT_READ, "shiny gold", 1);
 
 const pEnd = performance.now();
 
-console.log("REQUIRED BAG COUNT: " + TOTAL);
+console.log("REQUIRED BAG COUNT: " + RES);
 console.log(pEnd - pStart);

@@ -21,14 +21,10 @@ const pStart = performance.now();
  */
 let twoSum = function(arr, tar){
     let numObject = {};
-    for (let i = 0; i < arr.length; i++){
-        let thisNum = arr[i];
-        numObject[thisNum] = i;
-    }
-    for (var i = 0; i < arr.length; i++){
-        let diff = tar - arr[i];
-        if (numObject.hasOwnProperty(diff) && numObject[diff] !== i) return [i, numObject[diff]];
-    }
+    let res;
+    arr.forEach((e, i) => (numObject[e] = i));
+    arr.forEach((e, i) => ((numObject.hasOwnProperty(tar - e) && numObject[tar - e] !== i) && (res = [i, numObject[tar - e]])));
+    return res;
 };
 
 let res = twoSum(contentArr, 2020);
