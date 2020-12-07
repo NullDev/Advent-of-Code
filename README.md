@@ -22,7 +22,7 @@ I also tried to experiment with a couple of different things:
 - Theoretical single-liner (single chain function) in [Day_4/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_4/part_1.js)
 - Completely branchless approach in [Day_4/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_4/part_2.js)
 - Another theoretical single-liner in [Day_6/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_6/part_1.js) and [Day_6/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_6/part_2.js)
-- Recursive curryfied function in [Day_7/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_7/part_1.js)
+- Recursive curried function in [Day_7/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_7/part_1.js)
 
 <hr>
 
