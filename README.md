@@ -4,8 +4,17 @@
 <p align="center"><b>My solutions for the Advent of Code 2020 in NodeJS</b></p>
 <hr>
 
+## :information_source: About Advent of Code
+
 Each day consists of two puzzles. <br>
 I added a README.md file to each Day, which contains the instructions exactly as they were displayed on https://adventofcode.com/
+
+<hr>
+
+## :trophy: Goal
+
+I attempted to solve every problem as functional as possible and with as little code as possible while still being performant. <br>
+Some solutions could be one-liners but I left them splitted up for the sake of readability. 
 
 <hr>
 
