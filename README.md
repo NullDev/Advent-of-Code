@@ -16,6 +16,14 @@ I added a README.md file to each Day, which contains the instructions exactly as
 I attempted to solve every problem as functional as possible and with as little code as possible while still being performant. <br>
 Some solutions could be one-liners but I left them splitted up for the sake of readability. 
 
+I also tried to experiment with a couple of different things:
+
+- Solution with logical XOR-ing in [Day_2/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_2/part_2.js)
+- Theoretical single-liner (single chain function) in [Day_4/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_4/part_1.js)
+- Completely branchless approach in [Day_4/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_4/part_2.js)
+- Another theoretical single-liner in [Day_6/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_6/part_1.js) and [Day_6/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_6/part_2.js)
+- Recursive curryfied function in [Day_7/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_7/part_1.js)
+
 <hr>
 
 ## :rocket: Launching all solutions with benchmark
