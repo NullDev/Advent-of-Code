@@ -26,7 +26,7 @@ let runner = function(){
         const completed = new Set();
         let [ index, accumulator ] = [0, 0];
 
-        (OPCODES.includes(String(opcode))) && (asm[i] = [OPCODES[1 - Number(String(opcode).replace(OPCODES[0], "0").replace(OPCODES[1], "1"))], arg]);
+        if (OPCODES.includes(String(opcode))) asm[i] = [opcode === OPCODES[0] ? OPCODES[1] : OPCODES[0], arg];
 
         while (!completed.has(index) && index !== asm.length){
             completed.add(index);
