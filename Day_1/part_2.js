@@ -20,11 +20,11 @@ const pStart = performance.now();
  * @returns {Array} elements
  */
 let threeSum = function(array, target){
-    array.sort((a,b) => a - b);
+    array.sort((a, b) => a - b);
     const triplets = [];
 
     for (let i = 0; i < array.length - 2; i++){
-        if (array[i] != array[i-1]){
+        if (array[i] !== array[i - 1]){
             let left = i + 1;
             let right = array.length - 1;
 
@@ -32,22 +32,22 @@ let threeSum = function(array, target){
                 let currentSum = array[i] + array[left] + array[right];
                 if (currentSum === target){
                     triplets.push([array[i], array[left], array[right]]);
-                    while (array[left] == array[left + 1]) left++
-                    while (array[right] == array[right - 1]) right-- 
+                    while (array[left] === array[left + 1]) left++;
+                    while (array[right] === array[right - 1]) right--;
                     left ++;
                     right --;
-                } 
-                else if (currentSum < target) left++
-                else if (currentSum > target) right--
+                }
+                else if (currentSum < target) left++;
+                else if (currentSum > target) right--;
             }
         }
     }
-    return triplets
+    return triplets;
 };
 
 let res = threeSum(contentArr, 2020);
 
 const pEnd = performance.now();
 
-console.log("PRODUCT OF RESULTS: " + res[1].reduce((p, c) => p*c));
+console.log("PRODUCT OF RESULTS: " + res[1].reduce((p, c) => p * c));
 console.log(pEnd - pStart);

@@ -28,10 +28,10 @@ let decode = function(str, lo){
     return value;
 };
 
-const CONTENT = CONTENT_READ.split(require("os").EOL).filter(e => !!e).forEach(e => {
+CONTENT_READ.split(require("os").EOL).filter(e => !!e).forEach(e => {
     let rowCode = e.substring(0, 7);
-    let colCode = e.substring(7, 10); 
-    
+    let colCode = e.substring(7, 10);
+
     let row = decode(rowCode, "F");
     let col = decode(colCode, "L");
 

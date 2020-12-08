@@ -34,16 +34,16 @@ let isValid = function(element){
     let pidValid = ((element.pid).length === 9 && (typeof Number(element.pid) === "number") && !isNaN(Number(element.pid)));
     let hgtValid = (
         /^([0-9]*)(in|cm)$/gi.test(element.hgt) &&
-        element.hgt.toLowerCase().includes("cm") && 
-        150 <= num && 193 >= num || 
-        element.hgt.toLowerCase().includes("in") && 
-        59 <= num && 76 >= num
+        element.hgt.toLowerCase().includes("cm") &&
+        num >= 150 && num <= 193 ||
+        element.hgt.toLowerCase().includes("in") &&
+        num >= 59 && num <= 76
     );
 
     return (byrValid && iyrValid && eyrValid && hclValid && eclValid && pidValid && hgtValid);
 };
 
-const CONTENT = CONTENT_READ.replace(/\n\r/g, "\n")
+CONTENT_READ.replace(/\n\r/g, "\n")
     .replace(/\r/g, "\n")
     .split(/\n{2,}/g)
     .map(element => element.replace(/\n/g, " "))

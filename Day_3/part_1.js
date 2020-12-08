@@ -12,7 +12,6 @@ let { performance } = require("perf_hooks");
 const pStart = performance.now();
 
 let TREES_COUNT = 0;
-let CURRENT_LINE = 0;
 let CURRENT_CHAR = 0;
 
 /**
@@ -23,7 +22,6 @@ let CURRENT_CHAR = 0;
 let step = function(line){
     if (line[CURRENT_CHAR] === "#") TREES_COUNT += 1;
     CURRENT_CHAR = (CURRENT_CHAR + 3) % line.length;
-    CURRENT_LINE += 1;
 };
 
 // @ts-ignore

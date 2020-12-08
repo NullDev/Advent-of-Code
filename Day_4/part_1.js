@@ -16,7 +16,7 @@ let VALID = 0;
 
 const REQUIRED_PROPERTIES = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"];
 
-const CONTENT = CONTENT_READ.replace(/\n\r/g, "\n")
+CONTENT_READ.replace(/\n\r/g, "\n")
     .replace(/\r/g, "\n")
     .split(/\n{2,}/g)
     .map(element => element.replace(/\n/g, " "))

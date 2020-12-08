@@ -34,7 +34,7 @@ let countBags = (bags, bag, quantifier) => {
     }
     return TOTAL;
 };
-    
+
 const RES = countBags(CONTENT_READ, "shiny gold", 1);
 
 const pEnd = performance.now();

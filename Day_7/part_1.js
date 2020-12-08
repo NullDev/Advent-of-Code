@@ -27,7 +27,7 @@ let countBags = (bags, colors = {}) => bag => {
             return color;
         })
         .forEach(countBags(bags, colors));
-  
+
     return Object.keys(colors).length;
 };
 

@@ -14,10 +14,10 @@ const pStart = performance.now();
 
 const RESULT = [];
 const slopes = [
-    [1, 1], 
-    [3, 1], 
-    [5, 1], 
-    [7, 1], 
+    [1, 1],
+    [3, 1],
+    [5, 1],
+    [7, 1],
     [1, 2]
 ];
 
@@ -31,12 +31,12 @@ const slopes = [
 let countTrees = function(lines, slope = [1, 1]){
     let TREE_COUNT = 0;
     let position = 0;
-    
+
     for (let i = 1; i < lines.length; i++){
         let line = lines[i].trim();
 
         if (slope[1] === 2 && (i % 2 === 1)) continue;
-        
+
         let moveRight = position + slope[0];
         position = moveRight % line.length;
 
