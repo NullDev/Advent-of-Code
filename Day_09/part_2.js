@@ -32,5 +32,5 @@ let res = walker();
 
 const pEnd = performance.now();
 
-console.log("FIRST NUMBER: " + res);
+console.log("WEAKNESS: " + res);
 console.log(pEnd - pStart);
