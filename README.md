@@ -18,11 +18,11 @@ Some solutions could be one-liners but I left them splitted up for the sake of r
 
 I also tried to experiment with a couple of different things:
 
-- Solution with logical XOR-ing in [Day_2/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_2/part_2.js)
-- Theoretical single-liner (single chain function) in [Day_4/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_4/part_1.js)
-- Completely branchless approach in [Day_4/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_4/part_2.js)
-- Another theoretical single-liner in [Day_6/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_6/part_1.js) and [Day_6/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_6/part_2.js)
-- Recursive curried function in [Day_7/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_7/part_1.js)
+- Solution with logical XOR-ing in [Day_02/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_02/part_2.js)
+- Theoretical single-liner (single chain function) in [Day_04/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_04/part_1.js)
+- Completely branchless approach in [Day_04/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_04/part_2.js)
+- Another theoretical single-liner in [Day_06/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_06/part_1.js) and [Day_06/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_06/part_2.js)
+- Recursive curried function in [Day_07/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_07/part_1.js)
 
 <hr>
 
