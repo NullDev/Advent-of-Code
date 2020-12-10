@@ -15,7 +15,7 @@ const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt")))
 
 const pStart = performance.now();
 
-let differences = [0, ...CONTENT_READ, Math.max.apply(null, CONTENT_READ) + 3].slice(1)
+let productOfdifferences = [0, ...CONTENT_READ, Math.max.apply(null, CONTENT_READ) + 3].slice(1)
     .reduce((prev, curr, i) => [...prev, curr - (CONTENT_READ[i - 1] || 0)], [])
     .reduce((prev, cur) => {
         (cur === 1) && prev[0].push(cur);
@@ -27,5 +27,5 @@ let differences = [0, ...CONTENT_READ, Math.max.apply(null, CONTENT_READ) + 3].s
 
 const pEnd = performance.now();
 
-console.log("PRODUCT OF DIFFERENCES: " + differences);
+console.log("PRODUCT OF DIFFERENCES: " + productOfdifferences);
 console.log(pEnd - pStart);

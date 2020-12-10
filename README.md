@@ -23,6 +23,7 @@ I also tried to experiment with a couple of different things:
 - Completely branchless approach in [Day_04/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_04/part_2.js)
 - Another theoretical single-liner in [Day_06/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_06/part_1.js) and [Day_06/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_06/part_2.js)
 - Recursive curried function in [Day_07/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_07/part_1.js)
+- Another theoretical one-liner in [Day_10/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_10/part_1.js)
 
 <hr>
 
