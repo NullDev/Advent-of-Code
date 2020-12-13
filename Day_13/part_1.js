@@ -15,16 +15,17 @@ const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).
 const pStart = performance.now();
 
 const TIMESTAMP = Number(CONTENT_READ[0]);
-const IDS = CONTENT_READ[1]
+const RES = CONTENT_READ[1]
     .split(",")
     .filter(e => e !== "x")
-    .map(Number);
-
-const times = IDS.map(e => e - (TIMESTAMP % e));
-const low = Math.min(...times);
-const res = low * IDS[times.findIndex(time => time === low)];
+    .map(Number)
+    .reduce((prev, value) => [].concat(prev, [[value, TIMESTAMP % value, value - (TIMESTAMP % value)]]), [])
+    .sort((a, b) => b[2] - a[2])
+    .pop()
+    .filter((_, i) => i !== 1)
+    .reduce((p, c) => p * c);
 
 const pEnd = performance.now();
 
-console.log("PRODUCT OF ID AND MINUTES: " + res);
+console.log(RES);
 console.log(pEnd - pStart);
