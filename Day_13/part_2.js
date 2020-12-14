@@ -12,17 +12,21 @@ const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).
 
 const pStart = performance.now();
 
-const TIMESTAMP = Number(CONTENT_READ[0]);
+let RES = 0;
 
-const RES = CONTENT_READ[1]
+let [firstID, ...IDS] = CONTENT_READ[1]
     .split(",")
-    .filter(e => e !== "x")
-    .map(Number)
-    .map(id => [id, id - (TIMESTAMP % id)])
-    .sort((a, b) => a[1] - b[1])[0]
-    .reduce((p, c) => p * c);
+    .map((id, index) => [Number(id), index])
+    .filter(([e]) => Number.isInteger(e));
+
+IDS.forEach(([id, index]) => {
+    for (;;){
+        if ((RES + index) % id === 0) return (firstID[0] *= id);
+        RES += firstID[0];
+    }
+});
 
 const pEnd = performance.now();
 
-console.log("PRODUCT OF ID AND MINUTES: " + RES);
+console.log("EARLIEST TIMSTAMP: " + RES);
 console.log(pEnd - pStart);
