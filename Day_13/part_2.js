@@ -19,11 +19,9 @@ let [firstID, ...IDS] = CONTENT_READ[1]
     .map((id, index) => [Number(id), index])
     .filter(([e]) => Number.isInteger(e));
 
-IDS.forEach(([id, index]) => {
-    for (;;){
-        if ((RES + index) % id === 0) return (firstID[0] *= id);
-        RES += firstID[0];
-    }
+IDS.forEach(id => {
+    while ((RES + id[1]) % id[0] !== 0) RES += firstID[0];
+    firstID[0] *= id[0];
 });
 
 const pEnd = performance.now();
