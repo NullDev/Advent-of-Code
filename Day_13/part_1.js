@@ -15,14 +15,13 @@ const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).
 const pStart = performance.now();
 
 const TIMESTAMP = Number(CONTENT_READ[0]);
+
 const RES = CONTENT_READ[1]
     .split(",")
     .filter(e => e !== "x")
     .map(Number)
-    .reduce((prev, value) => [].concat(prev, [[value, TIMESTAMP % value, value - (TIMESTAMP % value)]]), [])
-    .sort((a, b) => b[2] - a[2])
-    .pop()
-    .filter((_, i) => i !== 1)
+    .map(id => [id, id - (TIMESTAMP % id)])
+    .sort((a, b) => a[1] - b[1])[0]
     .reduce((p, c) => p * c);
 
 const pEnd = performance.now();
