@@ -16,9 +16,9 @@ const mem = new Map();
 let mask;
 
 CONTENT_READ.forEach(line => {
-    if (line.startsWith("mask")) [, mask] = line.split(" = ");
+    if (line.startsWith("mask")) [ , mask ] = line.split(" = ");
     else {
-        const [, address, value] = line.match(/mem\[(\d+)\] = (\d+)/);
+        const [ , address, value ] = line.match(/mem\[(\d+)\] = (\d+)/);
         mem.set(address, parseInt(Number(value)
             .toString(2)
             .padStart(36, "0")
