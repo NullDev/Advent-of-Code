@@ -27,5 +27,5 @@ const RES = CONTENT_READ[1]
 
 const pEnd = performance.now();
 
-console.log(RES);
+console.log("PRODUCT OF ID AND MINUTES: " + RES);
 console.log(pEnd - pStart);
