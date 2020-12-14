@@ -21,10 +21,10 @@ CONTENT_READ.forEach(line => {
     else {
         let [ , m1, m2 ] = /^mem\[(\d+)\].=.(\d+)$/.exec(line);
         let addr = [0n];
-        [...mask].forEach((digit, index) => {
+        [...mask].forEach((element, index) => {
             addr = addr.map(e => e << 1n);
-            if (digit === "X") addr = [...addr, ...(addr.map(e => e | 1n))];
-            else if (digit === "1" || Number(m1).toString(2).padStart(36, "0")[index] === "1") addr = addr.map(e => e | 1n);
+            if (element === "X") addr = [...addr, ...(addr.map(e => e | 1n))];
+            else if (element === "1" || Number(m1).toString(2).padStart(36, "0")[index] === "1") addr = addr.map(e => e | 1n);
         });
         addr.forEach(e => mem[e] = BigInt(m2));
     }
