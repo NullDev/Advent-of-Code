@@ -12,10 +12,10 @@ const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).
 
 const pStart = performance.now();
 
-const mem = new Uint32Array(2020);
+const mem = new Uint32Array(30000000);
 let curr = 0;
 
-for (let i = 0; i < 2020; i++){
+for (let i = 0; i < 30000000; i++){
     if (i < CONTENT_READ.length) mem[curr = CONTENT_READ[i]] = i + 1;
     else {
         let prev = mem[curr] || -1;
@@ -26,5 +26,5 @@ for (let i = 0; i < 2020; i++){
 
 const pEnd = performance.now();
 
-console.log("2020TH NUMBER SPOKEN: " + curr);
+console.log("30000000TH NUMBER SPOKEN: " + curr);
 console.log(pEnd - pStart);
