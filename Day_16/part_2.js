@@ -19,23 +19,18 @@ let fields = CONTENT_READ[0].split("\n").map(field => {
     return [ name.trim(), ...other.map(Number) ];
 });
 
-const own = CONTENT_READ[1].split("\n").slice(1).map(l => l.split(",").map(Number))[0];
+const own = CONTENT_READ[1].split("\n").slice(1).map(l => l.split(","))[0];
 
-const cols = Array.from({ length: own.length })
-    .map((_, i) => [
-        i,
-        CONTENT_READ[2]
-            .split("\n")
-            .slice(1)
-            .map(l => l.split(",").map(Number))
-            .filter(t =>
-                t.every(n =>
-                    fields.some(([, row1Min, row1Max, row2Min, row2Max]) =>
-                        (n >= row1Min && n <= row1Max) || (n >= row2Min && n <= row2Max)
-                    )
-                )
-            ).map(n => n[i])
-    ]);
+const cols = Array.from({ length: own.length }).map((_, i) => [
+    i,
+    CONTENT_READ[2]
+        .split("\n")
+        .slice(1)
+        .map(l => l.split(",").map(Number))
+        .filter(t => t.every(n => fields.some(([, row1Min, row1Max, row2Min, row2Max]) =>
+            (n >= row1Min && n <= row1Max) || (n >= row2Min && n <= row2Max)
+        ))).map(n => n[i])
+]);
 
 // Could be recursive but cant be bothered ^-^
 while (cols.length){
@@ -46,7 +41,7 @@ while (cols.length){
     ));
 
     (matches.length === 1) // @ts-ignore
-        ? (fields = fields.filter(([n]) => n !== matches[0][0])) && (/departure/.test(matches[0][0])) && (RES *= own[col])
+        ? (fields = fields.filter(([n]) => n !== matches[0][0])) && (/departure/.test(matches[0][0])) && (RES *= Number(own[col]))
         : cols.push([col, nums]);
 }
 
