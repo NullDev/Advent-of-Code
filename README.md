@@ -28,6 +28,7 @@ I also tried to experiment with a couple of different things:
 - Yet another single-liner in [Day_13/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_13/part_1.js)
 - Experiment with bit-shift, bitwise operations and bigint numbers in [Day_14/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_14/part_2.js)
 - Another theoretical one-liner in [Day_16/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_16/part_1.js)
+- Recursive [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) arrow function to minimize code in [Day_17/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_17/part_1.js)
 
 <hr>
 
