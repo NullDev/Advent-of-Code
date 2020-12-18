@@ -29,6 +29,7 @@ I also tried to experiment with a couple of different things:
 - Experiment with bit-shift, bitwise operations and bigint numbers in [Day_14/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_14/part_2.js)
 - Another theoretical one-liner in [Day_16/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_16/part_1.js)
 - Recursive [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) arrow function to minimize code in [Day_17/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_17/part_1.js)
+- Theoretical one-liner by utilizing the [Lambda calculus Y-combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Fixed-point_combinators_in_lambda_calculus) with an [recursive anonymous arrow function](http://kestas.kuliukas.com/YCombinatorExplained/) in [Day_18/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_18/part_1.js)
 
 <hr>
 
