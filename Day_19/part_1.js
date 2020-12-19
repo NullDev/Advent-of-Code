@@ -21,11 +21,11 @@ const rules = new Map();
 
 CONTENT_READ[0].split(EOL).map(e => rules.set(Number(e.split(": ")[0]), e.split(": ")[1]));
 
-const r = new RegExp("^" + (function defineRules(ruleset, rule, n = 0){
+const r = new RegExp("^" + (function defineRules(ruleSet, rule, n = 0){
     return n > 4 ? "" : rule.startsWith('"')
         ? rule.slice(1, -1)
         : "(?:" + rule.split(" | ").map(e => e.split(" ")
-            .map(f => defineRules(ruleset, ruleset.get(Number(f)), ruleset.get(Number(f)) === rule ? n + 1 : 0))
+            .map(f => defineRules(ruleSet, ruleSet.get(Number(f)), ruleSet.get(Number(f)) === rule ? n + 1 : 0))
             .join("")
         ).join("|") + ")";
 })(rules, rules.get(0), 0) + "$");
