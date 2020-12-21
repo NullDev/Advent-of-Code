@@ -16,10 +16,8 @@ const pStart = performance.now();
 const RES = Object.values(CONTENT_READ.reduce((prev, tile) => {
     let grid = tile.split("\n").slice(1).map(w => w.split(""));
     [grid[0], grid.map(r => r[0]), grid.map(r => r[grid.length - 1]), grid[grid.length - 1]].forEach(b => {
-        let t = [b, ([...b].reverse())].sort()[0];
-        prev[t] = typeof(prev[t]) === "undefined" 
-            ? [].concat(Number(tile.match(/^Tile (\d+):\n/)[1]))
-            : prev[t].concat(Number(tile.match(/^Tile (\d+):\n/)[1]));
+        let t = [b, ([...b].reverse())].sort()[0]; // @ts-ignore
+        prev[t] = typeof(prev[t]) === "undefined" ? [].concat(Number(tile.match(/^Tile (\d+):\n/)[1])) : prev[t].concat(Number(tile.match(/^Tile (\d+):\n/)[1]));
     });
 
     return prev;
