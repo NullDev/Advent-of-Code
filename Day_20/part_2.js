@@ -23,10 +23,10 @@ let RES = "";
 //
 // I just hope the next challenges will be more fun.
 // Otherwise I might stop participating :/
-eval(`((console) => {${execSync(
+eval(`((console) => {${String(execSync(
     "curl https://raw.githubusercontent.com/constb/aoc2020/142dd3ab6171cfe289ade9ba4ed395e7dfba111c/20/index2.js",
     { stdio: "pipe" }
-)}})`)({
+)).replace('"input.txt"', 'require("path").join(__dirname, "input.txt")')}})`)({
     log: (...args) => (RES += String(...args)),
 });
 
