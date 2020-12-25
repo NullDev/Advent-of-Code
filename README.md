@@ -46,3 +46,9 @@ Preview:
 <p align="center"><img height="auto" width="100%" src="https://i.imgur.com/Z5ci7OS.png" /></p>
 
 <hr>
+
+## :snowflake: THE END <3
+
+<p align="center"><img height="auto" width="100%" src="https://i.imgur.com/I7AOZvQ.png" /></p>
+
+<hr>
