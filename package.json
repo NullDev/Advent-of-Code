@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NLDev/Advent-of-Code-2020.git"
+    "url": "git+https://github.com/NullDev/Advent-of-Code-2020.git"
   },
   "author": "NullDev",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/NLDev/Advent-of-Code-2020/issues"
+    "url": "https://github.com/NullDev/Advent-of-Code-2020/issues"
   },
-  "homepage": "https://github.com/NLDev/Advent-of-Code-2020#readme"
+  "homepage": "https://github.com/NullDev/Advent-of-Code-2020#readme"
 }
