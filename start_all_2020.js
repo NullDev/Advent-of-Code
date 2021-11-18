@@ -8,29 +8,31 @@ let fs = require("fs");
 let path = require("path");
 let { execSync } = require("child_process");
 
+const YEAR = "2020";
+
 const BC = "\x1b[42m\x1b[30m ✓ \x1b[0m\x1b[32m ";
 const MC = "\x1b[32m - \x1b[0m(took ";
 
-const DIRECTORIES = fs.readdirSync(path.join(__dirname), { withFileTypes: true })
+const DIRECTORIES = fs.readdirSync(path.join(__dirname, YEAR), { withFileTypes: true })
     .filter(dirEnt => dirEnt.isDirectory() && String(dirEnt.name).toLowerCase().includes("day_"))
     .map(dirEnt => dirEnt.name);
 
-console.log(`\x1b[32m  █████╗  ██████╗  ██████╗
- ██╔══██╗██╔═══██╗██╔════╝
- ███████║██║   ██║██║     
- ██╔══██║██║   ██║██║     
- ██║  ██║╚██████╔╝╚██████╗
- ╚═╝  ╚═╝ ╚═════╝  ╚═════╝
-\x1b[33m ---= \x1b[36mAdvent of Code\x1b[33m =---
- - \x1b[0mSolutions by \x1b[32mNullDev\x1b[33m -
- ------------------------\x1b[0m\n`
+console.log(`\n\x1b[32m    █████╗  ██████╗  ██████╗
+   ██╔══██╗██╔═══██╗██╔════╝
+   ███████║██║   ██║██║     
+   ██╔══██║██║   ██║██║     
+   ██║  ██║╚██████╔╝╚██████╗
+   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝
+\x1b[33m -----------------------------\n ---= \x1b[36mAdvent of Code ${YEAR}\x1b[33m =---
+ ---= \x1b[32mNullDev\x1b[33m's Solutions =---
+ -----------------------------\x1b[0m\n`
 );
 
 DIRECTORIES.forEach((element, index) => {
     let day = String(index + 1).padStart(2, "0");
 
-    const PART1 = path.join(__dirname, element, "part_1.js");
-    const PART2 = path.join(__dirname, element, "part_2.js");
+    const PART1 = path.join(__dirname, YEAR, element, "part_1.js");
+    const PART2 = path.join(__dirname, YEAR, element, "part_2.js");
 
     console.log(`\x1b[36m---====[ DAY ${day} ]====---\x1b[0m\n`);
 
