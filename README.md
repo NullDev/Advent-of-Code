@@ -45,7 +45,8 @@ _TBA_
 
 Each script can be run stand-alone / separatly but I've also created a `start_all.js` script to launch all days in order, and display the solutions along with an approximated benchmark (the benchmark uses [`performance.now()`](https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now) to measure the execution time and **does not include the actual reading of the file** except when the file is read line-by-line).
 
-No dependencies needed. Just launch the script by executing `npm start:2020`, `npm start:2021` or `npm start:all`.
+No dependencies needed. Just launch the script by executing <br>
+`npm start:2020`, `npm start:2021` or `npm start:all`.
 
 Preview:
 
