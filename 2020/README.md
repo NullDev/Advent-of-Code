@@ -18,20 +18,20 @@ Some solutions could be one-liners but I left them splitted up for the sake of r
 
 I also tried to experiment with a couple of different things:
 
-- Solution with logical XOR-ing in [Day_02/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_02/part_2.js)
-- Theoretical single-liner (single chain function) in [Day_04/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_04/part_1.js)
-- Completely branchless approach in [Day_04/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_04/part_2.js)
-- Another theoretical single-liner in [Day_06/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_06/part_1.js) and [Day_06/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_06/part_2.js)
-- Recursive curried function in [Day_07/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_07/part_1.js)
-- Another theoretical one-liner in [Day_10/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_10/part_1.js)
-- More branchless solutions in [Day_12/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_12/part_1.js) and [Day_12/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_12/part_2.js)
-- Yet another single-liner in [Day_13/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_13/part_1.js)
-- Experiment with bit-shift, bitwise operations and bigint numbers in [Day_14/part_2.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_14/part_2.js)
-- Another theoretical one-liner in [Day_16/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_16/part_1.js)
-- Recursive [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) arrow function to minimize code in [Day_17/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_17/part_1.js)
-- Theoretical one-liner by utilizing the [Lambda calculus Y-combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Fixed-point_combinators_in_lambda_calculus) with an [recursive anonymous arrow function](http://kestas.kuliukas.com/YCombinatorExplained/) in [Day_18/part_1.js](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_18/part_1.js)
-- Theoretical (_almost_) one-liner in [Day_20/part_1](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_20/part_1.js)
-- The final one-liner in [Day_25/part_1](https://github.com/NLDev/Advent-of-Code-2020/blob/master/Day_25/part_1.js)
+- Solution with logical XOR-ing in [Day_02/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_02/part_2.js)
+- Theoretical single-liner (single chain function) in [Day_04/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_04/part_1.js)
+- Completely branchless approach in [Day_04/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_04/part_2.js)
+- Another theoretical single-liner in [Day_06/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_06/part_1.js) and [Day_06/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_06/part_2.js)
+- Recursive curried function in [Day_07/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_07/part_1.js)
+- Another theoretical one-liner in [Day_10/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_10/part_1.js)
+- More branchless solutions in [Day_12/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_12/part_1.js) and [Day_12/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_12/part_2.js)
+- Yet another single-liner in [Day_13/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_13/part_1.js)
+- Experiment with bit-shift, bitwise operations and bigint numbers in [Day_14/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_14/part_2.js)
+- Another theoretical one-liner in [Day_16/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_16/part_1.js)
+- Recursive [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) arrow function to minimize code in [Day_17/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_17/part_1.js)
+- Theoretical one-liner by utilizing the [Lambda calculus Y-combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Fixed-point_combinators_in_lambda_calculus) with an [recursive anonymous arrow function](http://kestas.kuliukas.com/YCombinatorExplained/) in [Day_18/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_18/part_1.js)
+- Theoretical (_almost_) one-liner in [Day_20/part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_20/part_1.js)
+- The final one-liner in [Day_25/part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_25/part_1.js)
 
 <hr>
 
