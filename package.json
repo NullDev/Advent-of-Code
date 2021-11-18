@@ -4,16 +4,18 @@
   "description": "NodeJS Solutions for Advent Of Code 2020",
   "main": "startAll.js",
   "scripts": {
-    "start": "node ./startAll.js"
+    "start": "node ./*.js",
+    "start:2021": "node ./start_all_2021.js",
+    "start:2020": "node ./start_all_2020.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NLDev/Advent-of-Code-2020.git"
+    "url": "git+https://github.com/NLDev/Advent-of-Code.git"
   },
   "author": "NullDev",
-  "license": "Unlicense",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NLDev/Advent-of-Code-2020/issues"
+    "url": "https://github.com/NLDev/Advent-of-Code/issues"
   },
-  "homepage": "https://github.com/NLDev/Advent-of-Code-2020#readme"
+  "homepage": "https://github.com/NLDev/Advent-of-Code#readme"
 }
