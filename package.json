@@ -4,9 +4,9 @@
   "description": "NodeJS Solutions for Advent Of Code 2020",
   "main": "startAll.js",
   "scripts": {
-    "start": "node ./*.js",
-    "start:2021": "node ./start_all_2021.js",
-    "start:2020": "node ./start_all_2020.js"
+    "start:2021": "node ./start_all.js 2021",
+    "start:2020": "node ./start_all.js 2020",
+    "start:all": "npm run start:2021 && npm run start:2020"
   },
   "repository": {
     "type": "git",

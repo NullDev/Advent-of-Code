@@ -8,7 +8,12 @@ let fs = require("fs");
 let path = require("path");
 let { execSync } = require("child_process");
 
-const YEAR = "2020";
+const YEAR = process.argv[2];
+// TODO: Run all years if no CLI arg is given
+if (!YEAR){
+    console.log("No year given.");
+    process.exit(1);
+}
 
 const BC = "\x1b[42m\x1b[30m ✓ \x1b[0m\x1b[32m ";
 const MC = "\x1b[32m - \x1b[0m(took ";
