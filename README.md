@@ -26,7 +26,7 @@ I also tried to experiment with a couple of different things:
 - Another theoretical single-liner in [Day_06/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_06/part_1.js) and [Day_06/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_06/part_2.js)
 - Recursive curried function in [Day_07/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_07/part_1.js)
 - Another theoretical one-liner in [Day_10/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_10/part_1.js)
-- More branchless solutions in [Day_12/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/maste/2020r/Day_12/part_1.js) and [Day_12/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_12/part_2.js)
+- More branchless solutions in [Day_12/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_12/part_1.js) and [Day_12/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_12/part_2.js)
 - Yet another single-liner in [Day_13/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_13/part_1.js)
 - Experiment with bit-shift, bitwise operations and bigint numbers in [Day_14/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_14/part_2.js)
 - Another theoretical one-liner in [Day_16/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_16/part_1.js)
