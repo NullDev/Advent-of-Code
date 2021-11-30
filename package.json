@@ -6,7 +6,7 @@
   "scripts": {
     "start:2021": "node ./start_all.js 2021",
     "start:2020": "node ./start_all.js 2020",
-    "start:all": "npm run start:2021 && npm run start:2020"
+    "start:all": "node ./start_all.js"
   },
   "repository": {
     "type": "git",
