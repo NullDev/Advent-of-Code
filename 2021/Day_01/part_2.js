@@ -13,7 +13,7 @@ const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).
 const pStart = performance.now();
 
 const count = CONTENT_READ
-    .map((a, i) => CONTENT_READ[i - 2] + CONTENT_READ[i - 1] + CONTENT_READ[i])
+    .map((_, i) => CONTENT_READ[i - 2] + CONTENT_READ[i - 1] + CONTENT_READ[i])
     .filter((e, i, a) => e > a[i - 1])
     .length;
 
