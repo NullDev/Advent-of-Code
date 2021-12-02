@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/NullDev/Advent-of-Code/issues"
   },
-  "homepage": "https://github.com/NullDev/Advent-of-Code#readme"
+  "homepage": "https://github.com/NullDev/Advent-of-Code#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "eslint": "^8.3.0"
+  }
 }
