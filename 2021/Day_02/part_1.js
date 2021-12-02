@@ -17,9 +17,9 @@ let y = 0;
 
 INPUT.forEach(e => e[0][0] === "f"
     ? x += Number(e[1])
-    : e[0][0] === "d"
+    : e[0] === "down"
         ? y += Number(e[1])
-        : e[0][0] === "u" && (y -= Number(e[1]))
+        : e[0] === "up" && (y -= Number(e[1]))
 );
 
 const res = x * y;
