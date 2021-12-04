@@ -26,7 +26,7 @@ CONTENT_READ.forEach(line => {
             if (element === "X") addr = [...addr, ...(addr.map(e => e | 1n))];
             else if (element === "1" || Number(m1).toString(2).padStart(36, "0")[index] === "1") addr = addr.map(e => e | 1n);
         });
-        addr.forEach(e => mem[e] = BigInt(m2));
+        addr.forEach(e => (mem[e] = BigInt(m2)));
     }
 });
 const sum = Object.values(mem).reduce((p, c) => p + c, 0n);

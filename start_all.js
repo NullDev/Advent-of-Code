@@ -4,6 +4,8 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
+/* eslint-disable curly */
+
 let fs = require("fs");
 let path = require("path");
 let { execSync } = require("child_process");
@@ -27,7 +29,7 @@ YEARS.forEach(y => {
 \x1b[33m -----------------------------\n ---= \x1b[36mAdvent of Code ${y}\x1b[33m =---
  ---= \x1b[32mNullDev\x1b[33m's Solutions =---
  -----------------------------\x1b[0m\n`
-);
+    );
 
     const DIRECTORIES = fs.readdirSync(path.join(__dirname, y), { withFileTypes: true })
         .filter(dirEnt => dirEnt.isDirectory() && String(dirEnt.name).toLowerCase().includes("day_"))

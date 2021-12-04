@@ -17,16 +17,16 @@ const pStart = performance.now();
 
 // Thanks Reddit...
 const hMatrix = {
-    "e":  { dx:  1, dy:  0 },
-    "ne": { dx:  1, dy: -1 },
-    "se": { dx:  0, dy:  1 },
+    e:  { dx:  1, dy:  0 },
+    ne: { dx:  1, dy: -1 },
+    se: { dx:  0, dy:  1 },
 
-    "w":  { dx: -1, dy:  0 },
-    "nw": { dx:  0, dy: -1 },
-    "sw": { dx: -1, dy:  1 }
+    w:  { dx: -1, dy:  0 },
+    nw: { dx:  0, dy: -1 },
+    sw: { dx: -1, dy:  1 }
 };
 
-let minMax = { "minX": 0, "maxX": 0, "minY": 0, "maxY": 0 };
+let minMax = { minX: 0, maxX: 0, minY: 0, maxY: 0 };
 let field = [];
 
 CONTENT_READ.forEach(line => {
@@ -41,8 +41,8 @@ CONTENT_READ.forEach(line => {
     (field[xyi[0]] = field[xyi[0]] || []) && (field[xyi[0]][xyi[1]] = !field[xyi[0]][xyi[1]]);
 
     minMax = {
-        "minX": Math.min(xyi[0], minMax.minX), "maxX": Math.max(xyi[0], minMax.maxX),
-        "minY": Math.min(xyi[1], minMax.minY), "maxY": Math.max(xyi[1], minMax.maxY)
+        minX: Math.min(xyi[0], minMax.minX), maxX: Math.max(xyi[0], minMax.maxX),
+        minY: Math.min(xyi[1], minMax.minY), maxY: Math.max(xyi[1], minMax.maxY)
     };
 });
 
@@ -60,8 +60,8 @@ for (let i = 0; i < 100; i++){
                     ?  tmpField[x][y] = true : tmpField[x][y] = (field[x] && field[x][y]);
 
             tmpField[x][y] && (minMax = {
-                "minX": Math.min(x, minMax.minX), "maxX": Math.max(x, minMax.maxX),
-                "minY": Math.min(y, minMax.minY), "maxY": Math.max(y, minMax.maxY)
+                minX: Math.min(x, minMax.minX), maxX: Math.max(x, minMax.maxX),
+                minY: Math.min(y, minMax.minY), maxY: Math.max(y, minMax.maxY)
             });
         }
     }

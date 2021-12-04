@@ -16,13 +16,13 @@ const pStart = performance.now();
 
 // Thanks Reddit...
 const hMatrix = {
-    "e":  { dx:  1, dy:  0 },
-    "ne": { dx:  1, dy: -1 },
-    "se": { dx:  0, dy:  1 },
+    e:  { dx:  1, dy:  0 },
+    ne: { dx:  1, dy: -1 },
+    se: { dx:  0, dy:  1 },
 
-    "w":  { dx: -1, dy:  0 },
-    "nw": { dx:  0, dy: -1 },
-    "sw": { dx: -1, dy:  1 }
+    w:  { dx: -1, dy:  0 },
+    nw: { dx:  0, dy: -1 },
+    sw: { dx: -1, dy:  1 }
 };
 
 const tiles = new Set();

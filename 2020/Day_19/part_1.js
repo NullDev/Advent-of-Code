@@ -8,7 +8,8 @@
 
 let fs = require("fs");
 let path = require("path");
-let EOL = require("os").EOL;
+let { EOL } = require("os");
+
 let { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(EOL.repeat(2));

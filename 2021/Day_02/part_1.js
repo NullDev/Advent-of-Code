@@ -4,6 +4,8 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
+/* eslint-disable no-return-assign, no-nested-ternary */
+
 let fs = require("fs");
 let path = require("path");
 let { performance } = require("perf_hooks");

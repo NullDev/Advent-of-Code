@@ -19,7 +19,7 @@ const rotate = ([dx, dy], degrees) => ({
     0:   [ dx,  dy],
     90:  [-dy,  dx],
     180: [-dx, -dy],
-    270: [ dy, -dx],
+    270: [ dy, -dx]
 }[(degrees + 360) % 360]);
 
 const directions = CONTENT_READ.reduce((move, line) => {

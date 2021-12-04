@@ -23,7 +23,7 @@ let twoSum = function(arr, tar){
     let numObject = {};
     let res;
     arr.forEach((e, i) => (numObject[e] = i));
-    arr.forEach((e, i) => ((numObject.hasOwnProperty(tar - e) && numObject[tar - e] !== i) && (res = [i, numObject[tar - e]])));
+    arr.forEach((e, i) => ((Object.prototype.hasOwnProperty.call(numObject, tar - e) && numObject[tar - e] !== i) && (res = [i, numObject[tar - e]])));
     return res;
 };
 

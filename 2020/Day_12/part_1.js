@@ -17,7 +17,7 @@ const pStart = performance.now();
 const directions = CONTENT_READ.reduce((move, line) => {
     const action = line.trim()[0];
     const value = Number(line.trim().slice(1));
-    const direction = move.direction;
+    const { direction } = move;
 
     move.x += action === "E" ? value : action === "W" ? -value : 0;
     move.y += action === "N" ? value : action === "S" ? -value : 0;
