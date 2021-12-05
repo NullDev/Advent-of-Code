@@ -4,6 +4,8 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
+/* eslint-disable no-nested-ternary */
+
 let fs = require("fs");
 let path = require("path");
 let { performance } = require("perf_hooks");
@@ -22,13 +24,16 @@ const points = {};
 
 let check = point => !points[point] ? (points[point] = 1) : (((points[point] === 1) && (RES++)) && points[point]++);
 
-INPUT.forEach(([[x1, y1], [x2, y2]]) => { // destructoring go brrr
-    if (x1 === x2 && y1 === y2) check(x1 + "," + y1);
-    else if (x1 === x2) for (let y = Math.min(y1, y2); y <= Math.max(y1, y2); y++) check(x1 + "," + y);
-    else if (y1 === y2) for (let x = Math.min(x1, x2); x <= Math.max(x1, x2); x++) check(x + "," + y1);
+INPUT.forEach(([[x1, y1], [x2, y2]]) => {
+    for (
+        let x = x1, y = y1;
+        x !== x2 || y !== y2;
+        x === x2 ? null : x < x2 ? x++ : x--, y === y2 ? null : y < y2 ? y++ : y-- // lol
+    ) check(x + "," + y);
+    check(x2 + "," + y2);
 });
 
 const pEnd = performance.now();
 
-console.log("POINTS: " + RES); // 6666 >:)
+console.log("OVERLAPPING POINTS: " + RES);
 console.log(pEnd - pStart);
