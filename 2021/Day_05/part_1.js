@@ -11,9 +11,7 @@ let { performance } = require("perf_hooks");
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
     .split(require("os").EOL)
-    .map(line => line.split(" -> ")
-        .map(coord => coord.split(",").map(Number))
-    );
+    .map(line => line.split(" -> ").map(coord => coord.split(",").map(Number)));
 
 const pStart = performance.now();
 
