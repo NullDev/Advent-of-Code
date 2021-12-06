@@ -17,8 +17,7 @@ INPUT.forEach(f => (F[f]++));
 
 for (let d = 0; d < 80; d++){
     const f = F.shift();
-    F.push(f);
-    F[6] += f;
+    (F.push(f)) && (F[6] += f);
 }
 
 const RES = F.reduce((a, b) => a + b, 0);
