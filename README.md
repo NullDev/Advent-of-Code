@@ -37,7 +37,9 @@ I also tried to experiment with a couple of different things:
 
 **2021**:
 
-_TBA_
+- Single-Liner on Day 01 in both [part 1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_01/part_1.js) and [part 2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_01/part_2.js)
+- Solution in `O(n)` on Day 06 in both [part 1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_1.js) and [part 2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_2.js)
+- Single-Liner on Day 07 in both [part 1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_1.js) and [part 2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_2.js) by using a [formula transformation](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_2.js#L18-L21)
 
 <hr>
 
