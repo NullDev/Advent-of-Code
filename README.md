@@ -18,6 +18,10 @@ Some solutions could be one-liners but I left them splitted up for the sake of r
 
 I also tried to experiment with a couple of different things:
 
+**2019**
+
+- _TBA_
+
 **2020**:
 
 - Solution with logical XOR-ing in [Day_02/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_02/part_2.js)
