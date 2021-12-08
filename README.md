@@ -20,8 +20,8 @@ I also tried to experiment with a couple of different things:
 
 **2019**
 
-- Single-Liner in [Day 01/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_01/part_1.js)
-- Single-Liner on Day 04 in both [part 1](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_04/part_1.js) and [part 2](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_04/part_2.js)
+- Single-Liner in [Day_01/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_01/part_1.js)
+- Single-Liner on Day 04 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_04/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_04/part_2.js)
 
 **2020**:
 
@@ -37,15 +37,15 @@ I also tried to experiment with a couple of different things:
 - Another theoretical one-liner in [Day_16/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_16/part_1.js)
 - Recursive [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) arrow function to minimize code in [Day_17/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_17/part_1.js)
 - Theoretical one-liner by utilizing the [Lambda calculus Y-combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Fixed-point_combinators_in_lambda_calculus) with an [recursive anonymous arrow function](http://kestas.kuliukas.com/YCombinatorExplained/) in [Day_18/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_18/part_1.js)
-- Theoretical (_almost_) one-liner in [Day_20/part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_20/part_1.js)
-- The final one-liner in [Day_25/part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_25/part_1.js)
+- Theoretical (_almost_) one-liner in [Day_20/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_20/part_1.js)
+- The final one-liner in [Day_25/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_25/part_1.js)
 
 **2021**:
 
-- Single-Liner on Day 01 in both [part 1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_01/part_1.js) and [part 2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_01/part_2.js)
-- Solution in `O(n)` on Day 06 in both [part 1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_1.js) and [part 2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_2.js) (See the [Note](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_1.js#L16-L33))
-- Single-Liner on Day 07 in both [part 1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_1.js) and [part 2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_2.js) by using a [formula transformation](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_2.js#L18-L21)
-- Single-Liner on [Day 08/part 1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_08/part_1.js)
+- Single-Liner on Day 01 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_01/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_01/part_2.js)
+- Solution in `O(n)` on Day 06 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_2.js) (See the [Note](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_1.js#L16-L33))
+- Single-Liner on Day 07 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_2.js) by using a [formula transformation](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_2.js#L18-L21)
+- Single-Liner in [Day_08/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_08/part_1.js)
 
 <hr>
 
