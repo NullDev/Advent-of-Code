@@ -20,7 +20,8 @@ I also tried to experiment with a couple of different things:
 
 **2019**
 
-- _TBA_
+- Single-Liner in [Day 01/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_01/part_1.js)
+- Single-Liner on Day 04 in both [part 1](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_04/part_1.js) and [part 2](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_04/part_2.js)
 
 **2020**:
 
