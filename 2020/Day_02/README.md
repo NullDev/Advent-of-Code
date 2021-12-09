@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2020/day/2> <br>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2020)
+
+---
+
 ## --- Day 2: Password Philosophy ---
 
 Your flight departs in a few days from the coastal airport; the easiest way down to the coast from here is via [toboggan](https://en.wikipedia.org/wiki/Toboggan).

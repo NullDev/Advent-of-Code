@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2020/day/24> <br>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2020)
+
+---
+
 ## --- Day 24: Lobby Layout ---
 
 Your raft makes it to the tropical island; it turns out that the small crab was an excellent navigator. You make your way to the resort.

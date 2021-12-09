@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2020/day/6> <br>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2020)
+
+---
+
 ## --- Day 6: Custom Customs ---
 
 As your flight approaches the regional airport where you'll switch to a much larger plane, [customs declaration forms](https://en.wikipedia.org/wiki/Customs_declaration) are distributed to the passengers.

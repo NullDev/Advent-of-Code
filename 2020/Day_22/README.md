@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2020/day/22> <br>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2020)
+
+---
+
 ## --- Day 22: Crab Combat ---
 
 It only takes a few hours of sailing the ocean on a raft for boredom to sink in. Fortunately, you brought a small deck of [space cards](https://adventofcode.com/2019/day/22)! You'd like to play a game of **Combat**, and there's even an opponent available: a small crab that climbed aboard your raft before you left.

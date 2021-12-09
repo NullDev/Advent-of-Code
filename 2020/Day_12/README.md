@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2020/day/12> <br>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2020)
+
+---
+
 ## --- Day 12: Rain Risk ---
 
 Your ferry made decent progress toward the island, but the storm came in faster than anyone expected. The ferry needs to take evasive actions!
