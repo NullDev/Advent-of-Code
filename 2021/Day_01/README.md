@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2021/day/1>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2021)
+
+---
+
 ## --- Day 1: Sonar Sweep ---
 
 You're minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean!
@@ -48,7 +53,7 @@ In this example, there are **`7`** measurements that are larger than the previou
 
 **How many measurements are larger than the previous measurement?**
 
-<hr>
+---
 
 ## --- Part Two ---
 

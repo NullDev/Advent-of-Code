@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2021/day/2>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2021)
+
+---
+
 ## --- Day 2: Dive! ---
 
 Now, you need to figure out how to pilot this thing.
@@ -34,7 +39,7 @@ After following these instructions, you would have a horizontal position of `15`
 
 Calculate the horizontal position and depth you would have after following the planned course. **What do you get if you multiply your final horizontal position by your final depth?**
 
-<hr>
+---
 
 ## --- Part Two ---
 

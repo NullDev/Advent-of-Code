@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2021/day/7>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2021)
+
+---
+
 ## --- Day 7: The Treachery of Whales ---
 
 A giant [whale](https://en.wikipedia.org/wiki/Sperm_whale) has decided your submarine is its next meal, and it's much faster than you are. There's nowhere to run!
@@ -35,6 +40,8 @@ Each change of 1 step in horizontal position of a single crab costs 1 fuel. You 
 This costs a total of **`37`** fuel. This is the cheapest possible outcome; more expensive outcomes include aligning at position `1` (`41` fuel), position `3` (`39` fuel), or position `10` (`71` fuel).
 
 Determine the horizontal position that the crabs can align to using the least fuel possible. **How much fuel must they spend to align to that position?**
+
+---
 
 ## --- Part Two ---
 
