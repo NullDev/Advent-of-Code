@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2019/day/4> <br>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2019)
+
+---
+
 ## --- Day 4: Secure Container ---
 
 You arrive at the Venus fuel depot only to discover it's protected by a password. The Elves had written the password on a sticky note, but someone threw it out.
@@ -16,6 +21,8 @@ Other than the range rule, the following are true:
 - `123789` does not meet these criteria (no double).
 
 **How many different passwords** within the range given in your puzzle input meet these criteria?
+
+---
 
 ## --- Part Two ---
 

@@ -1,3 +1,8 @@
+Link: <https://adventofcode.com/2019/day/1> <br>
+Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2019)
+
+---
+
 ## --- Day 1: The Tyranny of the Rocket Equation ---
 
 Santa has become stranded at the edge of the Solar System while delivering presents to other planets! To accurately calculate his position in space, safely align his warp drive, and return to Earth in time to save Christmas, he needs you to bring him measurements from **fifty stars**.
@@ -20,6 +25,8 @@ For example:
 The Fuel Counter-Upper needs to know the total fuel requirement. To find it, individually calculate the fuel needed for the mass of each module (your puzzle input), then add together all the fuel values.
 
 **What is the sum of the fuel requirements** for all of the modules on your spacecraft?
+
+---
 
 ## --- Part Two ---
 
