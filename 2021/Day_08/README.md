@@ -1,4 +1,4 @@
-Link: <https://adventofcode.com/2021/day/8>
+Link: <https://adventofcode.com/2021/day/8> <br>
 Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2021)
 
 ## --- Day 8: Seven Segment Search ---
