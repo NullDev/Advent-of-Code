@@ -18,7 +18,7 @@ let RES = 0;
 
 INPUT.forEach(line => line.split("").forEach(char => {
     if (OC[0].indexOf(char) !== -1) stack.push(char);
-    else if(OC[1].indexOf(char) !== -1){
+    else if (OC[1].indexOf(char) !== -1){
         if (OC[0].indexOf(stack.pop()) === OC[1].indexOf(char)) return;
         RES += ([3, 57, 1197, 25137])[OC[1].indexOf(char)];
     }
