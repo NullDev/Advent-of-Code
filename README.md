@@ -47,6 +47,7 @@ I also tried to experiment with a couple of different things:
 - Single-Liner on Day 07 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_2.js) by using a [formula transformation](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_07/part_2.js#L18-L21)
 - Single-Liner in [Day_08/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_08/part_1.js)
 - Another Single-Liner in [Day_09/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_09/part_1.js)
+- Theoretical (almost) SIngle-Liner in [Day_10/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_10/part_2.js)
 
 <hr>
 
