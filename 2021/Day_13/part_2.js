@@ -32,7 +32,7 @@ TMP[1].forEach(([a, b]) => (TMP[0] = [
 const RES = [];
 for (let i = 0; i <= Math.max(...TMP[0].map(([, y]) => y)); i++, RES.push("\n"))
     for (let j = 0; j <= Math.max(...TMP[0].map(([x]) => x)); j++)
-        RES.push((new Set([...TMP[0].map(x => JSON.stringify(x))])).has(JSON.stringify([j, i])) ? "#" : " ");
+        RES.push((new Set([...TMP[0].map(x => JSON.stringify(x))])).has(JSON.stringify([j, i])) ? "█" : " ");
 
 const pEnd = performance.now();
 
