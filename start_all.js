@@ -44,10 +44,10 @@ YEARS.forEach(y => {
         console.log(`\x1b[36m---====[ DAY ${day} ]====---\x1b[0m\n`);
 
         let part1Out = fs.existsSync(PART1)
-            ? String(execSync("node " + PART1, { stdio: "pipe" })).split("\n").filter(e => !!e)
+            ? String(execSync("node " + PART1 + " t", { stdio: "pipe" })).split("\n").filter(e => !!e)
             : ["PART 1 NOT IMPLEMENTED YET", 0];
         let part2Out = fs.existsSync(PART2)
-            ? String(execSync("node " + PART2, { stdio: "pipe" })).split("\n").filter(e => !!e)
+            ? String(execSync("node " + PART2 + " t", { stdio: "pipe" })).split("\n").filter(e => !!e)
             : ["PART 2 NOT IMPLEMENTED YET", 0];
 
         console.log(`${BC}PART 1: \x1b[0m${String(part1Out[0]).replace(/\r?\n|\r/g, "")}${MC}\x1b[32m${Number(part1Out[1]).toFixed(4)}\x1b[0m ms)`);
