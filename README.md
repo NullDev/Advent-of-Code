@@ -48,6 +48,7 @@ I also tried to experiment with a couple of different things:
 - Single-Liner in [Day_08/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_08/part_1.js)
 - Another Single-Liner in [Day_09/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_09/part_1.js)
 - Theoretical (almost) SIngle-Liner in [Day_10/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_10/part_2.js)
+- Single-Liner in [Day_13/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_13/part_1.js)
 
 <hr>
 
