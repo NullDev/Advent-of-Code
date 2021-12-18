@@ -34,14 +34,10 @@ let solver = function(element = 0){
         let l;
         let store;
         const TMP = INPUT[element++];
-        if (TMP === "0"){
-            (l = parseInt(INPUT.slice(element, element + 15), 2)) && (element += 15);
+        if (TMP === "0" && (l = parseInt(INPUT.slice(element, element + 15), 2)) && (element += 15))
             while (l > 0) (store = solver(element)) && ((l -= (store - element)) || 1) && (element = store);
-        }
-        else {
-            (l = parseInt(INPUT.slice(element, element + 11), 2)) && (element += 11);
+        else if (TMP !== "0" && (l = parseInt(INPUT.slice(element, element + 11), 2)) && (element += 11))
             while (l > 0) (l--) && (element = solver(element));
-        }
     }
     return element;
 };
