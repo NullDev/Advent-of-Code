@@ -10,7 +10,6 @@ let fs = require("fs");
 let path = require("path");
 let { performance } = require("perf_hooks");
 let { EOL } = require("os");
-
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
     .split(EOL.repeat(2))
@@ -47,11 +46,10 @@ while (INPUT.length) STORE.forEach(e => {
     }
 });
 
-const set = new Set();
-STORE.forEach(e => e.processed.forEach(f => set.add(`${f[0] + e.loc[0]}, ${f[1] + e.loc[1]}, ${f[2] + e.loc[2]}`)));
-const RES = set.size;
+let RES = 0;
+STORE.forEach(e => STORE.forEach(f => (RES = Math.max(RES, Math.abs(e.loc[0] - f.loc[0]) + Math.abs(e.loc[1] - f.loc[1]) + Math.abs(e.loc[2] - f.loc[2])))));
 
 const pEnd = performance.now();
 
-console.log("BEACON COUNT: " + RES);
+console.log("LARGEST MANHATTAN DISTANCE: " + RES);
 console.log(pEnd - pStart);
