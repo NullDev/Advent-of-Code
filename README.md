@@ -52,6 +52,7 @@ I also tried to experiment with a couple of different things:
 - Single-Liner in [Day_17/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_17/part_1.js)
 - Singe-Liner in [Day_21/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_21/part_1.js)
 - Recursive IIFE in [Day_21/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_21/part_2.js)
+- Single-Liners & IIFE's on Day 22 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_22/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_22/part_2.js)
 
 <hr>
 
