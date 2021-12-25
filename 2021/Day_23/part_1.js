@@ -55,7 +55,7 @@ let solver = function(room, hall, point, tmp = room + "|" + hall, found = true){
     if (STORE[tmp] && STORE[tmp] <= point) return;
     STORE[tmp] = point;
     for (let i = 0; i < room.length; i++){
-        let roomId = room[i].findIndex(x=>(x !== 0));
+        let roomId = room[i].findIndex(x => (x !== 0));
         if (roomId === -1) continue;
         let val = room[i][roomId];
         if (val === i + 1 && room[i].every(x => (x === val || x === 0))) continue;
@@ -63,7 +63,7 @@ let solver = function(room, hall, point, tmp = room + "|" + hall, found = true){
         for (let j = i + 1; j >= 0; j--){
             if (hall[j] !== 0) break;
             ((targetRoom++) || 1) && ((j !== 0) && targetRoom++);
-            let curRoom = [...(room.map(x=>[...x]))];
+            let curRoom = [...(room.map(x => [...x]))];
             let hallPoints = [...hall];
             ((hallPoints[j] = curRoom[i][roomId]) && (curRoom[i][roomId] = 0) || 1) && solver(
                 curRoom, hallPoints,
@@ -74,7 +74,7 @@ let solver = function(room, hall, point, tmp = room + "|" + hall, found = true){
         for (let j = i + 2; j < hall.length; j++){
             if (hall[j] !== 0) break;
             ((targetRoom++) || 1) && ((j !== hall.length - 1) && targetRoom++);
-            let curRoom = [...(room.map(x=>[...x]))];
+            let curRoom = [...(room.map(x => [...x]))];
             let hallPoints = [...hall];
             ((hallPoints[j] = curRoom[i][roomId]) && (curRoom[i][roomId] = 0) || 1) && solver(
                 curRoom, hallPoints,
@@ -95,9 +95,9 @@ let solver = function(room, hall, point, tmp = room + "|" + hall, found = true){
             if (hall[j] !== 0) continue outer2;
             (j !== hall.length - 2) && targetRoom++;
         }
-        let roomId = room[val - 1].findIndex(x=>(x !== 0));
+        let roomId = room[val - 1].findIndex(x => (x !== 0));
         ((roomId === -1) && (roomId = 2) || 1) && roomId--;
-        let curRoom = [...(room.map(x=>[...x]))];
+        let curRoom = [...(room.map(x => [...x]))];
         let hallPoints = [...hall];
         ((targetRoom += roomId) && (curRoom[val - 1][roomId] = val) && (hallPoints[i] = 0) || 1) && solver(
             curRoom, hallPoints,
