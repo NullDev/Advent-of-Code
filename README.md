@@ -18,12 +18,12 @@ Some solutions could be one-liners but I left them splitted up for the sake of r
 
 I also tried to experiment with a couple of different things:
 
-**2019**
+**2019**: <a name="best-2019"></a>
 
 - Single-Liner in [Day_01/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_01/part_1.js)
 - Single-Liner on Day 04 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_04/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2019/Day_04/part_2.js)
 
-**2020**:
+**2020**: <a name="best-2020"></a>
 
 - Solution with logical XOR-ing in [Day_02/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_02/part_2.js)
 - Theoretical single-liner (single chain function) in [Day_04/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_04/part_1.js)
@@ -40,7 +40,7 @@ I also tried to experiment with a couple of different things:
 - Theoretical (_almost_) one-liner in [Day_20/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_20/part_1.js)
 - The final one-liner in [Day_25/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2020/Day_25/part_1.js)
 
-**2021**:
+**2021**: <a name="best-2021"></a>
 
 - Single-Liner on Day 01 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_01/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_01/part_2.js)
 - Solution in `O(n)` on Day 06 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_2.js) (See the [Note](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_06/part_1.js#L16-L33))
