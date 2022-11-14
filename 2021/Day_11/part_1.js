@@ -6,9 +6,9 @@
 
 /* eslint-disable curly, no-loop-func */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).map(e => e.split("").map(Number));
 

@@ -4,7 +4,7 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let { performance } = require("perf_hooks");
+const { performance } = require("perf_hooks");
 
 const pStart = performance.now();
 

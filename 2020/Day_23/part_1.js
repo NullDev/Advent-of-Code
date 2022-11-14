@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 let r = [...String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim()].map(Number);
 
@@ -26,7 +26,7 @@ for (let i = 0, c = 0; i < 100; i++){
     r.push(r.shift());
 }
 
-let RES = r.concat(r).slice(r.concat(r).indexOf(1) + 1, r.concat(r).indexOf(1) + r.length).join("");
+const RES = r.concat(r).slice(r.concat(r).indexOf(1) + 1, r.concat(r).indexOf(1) + r.length).join("");
 
 const pEnd = performance.now();
 

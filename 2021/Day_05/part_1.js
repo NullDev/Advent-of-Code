@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
@@ -18,7 +18,7 @@ const pStart = performance.now();
 let RES = 0;
 const points = {};
 
-let check = point => !points[point] ? (points[point] = 1) : (((points[point] === 1) && (RES++)) && points[point]++);
+const check = point => !points[point] ? (points[point] = 1) : (((points[point] === 1) && (RES++)) && points[point]++);
 
 INPUT.forEach(([[x1, y1], [x2, y2]]) => { // destructoring go brrr
     if (x1 === x2 && y1 === y2) check(x1 + "," + y1);

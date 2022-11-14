@@ -6,9 +6,9 @@
 
 /* eslint-disable curly */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const [ minX, maxX, minY, maxY ] = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()

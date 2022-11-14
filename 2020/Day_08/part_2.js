@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL);
 
@@ -19,7 +19,7 @@ const SERIALIZED = CONTENT_READ.filter(e => !!e)
     .map(([ opcode, arg ]) => [ opcode, Number(arg) ]);
 
 // eslint-disable-next-line consistent-return
-let runner = function(){
+const runner = function(){
     for (let i = 0; i < SERIALIZED.length; i++){
         const asm = [...SERIALIZED];
         const [ opcode, arg ] = asm[i];

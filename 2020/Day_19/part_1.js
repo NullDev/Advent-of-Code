@@ -6,11 +6,11 @@
 
 /* eslint-disable no-nested-ternary */
 
-let fs = require("fs");
-let path = require("path");
-let { EOL } = require("os");
+const fs = require("fs");
+const path = require("path");
+const { EOL } = require("os");
 
-let { performance } = require("perf_hooks");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(EOL.repeat(2));
 
@@ -27,7 +27,7 @@ const r = new RegExp("^" + (function defineRules(ruleSet, rule, n = 0){
         ? rule.slice(1, -1)
         : "(?:" + rule.split(" | ").map(e => e.split(" ")
             .map(f => defineRules(ruleSet, ruleSet.get(Number(f)), ruleSet.get(Number(f)) === rule ? n + 1 : 0))
-            .join("")
+            .join(""),
         ).join("|") + ")";
 })(rules, rules.get(0), 0) + "$");
 

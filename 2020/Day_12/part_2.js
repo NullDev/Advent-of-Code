@@ -7,9 +7,9 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable key-spacing */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL);
 
@@ -19,7 +19,7 @@ const rotate = ([dx, dy], degrees) => ({
     0:   [ dx,  dy],
     90:  [-dy,  dx],
     180: [-dx, -dy],
-    270: [ dy, -dx]
+    270: [ dy, -dx],
 }[(degrees + 360) % 360]);
 
 const directions = CONTENT_READ.reduce((move, line) => {
@@ -31,7 +31,7 @@ const directions = CONTENT_READ.reduce((move, line) => {
 
     const [XWaypoint, YWaypoint] = rotate(
         [move.XWaypoint, move.YWaypoint],
-        action === "L" ? value : action === "R" ? -value : 0
+        action === "L" ? value : action === "R" ? -value : 0,
     );
 
     move.XWaypoint = XWaypoint;
@@ -43,7 +43,7 @@ const directions = CONTENT_READ.reduce((move, line) => {
     return move;
 }, { x: 0, y: 0, XWaypoint: 10, YWaypoint: 1 });
 
-let res = Math.abs(directions.x) + Math.abs(directions.y);
+const res = Math.abs(directions.x) + Math.abs(directions.y);
 
 const pEnd = performance.now();
 

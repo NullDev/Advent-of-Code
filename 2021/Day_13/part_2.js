@@ -6,14 +6,14 @@
 
 /* eslint-disable curly */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(require("os").EOL).map(l => l.trim()).filter(e => !!e);
 const TMP = [[], []];
 INPUT.forEach(line => (
-    TMP[1 - Number(line.includes(","))].push(line.includes(",") ? line.split(",").map(Number) : [...line.replace("fold along ", "").split("=")]))
+    TMP[1 - Number(line.includes(","))].push(line.includes(",") ? line.split(",").map(Number) : [...line.replace("fold along ", "").split("=")])),
 );
 
 const pStart = performance.now();
@@ -21,12 +21,12 @@ const pStart = performance.now();
 TMP[1].forEach(([a, b]) => (TMP[0] = [
     ...new Set([
         ...TMP[0].filter(
-            ([x, y]) => (a === "x" && x < b) || (a === "y" && y < b)
+            ([x, y]) => (a === "x" && x < b) || (a === "y" && y < b),
         ).map((x) => JSON.stringify(x)),
         ...TMP[0].filter(
-            ([x, y]) => (a === "x" && x > b) || (a === "y" && y > b)
-        ).map(([x, y]) => JSON.stringify((a === "y") ? [x, y + 2 * (b - y)] : [x + 2 * (b - x), y]))
-    ])
+            ([x, y]) => (a === "x" && x > b) || (a === "y" && y > b),
+        ).map(([x, y]) => JSON.stringify((a === "y") ? [x, y + 2 * (b - y)] : [x + 2 * (b - x), y])),
+    ]),
 ].map(x => JSON.parse(x))));
 
 const RES = [];

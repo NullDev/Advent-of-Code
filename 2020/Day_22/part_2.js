@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd();
 
@@ -20,7 +20,7 @@ const pStart = performance.now();
  * @param {boolean} [first=false] Initial run of the function
  * @returns {Number | Boolean} Score or Exit-condition
  */
-let walker = function(d1, d2, first = false){
+const walker = function(d1, d2, first = false){
     const computed = new Set();
     let gameWinner = null;
 
@@ -40,7 +40,7 @@ let walker = function(d1, d2, first = false){
     return first ? (gameWinner ? d2 : d1).reduce((sum, c, i) => sum + c * (i + 1), 0) : gameWinner;
 };
 
-let cardDecks = CONTENT_READ.match(/(\n\d+)+/g).map(s => s.trim().split("\n").map(n => Number(n)).reverse());
+const cardDecks = CONTENT_READ.match(/(\n\d+)+/g).map(s => s.trim().split("\n").map(n => Number(n)).reverse());
 const RES = walker(cardDecks[0], cardDecks[1], true);
 
 const pEnd = performance.now();

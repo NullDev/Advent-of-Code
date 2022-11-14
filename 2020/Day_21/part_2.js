@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd().split(require("os").EOL);
 
@@ -26,8 +26,8 @@ CONTENT_READ.forEach(line => {
 
 while (problematic.size){
     iterator:
-    for (let [a, i] of problematic.entries()){
-        let t = i.filter(_i => !known.has(_i));
+    for (const [a, i] of problematic.entries()){
+        const t = i.filter(_i => !known.has(_i));
         if (t.length === 1){
             known.set(t[0], a) && problematic.delete(a);
             break iterator;

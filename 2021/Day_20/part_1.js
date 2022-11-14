@@ -6,17 +6,17 @@
 
 /* eslint-disable no-nested-ternary, curly */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
-let { EOL } = require("os");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
+const { EOL } = require("os");
 
-let INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
     .split(EOL.repeat(2))
     .map((e, i) => (i === 0)
         ? e.split("").map(c => Number(c === "#"))
-        : e.split(EOL).map(r => r.split("").map(c => Number(c === "#")))
+        : e.split(EOL).map(r => r.split("").map(c => Number(c === "#"))),
     );
 
 const pStart = performance.now();

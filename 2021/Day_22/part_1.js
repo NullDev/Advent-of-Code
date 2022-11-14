@@ -4,13 +4,13 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(require("os").EOL).map((l, _, __, [cmd, bounds] = l.split(" ")) => ({
     cmd,
-    cuboid: bounds.split(",").map(s => s.substring(2).split("..").map(Number))
+    cuboid: bounds.split(",").map(s => s.substring(2).split("..").map(Number)),
 }));
 let splitter;
 
@@ -22,13 +22,13 @@ const RES = INPUT.slice(0, 20).reduce((cub, instr) => [
             (intersect.length === 3)
                 ? (splitter = (tmpCuboid, tmpIntersect, tmpC = 0) => [
                     ...[
-                        [tmpCuboid[tmpC][0], tmpIntersect[tmpC][0] - 1], [tmpIntersect[tmpC][1] + 1, tmpCuboid[tmpC][1]]
+                        [tmpCuboid[tmpC][0], tmpIntersect[tmpC][0] - 1], [tmpIntersect[tmpC][1] + 1, tmpCuboid[tmpC][1]],
                     ].filter(([b1, b2]) => b2 >= b1).map(lim => Object.assign([...tmpCuboid], { [tmpC]: lim })),
-                    ...(tmpC < 2 ? splitter(Object.assign([...tmpCuboid], { [tmpC]: tmpIntersect[tmpC] }), tmpIntersect, tmpC + 1) : [])
+                    ...(tmpC < 2 ? splitter(Object.assign([...tmpCuboid], { [tmpC]: tmpIntersect[tmpC] }), tmpIntersect, tmpC + 1) : []),
                 ])(cuboid, intersect)
                 : [cuboid]
         )
-    )(c, instr.cuboid)), ...(instr.cmd === "on" ? [instr.cuboid] : [])
+    )(c, instr.cuboid)), ...(instr.cmd === "on" ? [instr.cuboid] : []),
 ], []).map(c => c.reduce((r, [l, h]) => r * (h - l + 1), 1)).reduce((r, c) => c + r, 0);
 
 const pEnd = performance.now();

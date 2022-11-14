@@ -4,11 +4,11 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
-let contentArr = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).map(Number);
+const contentArr = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).map(Number);
 
 const pStart = performance.now();
 
@@ -19,7 +19,7 @@ const pStart = performance.now();
  * @param {Number} target
  * @returns {Array} elements
  */
-let threeSum = function(array, target){
+const threeSum = function(array, target){
     array.sort((a, b) => a - b);
     const triplets = [];
 
@@ -29,7 +29,7 @@ let threeSum = function(array, target){
             let right = array.length - 1;
 
             while (left < right){
-                let currentSum = array[i] + array[left] + array[right];
+                const currentSum = array[i] + array[left] + array[right];
                 if (currentSum === target){
                     triplets.push([array[i], array[left], array[right]]);
                     while (array[left] === array[left + 1]) left++;
@@ -45,7 +45,7 @@ let threeSum = function(array, target){
     return triplets;
 };
 
-let res = threeSum(contentArr, 2020);
+const res = threeSum(contentArr, 2020);
 
 const pEnd = performance.now();
 

@@ -6,10 +6,10 @@
 
 /* eslint-disable no-loop-func, curly */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
-let { EOL } = require("os");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
+const { EOL } = require("os");
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
     .split(EOL.repeat(2))
@@ -30,14 +30,14 @@ while (INPUT.length) STORE.forEach(e => {
                 ([x, y, z]) => [-y, -z, x], ([x, y, z]) => [-y, z, -x],  ([x, y, z]) => [-y, -x, -z],
                 ([x, y, z]) => [-y, x, z],  ([x, y, z]) => [z, x, y],    ([x, y, z]) => [z, -x, -y],
                 ([x, y, z]) => [z, y, -x],  ([x, y, z]) => [z, -y, x],   ([x, y, z]) => [-z, -x, y],
-                ([x, y, z]) => [-z, x, -y], ([x, y, z]) => [-z, y, x],   ([x, y, z]) => [-z, -y, -x] // @ts-ignore
+                ([x, y, z]) => [-z, x, -y], ([x, y, z]) => [-z, y, x],   ([x, y, z]) => [-z, -y, -x], // @ts-ignore
             ][k](beacon)); // https://www.reddit.com/r/adventofcode/comments/rk0fyk/2021_day19_question_can_somebeody_tell_me_if_my/
             for (let l = 0; l < e.processed.length; l++) for (let m = 0; m < rotated.length; m++){
                 const d = [e.processed[l][0] - rotated[m][0], e.processed[l][1] - rotated[m][1], e.processed[l][2] - rotated[m][2]];
                 store[d] = store[d] + 1 || 1;
                 if (store[d] >= 12){
                     INPUT.splice(j, 1) && STORE.push({
-                        loc: [e.loc[0] + d[0], e.loc[1] + d[1], e.loc[2] + d[2]], processed: rotated, passed: false
+                        loc: [e.loc[0] + d[0], e.loc[1] + d[1], e.loc[2] + d[2]], processed: rotated, passed: false,
                     });
                     continue upperLoop;
                 }

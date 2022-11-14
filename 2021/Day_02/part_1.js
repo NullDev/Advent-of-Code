@@ -6,9 +6,9 @@
 
 /* eslint-disable no-return-assign, no-nested-ternary */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).map(e => e.split(" "));
 
@@ -21,7 +21,7 @@ INPUT.forEach(e => e[0][0] === "f"
     ? x += Number(e[1])
     : e[0] === "down"
         ? y += Number(e[1])
-        : e[0] === "up" && (y -= Number(e[1]))
+        : e[0] === "up" && (y -= Number(e[1])),
 );
 
 const res = x * y;

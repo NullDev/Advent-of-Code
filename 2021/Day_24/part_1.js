@@ -6,13 +6,13 @@
 
 /* eslint-disable no-param-reassign */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = [
     String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).filter(e => !!e),
-    [], [], []
+    [], [], [],
 ];
 
 const pStart = performance.now(); // @ts-ignore

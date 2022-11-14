@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL);
 
@@ -14,7 +14,7 @@ const pStart = performance.now();
 
 let RES = 0;
 
-let [firstID, ...IDS] = CONTENT_READ[1]
+const [firstID, ...IDS] = CONTENT_READ[1]
     .split(",")
     .map((id, index) => [Number(id), index])
     .filter(([e]) => Number.isInteger(e));

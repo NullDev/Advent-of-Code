@@ -7,9 +7,9 @@
 /* eslint-disable key-spacing */
 /* eslint-disable no-nested-ternary */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd().split(require("os").EOL);
 
@@ -23,7 +23,7 @@ const hMatrix = {
 
     w:  { dx: -1, dy:  0 },
     nw: { dx:  0, dy: -1 },
-    sw: { dx: -1, dy:  1 }
+    sw: { dx: -1, dy:  1 },
 };
 
 let minMax = { minX: 0, maxX: 0, minY: 0, maxY: 0 };
@@ -42,18 +42,18 @@ CONTENT_READ.forEach(line => {
 
     minMax = {
         minX: Math.min(xyi[0], minMax.minX), maxX: Math.max(xyi[0], minMax.maxX),
-        minY: Math.min(xyi[1], minMax.minY), maxY: Math.max(xyi[1], minMax.maxY)
+        minY: Math.min(xyi[1], minMax.minY), maxY: Math.max(xyi[1], minMax.maxY),
     };
 });
 
 // This is prob more complicated than it actually needs to be
 for (let i = 0; i < 100; i++){
-    let tmpField = [];
+    const tmpField = [];
     for (let x = minMax.minX - 1; x <= minMax.maxX + 1; x++){
         tmpField[x] = tmpField[x] ?? [];
         for (let y = minMax.minY - 1; y <= minMax.maxY + 1; y++){
             let c = 0;
-            for (let tmp in hMatrix) (field[x + hMatrix[tmp].dx] && field[x + hMatrix[tmp].dx][y + hMatrix[tmp].dy]) && c++;
+            for (const tmp in hMatrix) (field[x + hMatrix[tmp].dx] && field[x + hMatrix[tmp].dx][y + hMatrix[tmp].dy]) && c++;
 
             (field[x] && field[x][y]) && c !== 1 && c !== 2
                 ? tmpField[x][y] = false : (!(field[x] && field[x][y]) && c === 2)
@@ -61,7 +61,7 @@ for (let i = 0; i < 100; i++){
 
             tmpField[x][y] && (minMax = {
                 minX: Math.min(x, minMax.minX), maxX: Math.max(x, minMax.maxX),
-                minY: Math.min(y, minMax.minY), maxY: Math.max(y, minMax.maxY)
+                minY: Math.min(y, minMax.minY), maxY: Math.max(y, minMax.maxY),
             });
         }
     }

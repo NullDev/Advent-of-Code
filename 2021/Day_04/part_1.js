@@ -6,16 +6,16 @@
 
 /* eslint-disable no-loop-func */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 // LOT of pre-setup
 
 const INSTR = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL.repeat(2));
 const INPUT = [INSTR, INSTR[0].split(/\W/).map(n => Number(n)), INSTR.slice(1).map(board => ({
     r: board.split(/\n\W*/).map(row => row.split(/\W+/).map(n => Number(n))),
-    c: { x: [0, 0, 0, 0, 0], y: [0, 0, 0, 0, 0] }
+    c: { x: [0, 0, 0, 0, 0], y: [0, 0, 0, 0, 0] },
 }))];
 
 const pStart = performance.now();

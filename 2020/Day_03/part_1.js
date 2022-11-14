@@ -4,10 +4,10 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let readline = require("readline");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const readline = require("readline");
+const { performance } = require("perf_hooks");
 
 const pStart = performance.now();
 
@@ -19,15 +19,15 @@ let CURRENT_CHAR = 0;
  *
  * @param {String} line
  */
-let step = function(line){
+const step = function(line){
     if (line[CURRENT_CHAR] === "#") TREES_COUNT += 1;
     CURRENT_CHAR = (CURRENT_CHAR + 3) % line.length;
 };
 
 // @ts-ignore
-let readInterface = readline.createInterface({
+const readInterface = readline.createInterface({
     input: fs.createReadStream(path.join(__dirname, "input.txt")),
-    console: false
+    console: false,
 });
 
 readInterface.on("line", step);

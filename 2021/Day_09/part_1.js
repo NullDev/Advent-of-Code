@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL);
 const LEN = READ[0].length;
@@ -14,10 +14,10 @@ const INPUT = READ.join("").split("").map(Number);
 
 const pStart = performance.now();
 
-let RES = INPUT.filter((e, i) => e < (INPUT[i - LEN] ?? 99)
+const RES = INPUT.filter((e, i) => e < (INPUT[i - LEN] ?? 99)
     && (i % LEN === LEN - 1 ? true : e < INPUT[i + 1])
     && e < (INPUT[i + LEN] ?? 99)
-    && (i % LEN === 0 ? true : e < INPUT[i - 1])
+    && (i % LEN === 0 ? true : e < INPUT[i - 1]),
 ).reduce((p, c) => p + c + 1, 0);
 
 const pEnd = performance.now();

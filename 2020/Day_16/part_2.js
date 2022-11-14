@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(/\n{2,}/);
 
@@ -28,8 +28,8 @@ const cols = Array.from({ length: own.length }).map((_, i) => [
         .slice(1)
         .map(l => l.split(",").map(Number))
         .filter(t => t.every(n => fields.some(([, row1Min, row1Max, row2Min, row2Max]) =>
-            (n >= row1Min && n <= row1Max) || (n >= row2Min && n <= row2Max)
-        ))).map(n => n[i])
+            (n >= row1Min && n <= row1Max) || (n >= row2Min && n <= row2Max),
+        ))).map(n => n[i]),
 ]);
 
 // Could be recursive but cant be bothered ^-^
@@ -37,7 +37,7 @@ while (cols.length){
     const [ col, nums ] = cols.shift();
     // @ts-ignore
     const matches = fields.filter(([, row1Min, row1Max, row2Min, row2Max]) => nums.every(n =>
-        (n >= row1Min && n <= row1Max) || (n >= row2Min && n <= row2Max)
+        (n >= row1Min && n <= row1Max) || (n >= row2Min && n <= row2Max),
     ));
 
     (matches.length === 1) // @ts-ignore

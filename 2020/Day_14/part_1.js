@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).filter(e => !!e);
 
@@ -24,12 +24,12 @@ CONTENT_READ.forEach(line => {
             .padStart(36, "0")
             .split("")
             .map((bit, i) => (mask[i] === "X" ? bit : mask[i]))
-            .join(""), 2
+            .join(""), 2,
         ));
     }
 });
 
-let res = Array.from(mem.values()).reduce((p, c) => p + c);
+const res = Array.from(mem.values()).reduce((p, c) => p + c);
 
 const pEnd = performance.now();
 

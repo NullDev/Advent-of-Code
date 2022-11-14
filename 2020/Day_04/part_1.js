@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt")));
 
@@ -24,7 +24,7 @@ CONTENT_READ.replace(/\n\r/g, "\n")
         .filter(el => !!el)
         .map(el => el.split(":"))
         .map(el => ({ [el[0]]: el[1] }))
-        .reduce((a, c) => ({...a, ...c}))
+        .reduce((a, c) => ({...a, ...c})),
     ).forEach(element => REQUIRED_PROPERTIES.every(prop => prop in element) && (VALID += 1));
 
 const pEnd = performance.now();

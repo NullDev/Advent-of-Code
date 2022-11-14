@@ -6,39 +6,39 @@
 
 /* eslint-disable no-param-reassign, no-loop-func */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 // @ts-ignore
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(require("os").EOL).map(JSON.parse);
 
 const pStart = performance.now();
 
-let get = (sf, p) => p.reduce((s, i) => s[i], sf);
+const get = (sf, p) => p.reduce((s, i) => s[i], sf);
 
-let set = function(sf, p, val){
+const set = function(sf, p, val){
     while (p.length > 1) sf = sf[p.shift()];
     sf[p[0]] = val;
 };
 
-let explode = function(sf, paths, i = paths.findIndex(p => p.length > 4), tp = paths[i]){
+const explode = function(sf, paths, i = paths.findIndex(p => p.length > 4), tp = paths[i]){
     tp.pop();
-    let [ leftPath, rightPath ] = [paths?.[i - 1], paths?.[i + 2]]; // @ts-ignore
+    const [ leftPath, rightPath ] = [paths?.[i - 1], paths?.[i + 2]]; // @ts-ignore
     ((leftPath) && (set(sf, leftPath, get(sf, [...tp, 0]) + get(sf, leftPath))) && 0) || ((rightPath) && (set(sf, rightPath, get(sf, [...tp, 1]) + get(sf, rightPath))));
     set(sf, tp, 0);
     return sf;
 };
 
-let split = function(sf, paths, i = paths.findIndex(p => get(sf, p) > 9), n = get(sf, paths[i])){
+const split = function(sf, paths, i = paths.findIndex(p => get(sf, p) > 9), n = get(sf, paths[i])){
     set(sf, paths[i], [Math.floor(n / 2), Math.ceil(n / 2)]);
     return sf;
 };
 
-let reduce = function(sx, sf = JSON.parse(JSON.stringify(sx))){
+const reduce = function(sx, sf = JSON.parse(JSON.stringify(sx))){
     for (;;){
-        let p = [0];
-        let paths = [];
+        const p = [0];
+        const paths = [];
         while (p.length > 0){
             if (Array.isArray(get(sf, p))) p.push(0);
             else {
@@ -53,7 +53,7 @@ let reduce = function(sx, sf = JSON.parse(JSON.stringify(sx))){
     }
 };
 
-let magnitude = sf => !Array.isArray(sf) ? sf : 3 * magnitude(sf[0]) + 2 * magnitude(sf[1]);
+const magnitude = sf => !Array.isArray(sf) ? sf : 3 * magnitude(sf[0]) + 2 * magnitude(sf[1]);
 
 const RES = INPUT.reduce((max, s1) => Math.max(max, ...INPUT.map(s2 => magnitude(reduce([s1, s2])))), 0);
 

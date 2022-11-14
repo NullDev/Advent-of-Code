@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(require("os").EOL);
 
@@ -28,7 +28,7 @@ const RES = (INPUT.map(l => l.split(" | ").map(s => s.split(" "))).map(([pattern
     return Number(digits.map(d => [val4[0], val1[0], val4[1], val4[2], val1[1], val3[1], val2[0], val1[2], val1[3], val3[0]]
         .map(e => [...e].sort().join(""))
         .findIndex(e => e === d.split("").sort().join(""))
-        .toString()
+        .toString(),
     ).join(""));
 }).flat()).reduce((p, c) => p + c, 0);
 

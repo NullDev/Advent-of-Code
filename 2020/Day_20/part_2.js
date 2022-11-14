@@ -6,8 +6,8 @@
 
 /* eslint-disable no-eval */
 
-let { execSync } = require("child_process");
-let { performance } = require("perf_hooks");
+const { execSync } = require("child_process");
+const { performance } = require("perf_hooks");
 
 const pStart = performance.now();
 
@@ -25,9 +25,9 @@ let RES = "";
 // Otherwise I might stop participating :/
 eval(`((console) => {${String(execSync(
     "curl https://raw.githubusercontent.com/constb/aoc2020/142dd3ab6171cfe289ade9ba4ed395e7dfba111c/20/index2.js",
-    { stdio: "pipe" }
+    { stdio: "pipe" },
 )).replace('"input.txt"', 'require("path").join(__dirname, "input.txt")')}})`)({
-    log: (...args) => (RES += String(...args))
+    log: (...args) => (RES += String(...args)),
 });
 
 const pEnd = performance.now();

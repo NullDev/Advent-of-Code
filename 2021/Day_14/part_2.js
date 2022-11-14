@@ -4,10 +4,10 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { EOL } = require("os");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { EOL } = require("os");
+const { performance } = require("perf_hooks");
 
 const [INPUT, OPS] = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(EOL.repeat(2));
 const OPERATIONS = [{}, [ INPUT.charAt(0), INPUT.charAt(INPUT.length - 1) ]];
@@ -25,7 +25,7 @@ for (let i = 0, result = {}; i < 40; i++, result = {}){
     vals = result;
 }
 
-let resVals = {};
+const resVals = {};
 for (const e of Object.entries(vals)) inPlaceInsert(resVals, e[0].charAt(0), e[1]) && inPlaceInsert(resVals, e[0].charAt(1), e[1]);
 resVals[OPERATIONS[1][0]]++ && resVals[OPERATIONS[1][1]]++;
 

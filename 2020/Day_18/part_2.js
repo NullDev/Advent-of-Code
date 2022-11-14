@@ -6,9 +6,9 @@
 
 /* eslint-disable no-param-reassign */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(require("os").EOL);
 
@@ -24,12 +24,12 @@ const RES = CONTENT_READ.map(e =>
             if (equation.includes("(")) equation = equation.replace(equation.match(r1)[0], solve(equation.match(r1)[1]));
             else {
                 // The conditional destructoring prevents the solution from being a one-liner =(
-                let [ s, o1, op, o2 ] = equation.match(r2) || equation.match(r3);
+                const [ s, o1, op, o2 ] = equation.match(r2) || equation.match(r3);
                 equation = equation.replace(s, op === "+" ? Number(o1) + Number(o2) : Number(o1) * Number(o2));
             }
         }
         return Number(equation);
-    })(e))(le => (f => f(f))(f => le(x => (f(f))(x))))
+    })(e))(le => (f => f(f))(f => le(x => (f(f))(x)))),
 ).reduce((p, c) => p + c, 0);
 
 const pEnd = performance.now();

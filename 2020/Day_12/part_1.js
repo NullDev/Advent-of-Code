@@ -6,9 +6,9 @@
 
 /* eslint-disable no-nested-ternary */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL);
 
@@ -31,7 +31,7 @@ const directions = CONTENT_READ.reduce((move, line) => {
 }, { direction: 0, x: 0, y: 0 });
 
 
-let res = Math.abs(directions.x) + Math.abs(directions.y);
+const res = Math.abs(directions.x) + Math.abs(directions.y);
 
 const pEnd = performance.now();
 

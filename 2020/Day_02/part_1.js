@@ -4,10 +4,10 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let readline = require("readline");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const readline = require("readline");
+const { performance } = require("perf_hooks");
 
 const pStart = performance.now();
 
@@ -18,24 +18,24 @@ let VALID_COUNT = 0;
  *
  * @param {String} line
  */
-let validate = function(line){
+const validate = function(line){
     /**
      * Index 0: min-max
      * Index 1: letter
      * Index 2: Password
      */
-    let lineArr = line.replace(/\:/g, "").split(" ");
-    let minMaxArr = lineArr[0].split("-").map(Number);
+    const lineArr = line.replace(/\:/g, "").split(" ");
+    const minMaxArr = lineArr[0].split("-").map(Number);
 
-    let matcher = new RegExp(lineArr[1], "g");
-    let count = (lineArr[2].match(matcher) || []).length;
+    const matcher = new RegExp(lineArr[1], "g");
+    const count = (lineArr[2].match(matcher) || []).length;
     if (count >= minMaxArr[0] && count <= minMaxArr[1]) VALID_COUNT += 1;
 };
 
 // @ts-ignore
-let readInterface = readline.createInterface({
+const readInterface = readline.createInterface({
     input: fs.createReadStream(path.join(__dirname, "input.txt")),
-    console: false
+    console: false,
 });
 
 readInterface.on("line", validate);

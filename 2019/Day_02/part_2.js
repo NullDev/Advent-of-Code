@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(",").map(Number);
 
@@ -14,7 +14,7 @@ const pStart = performance.now();
 
 let RES;
 
-let sol = function(n, v){
+const sol = function(n, v){
     const INT = [...INPUT];
     (INT[1] = n) && (INT[2] = v);
     for (let i = 0; i < INT.length; i += 4){

@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).filter(e => !!e);
 
@@ -16,10 +16,10 @@ const mem = {};
 let mask;
 
 CONTENT_READ.forEach(line => {
-    let match1 = /^mask.=.(\w+)$/.exec(line);
+    const match1 = /^mask.=.(\w+)$/.exec(line);
     if (match1) mask = match1[1];
     else {
-        let [ , m1, m2 ] = /^mem\[(\d+)\].=.(\d+)$/.exec(line);
+        const [ , m1, m2 ] = /^mem\[(\d+)\].=.(\d+)$/.exec(line);
         let addr = [0n];
         [...mask].forEach((element, index) => {
             addr = addr.map(e => e << 1n);

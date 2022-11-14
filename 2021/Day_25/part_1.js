@@ -6,9 +6,9 @@
 
 /* eslint-disable curly */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
@@ -26,7 +26,7 @@ let mov = false;
 do {
     (step++) && (mov = false);
     for (let i = 0; i < 2; i++){
-        let g = INPUT.map(r => r.map(c => c));
+        const g = INPUT.map(r => r.map(c => c));
         for (let r = 0; r < height; r++)
             for (let c = 0; c < width; c++)
                 (g[r][c] === MAP[i][0] && g[(r + Number(MAP[i][1])) % height][(c + Number(MAP[i][2])) % width] === ".") // @ts-ignore

@@ -4,9 +4,9 @@
 // = Copyright (seat) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL);
 
@@ -21,11 +21,11 @@ let layoutChanged = true;
 do {
     layoutChanged = false;
     // eslint-disable-next-line no-loop-func
-    let nextState = currentState.map((row, rowIndex) => row.map((seat, index) => {
+    const nextState = currentState.map((row, rowIndex) => row.map((seat, index) => {
         let count = 0;
 
-        for (let [dx, dy] of directionMatrix){
-            let xy = [index, rowIndex];
+        for (const [dx, dy] of directionMatrix){
+            const xy = [index, rowIndex];
             do {
                 xy[0] += dx;
                 xy[1] += dy;
@@ -48,7 +48,7 @@ do {
 }
 while (layoutChanged);
 
-let res = currentState.reduce((count, row) => row.filter(seat => seat === "#").length + count, 0);
+const res = currentState.reduce((count, row) => row.filter(seat => seat === "#").length + count, 0);
 
 const pEnd = performance.now();
 

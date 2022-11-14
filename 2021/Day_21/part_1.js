@@ -6,9 +6,9 @@
 
 /* eslint-disable no-param-reassign */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = [];
 INPUT[0] = String(fs.readFileSync(path.join(__dirname, "input.txt")))
@@ -20,7 +20,7 @@ INPUT[1] = 0;
 const pStart = performance.now();
 
 const solve = (
-    p, cp, np, cs = 0, ns = 0, rp = ((cp + Array(3).fill().map(() => (INPUT[1]++ % 100) + 1).reduce((a, b) => a + b) - 1) % 10) + 1, rs = cs + rp
+    p, cp, np, cs = 0, ns = 0, rp = ((cp + Array(3).fill().map(() => (INPUT[1]++ % 100) + 1).reduce((a, b) => a + b) - 1) % 10) + 1, rs = cs + rp,
 ) => rs < 1000 ? solve(1 - p, np, rp, ns, rs) : ns * INPUT[1];
 
 const RES = solve(0, ...INPUT[0]);

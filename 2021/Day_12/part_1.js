@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).map(e => e.split("-"));
 
@@ -19,7 +19,7 @@ for (const [a, b] of INPUT){
     (HEAP[a].add(b)) && (HEAP[b].add(a));
 }
 
-let traverse = function(s = "start", traversed = new Set()){
+const traverse = function(s = "start", traversed = new Set()){
     if (s === "end") return 1;
 
     let seen = traversed;

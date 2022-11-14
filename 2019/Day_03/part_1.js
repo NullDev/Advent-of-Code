@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const [A, B] = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
@@ -18,8 +18,8 @@ const pStart = performance.now();
 
 const dir = [{ U: 0, D: 0, R: +1, L: -1 }, { U: +1, D: -1, R: 0, L: 0 }];
 
-let gP = function(p){
-    let pointsMap = {};
+const gP = function(p){
+    const pointsMap = {};
     let x = 0;
     let y = 0;
     let len = 0;
@@ -30,17 +30,17 @@ let gP = function(p){
     return pointsMap;
 };
 
-let pA = gP(A);
-let pB = gP(B);
+const pA = gP(A);
+const pB = gP(B);
 
-let RES = Math.min(
+const RES = Math.min(
     ...Object.keys(pA)
         .filter(k => pB[k])
         .map(p => p.split(",")
             .map(Number)
             .map(Math.abs)
-            .reduce((a, b) => a + b)
-        )
+            .reduce((a, b) => a + b),
+        ),
 );
 
 const pEnd = performance.now();

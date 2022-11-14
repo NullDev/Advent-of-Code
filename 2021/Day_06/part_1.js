@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(",").map(Number);
 const F = new Array(9).fill(0);
@@ -15,7 +15,7 @@ const pStart = performance.now();
 
 /**
  * NOTE:
- * This can also be solved by using this Matrix: 
+ * This can also be solved by using this Matrix:
  * 000000101
  * 100000000
  * 010000000
@@ -25,7 +25,7 @@ const pStart = performance.now();
  * 000001000
  * 000000100
  * 000000010
- * and multiplying it with itself 80 times, 
+ * and multiplying it with itself 80 times,
  * then multiplying the resulting matrix by the input vector.
  * The matrix-multiplication would run in O(1) instead of O(m²) / O(nm²) if we disregard reading the input.
  * That's because the matrix has a constant size and is independant of the input length.

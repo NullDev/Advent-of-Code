@@ -6,9 +6,9 @@
 
 /* eslint-disable no-param-reassign, curly, no-cond-assign */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
@@ -16,7 +16,7 @@ const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .split("")
     .map(e => parseInt(e, 16)
         .toString(2)
-        .padStart(4, "0")
+        .padStart(4, "0"),
     ).join("");
 
 const pStart = performance.now();
@@ -24,7 +24,7 @@ const pStart = performance.now();
 let RES = 0;
 let cur;
 
-let solver = function(element = 0){
+const solver = function(element = 0){
     (RES += parseInt(INPUT.slice(element, element + 3), 2)) && (element += 3) && (element += 3);
     if (parseInt(INPUT.slice(element - 3, element), 2) === 4)
         for (;;){

@@ -5,11 +5,11 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
-let r = [...String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim()].map(Number);
+const r = [...String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim()].map(Number);
 
 const pStart = performance.now();
 
@@ -43,7 +43,7 @@ for (let i = 0; i < 10000000; i++){
     init = init.n;
 }
 
-let RES = vMap.get(1).n.v * vMap.get(1).n.n.v;
+const RES = vMap.get(1).n.v * vMap.get(1).n.n.v;
 
 const pEnd = performance.now();
 

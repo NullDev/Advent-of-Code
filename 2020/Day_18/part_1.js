@@ -7,9 +7,9 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable curly */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(require("os").EOL);
 
@@ -26,7 +26,7 @@ const RES = CONTENT_READ.map(e =>
                 ? Number(equation.match(r2)[1]) + Number(equation.match(r2)[3])
                 : Number(equation.match(r2)[1]) * Number(equation.match(r2)[3]));
         return Number(equation);
-    })(e))(le => (f => f(f))(f => le(x => (f(f))(x))))
+    })(e))(le => (f => f(f))(f => le(x => (f(f))(x)))),
 ).reduce((p, c) => p + c);
 
 const pEnd = performance.now();

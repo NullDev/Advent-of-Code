@@ -4,9 +4,9 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL)[0].split(",").map(Number);
 
@@ -18,7 +18,7 @@ let curr = 0;
 for (let i = 0; i < 2020; i++){
     if (i < CONTENT_READ.length) mem[curr = CONTENT_READ[i]] = i + 1;
     else {
-        let prev = mem[curr] || -1;
+        const prev = mem[curr] || -1;
         mem[curr] = i;
         curr = prev === -1 ? 0 : i - prev;
     }

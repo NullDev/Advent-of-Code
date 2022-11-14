@@ -6,9 +6,9 @@
 
 /* eslint-disable key-spacing */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd().split(require("os").EOL);
 
@@ -22,7 +22,7 @@ const hMatrix = {
 
     w:  { dx: -1, dy:  0 },
     nw: { dx:  0, dy: -1 },
-    sw: { dx: -1, dy:  1 }
+    sw: { dx: -1, dy:  1 },
 };
 
 const tiles = new Set();

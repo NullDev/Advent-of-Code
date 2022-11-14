@@ -4,10 +4,10 @@
 // = Copyright (c) NullDev = //
 // ========================= //
 
-let fs = require("fs");
-let path = require("path");
-let { EOL } = require("os");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { EOL } = require("os");
+const { performance } = require("perf_hooks");
 
 // LOT of pre-setup
 
@@ -18,7 +18,7 @@ INPUT[2] = INPUT[0].map(board => board.trim().split(EOL).map(row => row.trim().s
 
 const pStart = performance.now();
 
-let won = function(board, last){
+const won = function(board, last){
     for (let col = 0; col < board[0].length; col++) if (board.every(row => last.has(row[col]))) return true;
     return (board.some(row => row.every(val => last.has(val))));
 };

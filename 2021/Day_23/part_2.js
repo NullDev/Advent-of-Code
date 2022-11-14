@@ -6,9 +6,9 @@
 
 /* eslint-disable consistent-return, no-param-reassign, curly */
 
-let fs = require("fs");
-let path = require("path");
-let { performance } = require("perf_hooks");
+const fs = require("fs");
+const path = require("path");
+const { performance } = require("perf_hooks");
 
 /*
 #############
@@ -27,7 +27,7 @@ Could be solved by hand but it's Advent of CODE after all
 
 // We need to inject those numbers into our input
 const MAP = [[4, 4], [3, 2], [2, 1], [1, 3]];
-let INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL)
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL)
     .filter((_, i) => (i === 2 || i === 3))
     .map(e => e.trim()
         .replaceAll("#", "")
@@ -36,7 +36,7 @@ let INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(req
         .replaceAll("C", "3")
         .replaceAll("D", "4")
         .split("")
-        .map(Number)
+        .map(Number),
     )
     .map((e, i, a) => ((i === 0) ? e.map((e1, i1) => ([e1, ...MAP[i1], a[1][i1]])) : null))
     .filter(e => !!e)
@@ -48,7 +48,7 @@ const pStart = performance.now();
 let RES = Number.MAX_SAFE_INTEGER;
 const STORE = {};
 
-let solver = function(room, hall, point, tmp = room + "|" + hall, found = true){
+const solver = function(room, hall, point, tmp = room + "|" + hall, found = true){
     if (point >= RES) return;
     outer1: for (let i = 0; i < room.length; i++){ // Second day where I have to use a label >.>
         for (let j = 0; j < 4; j++) if (room[i][j] !== i + 1){ // 4 instead of two. Array is bigger now
@@ -60,36 +60,36 @@ let solver = function(room, hall, point, tmp = room + "|" + hall, found = true){
     if (STORE[tmp] && STORE[tmp] <= point) return;
     STORE[tmp] = point;
     for (let i = 0; i < room.length; i++){
-        let roomId = room[i].findIndex(x => (x !== 0));
+        const roomId = room[i].findIndex(x => (x !== 0));
         if (roomId === -1) continue;
-        let val = room[i][roomId];
+        const val = room[i][roomId];
         if (val === i + 1 && room[i].every(x => (x === val || x === 0))) continue;
         let targetRoom = roomId;
         for (let j = i + 1; j >= 0; j--){
             if (hall[j] !== 0) break;
             ((targetRoom++) || 1) && ((j !== 0) && targetRoom++);
-            let curRoom = [...(room.map(x => [...x]))];
-            let hallPoints = [...hall];
+            const curRoom = [...(room.map(x => [...x]))];
+            const hallPoints = [...hall];
             ((hallPoints[j] = curRoom[i][roomId]) && (curRoom[i][roomId] = 0) || 1) && solver(
                 curRoom, hallPoints,
-                point + targetRoom * (10 ** (val - 1))
+                point + targetRoom * (10 ** (val - 1)),
             );
         }
         targetRoom = roomId;
         for (let j = i + 2; j < hall.length; j++){
             if (hall[j] !== 0) break;
             ((targetRoom++) || 1) && ((j !== hall.length - 1) && targetRoom++);
-            let curRoom = [...(room.map(x => [...x]))];
-            let hallPoints = [...hall];
+            const curRoom = [...(room.map(x => [...x]))];
+            const hallPoints = [...hall];
             ((hallPoints[j] = curRoom[i][roomId]) && (curRoom[i][roomId] = 0) || 1) && solver(
                 curRoom, hallPoints,
-                point + targetRoom * (10 ** (val - 1))
+                point + targetRoom * (10 ** (val - 1)),
             );
         }
     }
     outer2: for (let i = 0; i < hall.length; i++){
         if (hall[i] === 0) continue;
-        let val = hall[i];
+        const val = hall[i];
         if (!room[val - 1].every(x => (x === val || x === 0))) continue;
         let targetRoom = 2;
         if (i < val) for (let j = i + 1; j <= val; j++, targetRoom++){
@@ -102,11 +102,11 @@ let solver = function(room, hall, point, tmp = room + "|" + hall, found = true){
         }
         let roomId = room[val - 1].findIndex(x => (x !== 0));
         ((roomId === -1) && (roomId = 4) || 1) && roomId--; // 4 instead of two. Array is bigger now
-        let curRoom = [...(room.map(x =>[...x]))];
-        let hallPoints = [...hall];
+        const curRoom = [...(room.map(x =>[...x]))];
+        const hallPoints = [...hall];
         ((targetRoom += roomId) && (curRoom[val - 1][roomId] = val) && (hallPoints[i] = 0) || 1) && solver(
             curRoom, hallPoints,
-            point + targetRoom * (10 ** (val - 1))
+            point + targetRoom * (10 ** (val - 1)),
         );
     }
 };
