@@ -1,14 +1,8 @@
-"use strict";
-
-// ========================= //
-// = Copyright (c) NullDev = //
-// ========================= //
+import fs from "node:fs";
+import path from "node:path";
+import { execSync } from "node:child_process";
 
 /* eslint-disable curly */
-
-let fs = require("fs");
-let path = require("path");
-let { execSync } = require("child_process");
 
 let YEARS = [process.argv[2]].filter(e => !!e);
 
@@ -28,7 +22,7 @@ YEARS.forEach(y => {
    ╚═╝  ╚═╝ ╚═════╝  ╚═════╝
 \x1b[33m -----------------------------\n ---= \x1b[36mAdvent of Code ${y}\x1b[33m =---
  ---= \x1b[32mNullDev\x1b[33m's Solutions =---
- -----------------------------\x1b[0m\n`
+ -----------------------------\x1b[0m\n`,
     );
 
     const DIRECTORIES = fs.readdirSync(path.join(__dirname, y), { withFileTypes: true })
@@ -36,17 +30,17 @@ YEARS.forEach(y => {
         .map(dirEnt => dirEnt.name);
 
     DIRECTORIES.forEach((element, index) => {
-        let day = String(index + 1).padStart(2, "0");
+        const day = String(index + 1).padStart(2, "0");
 
         const PART1 = path.join(__dirname, y, element, "part_1.js");
         const PART2 = path.join(__dirname, y, element, "part_2.js");
 
         console.log(`\x1b[36m---====[ DAY ${day} ]====---\x1b[0m\n`);
 
-        let part1Out = fs.existsSync(PART1)
+        const part1Out = fs.existsSync(PART1)
             ? String(execSync("node " + PART1 + " t", { stdio: "pipe" })).split("\n").filter(e => !!e)
             : ["PART 1 NOT IMPLEMENTED YET", 0];
-        let part2Out = fs.existsSync(PART2)
+        const part2Out = fs.existsSync(PART2)
             ? String(execSync("node " + PART2 + " t", { stdio: "pipe" })).split("\n").filter(e => !!e)
             : ["PART 2 NOT IMPLEMENTED YET", 0];
 
