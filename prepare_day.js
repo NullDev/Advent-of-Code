@@ -13,21 +13,25 @@ let year;
 let day;
 let session;
 
-try {
-    session = require("./config.json").session;
-}
-catch (e) {
-    console.log("No config.json found! Copy-paste config.template.json to config.json and fill in your session cookie!");
-    process.exit(1);
-}
+// get session from args in case we run via GH action
+if (!!process.argv[3]) session = process.argv[3];
+else {
+    try {
+        session = require("./config.json").session;
+    }
+    catch (e) {
+        console.log("No config.json found! Copy-paste config.template.json to config.json and fill in your session cookie!");
+        process.exit(1);
+    }
 
-if (!session){
-    console.log("No session cookie found! Fill in your session cookie in config.json!");
-    process.exit(1);
+    if (!session){
+        console.log("No session cookie found! Fill in your session cookie in config.json!");
+        process.exit(1);
+    }
 }
 
 const date = process.argv[2];
-if (!date){
+if (!date || date === "today"){
     const now = new Date();
     const y = now.getFullYear();
     const d = now.getDate();
