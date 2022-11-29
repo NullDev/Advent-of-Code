@@ -30,7 +30,7 @@ $ `npm install`<br><br>
 ### Starting a new day
 
 - To automatically setup and prepare the current day, simply type `npm run prepare-today`
-- Optionally, to prepare a previous day, type `node node prepare_day.js YEAR-DAY`- Example: `node node prepare_day.js 2020-12` (for the 12th day of 2018)
+- Optionally, to prepare a previous day, type `node prepare_day.js YEAR-DAY`- Example: `node prepare_day.js 2020-12`
 
 Both of those commands will create a folder for the day/year, fetch the task from the website & convert it to a README.md, fetch the input and create template files for the solution.
 
