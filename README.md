@@ -11,6 +11,40 @@ I added a README.md file to each Day, which contains the instructions exactly as
 
 <hr>
 
+## :bulb: How to use this repository
+
+**Initial Setup**
+
+0. Open up your favourite terminal (and navigate somewhere you want to download the repository to). <br><br>
+1. Make sure you have NodeJS installed. Test by entering <br>
+$ `node -v` <br>
+If this returns a version number, NodeJS is installed. **If not**, get NodeJS <a href="https://nodejs.org/en/download/package-manager/">here</a>. <br><br>
+2. Clone the repository and navigate to it.<br>
+$ `git clone https://github.com/NullDev/Advent-of-Code.git && cd Advent-of-Code` <br>
+If not, download it <a href="https://github.com/NullDev/Advent-of-Code/archive/master.zip">here</a> and extract the ZIP file.<br><br>
+3. Install all dependencies by typing <br>
+$ `npm install`<br><br>
+4. Remove all years that weren't made by you (if all: `rm -r "./20*"`) and maybe alter the README<br><br>
+
+**Starting a new day**
+
+- To automatically setup and prepare the current day, simply type `npm run prepare-today`
+- Optionally, to prepare a previous day, type `node node prepare_day.js YEAR-DAY`- Example: `node node prepare_day.js 2020-12` (for the 12th day of 2018)
+
+Both of those commands will create a folder for the day/year, fetch the task from the website & convert it to a README.md, fetch the input and create template files for the solution.
+
+**Running benchmarks** :rocket:
+
+Each script can be run stand-alone / separatly but I've also created a `start_all.js` script to launch all days in order, and display the solutions along with an approximated benchmark (the benchmark uses [`performance.now()`](https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now) to measure the execution time and **does not include the actual reading of the file** except when the file is read line-by-line).
+
+- Run all years: `npm run start:all`
+- Run a specific year: `npm run start:YEAR`- Example: `npm run start:2020`
+- Run a specific day & part: `node YEAR/DAY/part_[1 OR 2].js`- Example: `node 2020/01/part_2.js`
+
+<p align="center"><img height="auto" width="100%" src="https://i.imgur.com/Z5ci7OS.png" /></p>
+
+<hr>
+
 ## :trophy: Goal
 
 I attempted to solve every problem as functional as possible and with as little code as possible while still being performant. <br>
@@ -53,19 +87,6 @@ I also tried to experiment with a couple of different things:
 - Singe-Liner in [Day_21/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_21/part_1.js)
 - Recursive IIFE in [Day_21/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_21/part_2.js)
 - Single-Liners & IIFE's on Day 22 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_22/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_22/part_2.js)
-
-<hr>
-
-## :rocket: Launching all solutions with benchmark
-
-Each script can be run stand-alone / separatly but I've also created a `start_all.js` script to launch all days in order, and display the solutions along with an approximated benchmark (the benchmark uses [`performance.now()`](https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now) to measure the execution time and **does not include the actual reading of the file** except when the file is read line-by-line).
-
-No dependencies needed. Just launch the script by executing <br>
-`npm start:2019`, `npm start:2020`, `npm start:2021` or `npm start:all`.
-
-Preview:
-
-<p align="center"><img height="auto" width="100%" src="https://i.imgur.com/Z5ci7OS.png" /></p>
 
 <hr>
 
