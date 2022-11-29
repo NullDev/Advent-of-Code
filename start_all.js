@@ -1,6 +1,13 @@
-import fs from "node:fs";
-import path from "node:path";
-import { execSync } from "node:child_process";
+"use strict";
+
+// ========================= //
+// = Copyright (c) NullDev = //
+// ========================= //
+
+const fs = require("node:fs");
+const path = require("node:path");
+
+const { execSync } = require("node:child_process");
 
 /* eslint-disable curly */
 
