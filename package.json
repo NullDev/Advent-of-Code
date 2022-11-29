@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "NodeJS Solutions for Advent Of Code",
   "main": "startAll.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start:2021": "node ./start_all.js 2021",
     "start:2020": "node ./start_all.js 2020",
@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
-    "node-fetch": "^3.3.0"
+    "node-fetch": "^2.6.7"
   }
 }
