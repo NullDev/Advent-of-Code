@@ -13,7 +13,7 @@ I added a README.md file to each Day, which contains the instructions exactly as
 
 ## :bulb: How to use this repository
 
-### Initial Setup
+### :wrench: Initial Setup
 
 0. Open up your favourite terminal (and navigate somewhere you want to download the repository to). <br><br>
 1. Make sure you have NodeJS installed. Test by entering <br>
@@ -27,7 +27,7 @@ $ `npm install`<br><br>
 5. Copy `config.template.json` and paste it as `config.json`<br><br>
 6. Go to https://adventofcode.com/ and login with your account. Then copy the value from the `session` cookie and paste it into the `config.json` file (See [here](https://www.cookieyes.com/blog/how-to-check-cookies-on-your-website-manually/) if you don't know how).<br><br>
 
-### Starting a new day
+### :sunny: Starting a new day
 
 - To automatically setup and prepare the current day, simply type `npm run prepare-today`
   - If you finished part one and want to get the readme updated, simple run the command again.
@@ -35,7 +35,7 @@ $ `npm install`<br><br>
 
 Both of those commands will create a folder for the day/year, fetch the task from the website & convert it to a README.md, fetch the input and create template files for the solution.
 
-### Running benchmarks :rocket:
+### :rocket: Running benchmarks 
 
 Each script can be run stand-alone / separatly but I've also created a `start_all.js` script to launch all days in order, and display the solutions along with an approximated benchmark (the benchmark uses [`performance.now()`](https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now) to measure the execution time and **does not include the actual reading of the file** except when the file is read line-by-line).
 
@@ -90,13 +90,13 @@ I also tried to experiment with a couple of different things:
 
 <hr>
 
-## Benchmarks Preview
+## :rocket: Benchmarks Preview
 
 <p align="center"><img height="auto" width="100%" src="https://i.imgur.com/Z5ci7OS.png" /></p>
 
 <hr>
 
-## Yay
+## :star: Yay
 
 ![image](https://user-images.githubusercontent.com/22935000/147389049-3b1c9830-28d8-45e5-968c-7375f133accc.png)
 
