@@ -40,8 +40,6 @@ Each script can be run stand-alone / separatly but I've also created a `start_al
 - Run a specific year: `npm run start:YEAR`- Example: `npm run start:2020`
 - Run a specific day & part: `node YEAR/DAY/part_[1 OR 2].js`- Example: `node 2020/01/part_2.js`
 
-<p align="center"><img height="auto" width="100%" src="https://i.imgur.com/Z5ci7OS.png" /></p>
-
 <hr>
 
 ## :trophy: Goal
@@ -86,6 +84,12 @@ I also tried to experiment with a couple of different things:
 - Singe-Liner in [Day_21/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_21/part_1.js)
 - Recursive IIFE in [Day_21/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_21/part_2.js)
 - Single-Liners & IIFE's on Day 22 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_22/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_22/part_2.js)
+
+<hr>
+
+## Benchmarks Preview
+
+<p align="center"><img height="auto" width="100%" src="https://i.imgur.com/Z5ci7OS.png" /></p>
 
 <hr>
 
