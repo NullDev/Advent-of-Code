@@ -98,9 +98,9 @@ Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (${year})
 
 ---
 
-` + res[0] + "\n---\n\n" + res[1];
+` + res[0] + (!!res[1] ? ("\n---\n\n" + res[1]) : "");
 
-    const dir = `./${year}/day_${day.padStart(2, "0")}`;
+    const dir = `./${year}/Day_${day.padStart(2, "0")}`;
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
     fs.writeFileSync(`${dir}/README.md`, result, { flag: "w" });
