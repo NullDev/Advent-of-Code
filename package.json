@@ -1,6 +1,7 @@
 {
-  "name": "advent-of-code-nulldev",
+  "name": "advent-of-code",
   "version": "1.0.0",
+  "private": true,
   "description": "NodeJS Solutions for Advent Of Code",
   "main": "startAll.js",
   "type": "commonjs",
