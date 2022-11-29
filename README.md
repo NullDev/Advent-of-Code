@@ -13,27 +13,26 @@ I added a README.md file to each Day, which contains the instructions exactly as
 
 ## :bulb: How to use this repository
 
-**Initial Setup**
+### Initial Setup
 
 0. Open up your favourite terminal (and navigate somewhere you want to download the repository to). <br><br>
 1. Make sure you have NodeJS installed. Test by entering <br>
 $ `node -v` <br>
 If this returns a version number, NodeJS is installed. **If not**, get NodeJS <a href="https://nodejs.org/en/download/package-manager/">here</a>. <br><br>
 2. Clone the repository and navigate to it.<br>
-$ `git clone https://github.com/NullDev/Advent-of-Code.git && cd Advent-of-Code` <br>
-If not, download it <a href="https://github.com/NullDev/Advent-of-Code/archive/master.zip">here</a> and extract the ZIP file.<br><br>
+$ `git clone https://github.com/NullDev/Advent-of-Code.git && cd Advent-of-Code` <br><br>
 3. Install all dependencies by typing <br>
 $ `npm install`<br><br>
 4. Remove all years that weren't made by you (if all: `rm -r "./20*"`) and maybe alter the README<br><br>
 
-**Starting a new day**
+### Starting a new day
 
 - To automatically setup and prepare the current day, simply type `npm run prepare-today`
 - Optionally, to prepare a previous day, type `node node prepare_day.js YEAR-DAY`- Example: `node node prepare_day.js 2020-12` (for the 12th day of 2018)
 
 Both of those commands will create a folder for the day/year, fetch the task from the website & convert it to a README.md, fetch the input and create template files for the solution.
 
-**Running benchmarks** :rocket:
+### Running benchmarks :rocket:
 
 Each script can be run stand-alone / separatly but I've also created a `start_all.js` script to launch all days in order, and display the solutions along with an approximated benchmark (the benchmark uses [`performance.now()`](https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now) to measure the execution time and **does not include the actual reading of the file** except when the file is read line-by-line).
 
