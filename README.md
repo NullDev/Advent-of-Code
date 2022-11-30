@@ -89,6 +89,10 @@ I also tried to experiment with a couple of different things:
 - Recursive IIFE in [Day_21/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_21/part_2.js)
 - Single-Liners & IIFE's on Day 22 in both [part_1](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_22/part_1.js) and [part_2](https://github.com/NullDev/Advent-of-Code/blob/master/2021/Day_22/part_2.js)
 
+**2022** <a name="best-2022"></a>
+
+- TBA
+
 <hr>
 
 ## :rocket: Benchmarks Preview
