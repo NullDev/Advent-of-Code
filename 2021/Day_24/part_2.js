@@ -11,7 +11,7 @@ const path = require("path");
 const { performance } = require("perf_hooks");
 
 const INPUT = [
-    String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).filter(e => !!e),
+    String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n").filter(e => !!e),
     [], [], [],
 ];
 

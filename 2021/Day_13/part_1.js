@@ -8,7 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { performance } = require("perf_hooks");
 
-const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(require("os").EOL).map(l => l.trim()).filter(e => !!e);
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n").map(l => l.trim()).filter(e => !!e);
 const TMP = [[], []];
 INPUT.forEach(line => (
     TMP[1 - Number(line.includes(","))].push(line.includes(",") ? line.split(",").map(Number) : [...line.replace("fold along ", "").split("=")])),

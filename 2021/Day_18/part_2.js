@@ -11,7 +11,7 @@ const path = require("path");
 const { performance } = require("perf_hooks");
 
 // @ts-ignore
-const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(require("os").EOL).map(JSON.parse);
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n").map(JSON.parse);
 
 const pStart = performance.now();
 

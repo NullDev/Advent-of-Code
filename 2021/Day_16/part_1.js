@@ -12,7 +12,7 @@ const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
-    .split(require("os").EOL)[0]
+    .split("\n")[0]
     .split("")
     .map(e => parseInt(e, 16)
         .toString(2)

@@ -8,7 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { performance } = require("perf_hooks");
 
-const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(require("os").EOL).map((l, _, __, [cmd, bounds] = l.split(" ")) => ({
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n").map((l, _, __, [cmd, bounds] = l.split(" ")) => ({
     cmd,
     cuboid: bounds.split(",").map(s => s.substring(2).split("..").map(Number)),
 }));

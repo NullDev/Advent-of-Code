@@ -27,7 +27,7 @@ Could be solved by hand but it's Advent of CODE after all
 
 // We need to inject those numbers into our input
 const MAP = [[4, 4], [3, 2], [2, 1], [1, 3]];
-const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL)
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n")
     .filter((_, i) => (i === 2 || i === 3))
     .map(e => e.trim()
         .replaceAll("#", "")

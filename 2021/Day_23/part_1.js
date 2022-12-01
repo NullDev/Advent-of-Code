@@ -22,7 +22,7 @@ A:1 , B:2 , C:3 , D:4
 Could be solved by hand but it's Advent of CODE after all
 */
 
-const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL)
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n")
     .filter((_, i) => (i === 2 || i === 3))
     .map(e => e.trim()
         .replaceAll("#", "")

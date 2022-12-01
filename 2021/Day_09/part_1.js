@@ -8,7 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { performance } = require("perf_hooks");
 
-const READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL);
+const READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n");
 const LEN = READ[0].length;
 const INPUT = READ.join("").split("").map(Number);
 

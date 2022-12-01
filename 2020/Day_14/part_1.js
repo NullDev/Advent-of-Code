@@ -8,7 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { performance } = require("perf_hooks");
 
-const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL).filter(e => !!e);
+const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n").filter(e => !!e);
 
 const pStart = performance.now();
 

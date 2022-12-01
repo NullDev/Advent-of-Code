@@ -12,7 +12,7 @@ const { performance } = require("perf_hooks");
 
 // LOT of pre-setup
 
-const INSTR = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(require("os").EOL.repeat(2));
+const INSTR = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n".repeat(2));
 const INPUT = [INSTR, INSTR[0].split(/\W/).map(n => Number(n)), INSTR.slice(1).map(board => ({
     r: board.split(/\n\W*/).map(row => row.split(/\W+/).map(n => Number(n))),
     c: { x: [0, 0, 0, 0, 0], y: [0, 0, 0, 0, 0] },

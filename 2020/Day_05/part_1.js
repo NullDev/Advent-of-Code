@@ -28,7 +28,7 @@ const decode = function(str, lo){
     return value;
 };
 
-CONTENT_READ.split(require("os").EOL).filter(e => !!e).forEach(e => {
+CONTENT_READ.split("\n").filter(e => !!e).forEach(e => {
     const rowCode = e.substring(0, 7);
     const colCode = e.substring(7, 10);
 

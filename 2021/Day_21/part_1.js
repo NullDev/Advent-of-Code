@@ -13,7 +13,7 @@ const { performance } = require("perf_hooks");
 const INPUT = [];
 INPUT[0] = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
-    .split(require("os").EOL)
+    .split("\n")
     .flatMap(l => l.split(/\D+/).slice(-1).map(a => Number(a[0])));
 INPUT[1] = 0;
 

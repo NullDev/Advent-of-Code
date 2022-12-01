@@ -8,7 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { performance } = require("perf_hooks");
 
-const [ cardKey, doorKey ] = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd().split(require("os").EOL).map(Number);
+const [ cardKey, doorKey ] = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd().split("\n").map(Number);
 
 const pStart = performance.now();
 

@@ -10,7 +10,7 @@ const { performance } = require("perf_hooks");
 
 const [A, B] = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
-    .split(require("os").EOL)
+    .split("\n")
     .map(a => a.split(","))
     .map(p => p.map(dir => /(.)(\d+)/g.exec(dir).slice(1, 3)));
 
