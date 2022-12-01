@@ -21,7 +21,7 @@ $ `node -v` <br>
 If this returns a version number, NodeJS is installed. **If not**, get NodeJS <a href="https://nodejs.org/en/download/package-manager/">here</a>. <br><br>
 2. Clone the repository and navigate to it.<br>
 $ `git clone https://github.com/NullDev/Advent-of-Code.git && cd Advent-of-Code` <br><br>
-3. Check out the template branch in your fork from my remote. (IF YOU SEE THIS: YOU ARE ON THE **WRONG** BRANCH)<br>
+3. Check out the template branch in your fork from my remote. (IF YOU SEE THIS: YOU ARE ON THE **CORRECT** BRANCH)<br>
 $ `git checkout -b template origin/template` <br><br>
 4. Push your newly created branch and make sure to set it as your default branch on GitHub (`REPO/settings/branches`). <br><br>
 5. Install all dependencies by typing <br>
