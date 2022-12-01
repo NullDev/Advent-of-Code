@@ -21,12 +21,14 @@ $ `node -v` <br>
 If this returns a version number, NodeJS is installed. **If not**, get NodeJS <a href="https://nodejs.org/en/download/package-manager/">here</a>. <br><br>
 2. Clone the repository and navigate to it.<br>
 $ `git clone https://github.com/NullDev/Advent-of-Code.git && cd Advent-of-Code` <br><br>
-3. Install all dependencies by typing <br>
+3. Check out the template branch in your fork from my remote. (IF YOU SEE THIS: YOU ARE ON THE CORRECT BRANCH)<br>
+$ `git checkout -b template origin/template` <br><br>
+4. Install all dependencies by typing <br>
 $ `npm install`<br><br>
-4. Remove all years that weren't made by you (if all: `rm -r "./20*"`) and maybe alter the README<br><br>
-5. Copy `config.template.json` and paste it as `config.json`<br><br>
-6. Go to https://adventofcode.com/ and login with your account. Then copy the value from the `session` cookie and paste it into the `config.json` file (See [here](https://www.cookieyes.com/blog/how-to-check-cookies-on-your-website-manually/) if you don't know how).<br><br>
-7. (OPTIONAL) If you wish to use the GitHub Action for the "Prepare Day automatically at 0:10 workflow" you need to go to your repository settings -> secrets -> actions and add `SESSION_COOKIE` with your session string. <br><br>
+5. Remove all years that weren't made by you (if all: `rm -r "./20*"`) and maybe alter the README<br><br>
+6. Copy `config.template.json` and paste it as `config.json`<br><br>
+7. Go to https://adventofcode.com/ and login with your account. Then copy the value from the `session` cookie and paste it into the `config.json` file (See [here](https://www.cookieyes.com/blog/how-to-check-cookies-on-your-website-manually/) if you don't know how).<br><br>
+8. (OPTIONAL) If you wish to use the GitHub Action for the "Prepare Day automatically at 0:10 workflow" you need to go to your repository settings -> secrets -> actions and add `SESSION_COOKIE` with your session string. <br><br>
 
 ### :sunny: Starting a new day
 
