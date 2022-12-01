@@ -93,7 +93,7 @@ I also tried to experiment with a couple of different things:
 
 **2022** <a name="best-2022"></a>
 
-- TBA
+- Pretty straight forward one-liners in both [Day_01/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2022/Day_01/part_1.js) and [Day_01/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2022/Day_01/part_2.js)
 
 <hr>
 
