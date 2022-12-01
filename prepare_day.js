@@ -80,10 +80,12 @@ const headers = {
             .replace(/<li>/g, "- ")
             .replace(/(<h2>)|(<h2 id="part2">)/g, "## ")
             .replace(/<\/h2>/g, "\n")
+            .replace(/<code><em>/g, "**`")
+            .replace(/<\/em><\/code>/g, "`**")
             .replace(/(<code>)|(<\/code>)/g, "`")
             .replace(/<pre>/g, "```\n")
             .replace(/<\/pre>/g, "```")
-            .replace(/(<em>)|(<\/em>)/g, "**")
+            .replace(/(<em>)|(<em class=".*">)|(<\/em>)/g, "**")
             .replace(/(<p>)|(<\/p>)/g, "\n")
             .replace(/\n{3,}/g, "\n\n");
 
