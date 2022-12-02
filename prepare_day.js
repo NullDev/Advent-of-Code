@@ -121,7 +121,7 @@ const fs = require("fs");
 const path = require("path");
 const { performance } = require("perf_hooks");
 
-const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n"); // change this if necessary
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\\n"); // change this if necessary
 
 const pStart = performance.now();
 
@@ -134,7 +134,7 @@ const pEnd = performance.now();
 
 console.log("<DESCRIPTION>: " + result);
 console.log(pEnd - pStart);
-`
+`;
 
     if (!fs.existsSync(`${dir}/part_1.js`)) fs.writeFileSync(`${dir}/part_1.js`, CODE);
     if (!fs.existsSync(`${dir}/part_2.js`)) fs.writeFileSync(`${dir}/part_2.js`, CODE);
