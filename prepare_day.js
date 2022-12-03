@@ -17,9 +17,10 @@ let session;
 if (!!process.argv[3]) session = process.argv[3];
 else {
     try {
+        // eslint-disable-next-line prefer-destructuring
         session = require("./config.json").session;
     }
-    catch (e) {
+    catch (e){
         console.log("No config.json found! Copy-paste config.template.json to config.json and fill in your session cookie!");
         process.exit(1);
     }
@@ -92,7 +93,7 @@ const headers = {
         sanitized.match(/<a href=".*?">.*?<\/a>/g)?.forEach(link => {
             const [, href, text] = link.match(/<a href="(.+?)">(.+?)<\/a>/) ?? [];
             const regex = new RegExp(String(link.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&")).trim(), "gi");
-            
+
             sanitized = sanitized.replace(regex, `[${text}](${href.replace(/&amp;/g, "&")})`);
         });
 
@@ -111,7 +112,7 @@ Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (${year})
 
     fs.writeFileSync(`${dir}/README.md`, result, { flag: "w" });
 
-    const input = await fetch(`https://adventofcode.com/${year}/day/${day}/input`, { headers }).then(res => res.text());
+    const input = await fetch(`https://adventofcode.com/${year}/day/${day}/input`, { headers }).then(r => r.text());
 
     fs.writeFileSync(`${dir}/input.txt`, input, { flag: "w" });
 
