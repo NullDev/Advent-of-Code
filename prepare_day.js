@@ -119,9 +119,9 @@ Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (${year})
 
     const CODE = `"use strict";
 
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
+const fs = require("node:fs");
+const path = require("node:path");
+const { performance } = require("node:perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\\n"); // change this if necessary
 
@@ -140,5 +140,5 @@ console.log(pEnd - pStart);
 
     if (!fs.existsSync(`${dir}/part_1.js`)) fs.writeFileSync(`${dir}/part_1.js`, CODE);
     if (!fs.existsSync(`${dir}/part_2.js`)) fs.writeFileSync(`${dir}/part_2.js`, CODE);
-    exec(`git add ${dir}/*`)
+    exec(`git add ${dir}/*`);
 })();
