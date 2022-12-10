@@ -84,6 +84,11 @@ const headers = {
 
         let sanitized = article.replace(/(<\/li>)|(<ul>)|(<\/ul>)/g, "")
             .replace(/<li>/g, "- ")
+            .replace(/&gt;/g, ">")
+            .replace(/&lt;/g, "<")
+            .replace(/&amp;/g, "&")
+            .replace(/&quot;/g, '"')
+            .replace(/&apos;/g, "'")
             .replace(/(<h2>)|(<h2 id="part2">)/g, "## ")
             .replace(/<\/h2>/g, "\n")
             .replace(/<code><em>/g, "**`")
