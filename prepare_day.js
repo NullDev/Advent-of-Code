@@ -63,6 +63,10 @@ const headers = {
 
     const $ = cheerio.load(markup);
 
+    $("a > span").each((_, el) => {
+        $(el).replaceWith($(el).text());
+    });
+
     $("span").remove();
     $("pre em, pre code").each((_, el) => {
         $(el).replaceWith($(el).text());
@@ -95,7 +99,7 @@ const headers = {
             const [, href, text] = link.match(/<a href="(.+?)">(.+?)<\/a>/) ?? [];
             const regex = new RegExp(String(link.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&")).trim(), "gi");
 
-            sanitized = sanitized.replace(regex, `[${text}](${href.replace(/&amp;/g, "&")})`);
+            sanitized = sanitized.replace(regex, `[${text}](${href?.replace(/&amp;/g, "&")})`);
         });
 
         return sanitized;
@@ -123,7 +127,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { performance } = require("node:perf_hooks");
 
-const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\\n"); // change this if necessary
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\\n"); // change this if necessary
 
 const pStart = performance.now();
 
