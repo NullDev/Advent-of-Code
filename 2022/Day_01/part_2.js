@@ -13,5 +13,5 @@ const result = INPUT.map(e => e.reduce((a, b) => a + b)).sort((a, b) => b - a).s
 
 const pEnd = performance.now();
 
-console.log("Calories of Top 3 elves: " + result);
+console.log("CALORIES OF TOP 3 ELVES: " + result);
 console.log(pEnd - pStart);
