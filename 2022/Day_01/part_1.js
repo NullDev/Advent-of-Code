@@ -13,5 +13,5 @@ const result = Math.max(...INPUT.map(e => e.reduce((a, b) => a + b)));
 
 const pEnd = performance.now();
 
-console.log("Calories of Elf carrying the most: " + result);
+console.log("CALORIES OF ELF CARRYING THE MOST: " + result);
 console.log(pEnd - pStart);
