@@ -348,3 +348,13 @@ The moment each of the next few rocks begins falling, you would see this:
 To prove to the elephants your simulation is accurate, they want to know how tall the tower will get after 2022 rocks have stopped (but before the 2023rd rock begins falling). In this example, the tower of rocks will be **`3068`** units tall.
 
 **How many units tall will the tower of rocks be after 2022 rocks have stopped falling?**
+
+---
+
+## --- Part Two ---
+
+The elephants are not impressed by your simulation. They demand to know how tall the tower will be after **`1000000000000`** rocks have stopped! Only then will they feel confident enough to proceed through the cave.
+
+In the example above, the tower would be **`1514285714288`** units tall!
+
+**How tall will the tower be after `1000000000000` rocks have stopped?**
