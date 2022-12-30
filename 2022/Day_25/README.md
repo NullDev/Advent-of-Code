@@ -106,3 +106,15 @@ As you go to input this number on Bob's console, you discover that some buttons 
 Reversing the process, you can determine that for the decimal number `4890`, the SNAFU number you need to supply to Bob's console is **`2=-1=0`**.
 
 The Elves are starting to get cold. **What SNAFU number do you supply to Bob's console?**
+
+---
+
+## --- Part Two ---
+
+The  quickly carry you to the North Pole. As soon as you land, most of the expedition is escorted directly to a small building attached to the reindeer stables.
+
+The **head smoothie chef** has just finished warming up the industrial-grade smoothie blender as you arrive. It will take **50 stars** to fill the blender. The expedition Elves turn their attention to you, and you begin emptying the fruit from your pack onto the table.
+
+As you do, a very young Elf - one you recognize from the expedition team - approaches the table and holds up a single **star** fruit he found. The head smoothie chef places it in the blender.
+
+Only **49 stars** to go.
