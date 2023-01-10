@@ -49,6 +49,15 @@ Each script can be run stand-alone / separatly but I've also created a `start_al
 
 <hr>
 
+## :scroll: License
+
+- All Puzzles & Inputs (`Day_XX/README.md`'s and `Day_XX/input.txt`'s) Copyright (c) Eric Wastl ([@ericwastl](https://twitter.com/ericwastl))
+- All Puzzle Solutions[^1] (`Day_XX/part_1.js`'s and `Day_XX/part_2.js`'s) Copyright (c) NullDev ([nulldev.org](https://nulldev.org))
+
+[^1]: Unless otherwise noted in the Code
+
+<hr>
+
 ## :rocket: Benchmarks Preview
 
 <p align="center"><img height="auto" width="100%" src="https://i.imgur.com/Z5ci7OS.png" /></p>
