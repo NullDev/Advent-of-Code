@@ -52,7 +52,7 @@ Each script can be run stand-alone / separatly but I've also created a `start_al
 ## :scroll: License
 
 - All Puzzles & Inputs (`Day_XX/README.md`'s and `Day_XX/input.txt`'s) Copyright (c) Eric Wastl ([@ericwastl](https://twitter.com/ericwastl))
-- All Puzzle Solutions[^1] (`Day_XX/part_1.js`'s and `Day_XX/part_2.js`'s) Copyright (c) NullDev ([nulldev.org](https://nulldev.org))
+- All Puzzle Solutions[^1] (`Day_XX/part_1.js`'s and `Day_XX/part_2.js`'s) Copyright (c) <your name> ([<your link>](https://github.com))
 
 [^1]: Unless otherwise noted in the Code
 
