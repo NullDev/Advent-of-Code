@@ -1,4 +1,4 @@
-Link: <https://adventofcode.com/2023/1/2> <br>
+Link: <https://adventofcode.com/2023/day/1> <br>
 Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2023)
 
 ---

@@ -1,4 +1,4 @@
-Link: <https://adventofcode.com/2022/20/2> <br>
+Link: <https://adventofcode.com/2022/day/20> <br>
 Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2022)
 
 ---

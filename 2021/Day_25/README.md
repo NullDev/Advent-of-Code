@@ -1,4 +1,4 @@
-Link: <https://adventofcode.com/2021/day/24> <br>
+Link: <https://adventofcode.com/2021/day/25> <br>
 Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2021)
 
 ---
