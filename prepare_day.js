@@ -110,7 +110,7 @@ const headers = {
         return sanitized;
     });
 
-    const result = `Link: <https://adventofcode.com/${year}/${day}/2> <br>
+    const result = `Link: <https://adventofcode.com/${year}/day/${day}> <br>
 Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (${year})
 
 ---
