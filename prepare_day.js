@@ -110,7 +110,7 @@ const headers = {
         return sanitized;
     });
 
-    const result = `Link: <https://adventofcode.com/${year}/${day}/2> <br>
+    const result = `Link: <https://adventofcode.com/${year}/day/${day}> <br>
 Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (${year})
 
 ---
@@ -123,7 +123,7 @@ Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (${year})
     fs.writeFileSync(`${dir}/README.md`, result, { flag: "w" });
 
     const input = await fetch(`https://adventofcode.com/${year}/day/${day}/input`, { headers }).then(r => r.text());
-
+    
     fs.writeFileSync(`${dir}/input.txt`, input, { flag: "w" });
 
     const CODE = `"use strict";
