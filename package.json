@@ -6,6 +6,7 @@
   "main": "startAll.js",
   "type": "commonjs",
   "scripts": {
+    "start:2023": "node ./start_all.js 2023",
     "start:2022": "node ./start_all.js 2022",
     "start:2021": "node ./start_all.js 2021",
     "start:2020": "node ./start_all.js 2020",
