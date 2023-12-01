@@ -8,12 +8,9 @@ const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().
 
 const pStart = performance.now();
 
-//
-// YOUR CODE HERE
-//
-const result = "...";
+const result = INPUT.map(e => Number(e.replace(/\D/g, "")[0] + e.replace(/\D/g, "").slice(-1))).reduce((a, b) => a + b);
 
 const pEnd = performance.now();
 
-console.log("<DESCRIPTION>: " + result);
+console.log("SUM OF CALIBRATION VALUES: " + result);
 console.log(pEnd - pStart);
