@@ -107,6 +107,11 @@ I also tried to experiment with a couple of different things:
 - Another one-liner in both [Day_04/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2022/Day_04/part_1.js) and [Day_04/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2022/Day_04/part_2.js)
 - Yet another one-line solution in both [Day_06/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2022/Day_06/part_1.js) and [Day_06/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2022/Day_06/part_2.js)
 
+**2023** <a name="best-2023"></a>
+
+- One-Liner in [Day_01/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_01/part_1.js)
+- One-Liner in both [Day_02/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_02/part_1.js) and [Day_02/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_02/part_2.js)
+
 <hr>
 
 ## :rocket: Benchmarks Preview
