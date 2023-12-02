@@ -28,13 +28,12 @@
   },
   "homepage": "https://github.com/NullDev/Advent-of-Code#readme",
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/eslint-parser": "^7.16.3",
-    "@types/node": "^18.11.9"
+    "@babel/core": "^7.23.5",
+    "@babel/eslint-parser": "^7.23.3",
+    "eslint": "^8.55.0"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
-    "eslint": "^8.29.0",
     "node-fetch": "^2.6.7"
   }
 }
