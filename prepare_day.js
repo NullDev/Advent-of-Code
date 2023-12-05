@@ -94,8 +94,10 @@ const headers = {
             .replace(/<code><em>/g, "**`")
             .replace(/<\/em><\/code>/g, "`**")
             .replace(/(<code>)|(<\/code>)/g, "`")
+            .replace(/<pre>\n/g, "```\n")
             .replace(/<pre>/g, "```\n")
-            .replace(/<\/pre>/g, "```")
+            .replace(/\n<\/pre>/g, "\n```")
+            .replace(/<\/pre>/g, "\n```")
             .replace(/(<em>)|(<em class=".*">)|(<\/em>)/g, "**")
             .replace(/(<p>)|(<\/p>)/g, "\n")
             .replace(/\n{3,}/g, "\n\n");
