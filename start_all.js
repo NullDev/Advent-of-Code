@@ -12,6 +12,12 @@ const { execSync } = require("node:child_process");
 /* eslint-disable curly */
 
 let YEARS = [process.argv[2]].filter(e => !!e);
+let DAY = process.argv[3] || "";
+
+if (YEARS[0] === "today"){
+    YEARS = [String(new Date().getFullYear())];
+    DAY = String(new Date().getDate());
+}
 
 if (!YEARS.length) YEARS = fs.readdirSync(__dirname, { withFileTypes: true })
     .filter(d => d.isDirectory() && d.name.startsWith("2"))
@@ -31,12 +37,19 @@ YEARS.forEach(y => {
  -----------------------------\x1b[0m\n`,
     );
 
-    const DIRECTORIES = fs.readdirSync(path.join(__dirname, y), { withFileTypes: true })
+    const dirs = fs.readdirSync(path.join(__dirname, y), { withFileTypes: true })
         .filter(dirEnt => dirEnt.isDirectory() && String(dirEnt.name).toLowerCase().includes("day_"))
         .map(dirEnt => dirEnt.name);
 
-    DIRECTORIES.forEach((element, index) => {
-        const day = String(index + 1).padStart(2, "0");
+    const DIRECTORIES = !!DAY
+        ? dirs.filter(d => {
+            const dayNum = Number(d.replace("Day_", ""));
+            return dayNum === Number(DAY);
+        })
+        : dirs;
+
+    DIRECTORIES.forEach(element => {
+        const day = element.replace("Day_", "");
 
         const PART1 = path.join(__dirname, y, element, "part_1.js");
         const PART2 = path.join(__dirname, y, element, "part_2.js");

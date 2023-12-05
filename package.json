@@ -12,6 +12,7 @@
     "start:2020": "node ./start_all.js 2020",
     "start:2019": "node ./start_all.js 2019",
     "start:all": "node ./start_all.js",
+    "start:today": "node ./start_all.js today", 
     "prepare-today": "node ./prepare_day.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
