@@ -45,6 +45,8 @@ Each script can be run stand-alone / separatly but I've also created a `start_al
 
 - Run all years: `npm run start:all`
 - Run a specific year: `npm run start:YEAR`- Example: `npm run start:2020`
+- Run a specific year and day: `npm run start:YEAR DAY`- Example: `npm run start:2020 3`
+- Run todays parts: `npm run start:today`
 - Run a specific day & part: `node YEAR/DAY/part_[1 OR 2].js`- Example: `node 2020/01/part_2.js`
 
 <hr>
