@@ -119,7 +119,8 @@ Everyone will starve if you only plant such a small number of seeds. Re-reading 
 The values on the initial `seeds:` line come in pairs. Within each pair, the first value is the **start** of the range and the second value is the **length** of the range. So, in the first line of the example above:
 
 ```
-seeds: 79 14 55 13```
+seeds: 79 14 55 13
+```
 
 This line describes two ranges of seed numbers to be planted in the garden. The first range starts with seed number `79` and contains `14` values: `79`, `80`, ..., `91`, `92`. The second range starts with seed number `55` and contains `13` values: `55`, `56`, ..., `66`, `67`.
 
