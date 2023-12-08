@@ -1,6 +1,6 @@
 "use strict";
 
-/* eslint-disable one-var, no-sequences  */
+/* eslint-disable one-var, no-sequences */
 
 const fs = require("node:fs");
 const path = require("node:path");
