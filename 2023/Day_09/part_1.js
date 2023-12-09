@@ -8,12 +8,12 @@ const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().
 
 const pStart = performance.now();
 
-//
-// YOUR CODE HERE
-//
-const result = "...";
+const res = INPUT.map(l => l.trim().split(" ").map(Number)).reduce((sum, h) => sum + ((seqA = []) => {
+    for (let seq = h; !seq.every(val => val === 0); seq = seq.slice(1).map((v, i) => v - seq[i])) seqA.push(seq);
+    return seqA.reduceRight((next, seq) => seq[seq.length - 1] + next, 0);
+})(), 0);
 
 const pEnd = performance.now();
 
-console.log("<DESCRIPTION>: " + result);
+console.log("SUM OF VALUES: " + res);
 console.log(pEnd - pStart);
