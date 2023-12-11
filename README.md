@@ -115,6 +115,7 @@ I also tried to experiment with a couple of different things:
 - One-Liner in both [Day_02/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_02/part_1.js) and [Day_02/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_02/part_2.js)
 - One-Liner in both [Day_04/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_04/part_1.js) and [Day_04/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_04/part_2.js)
 - One-Liner in [Day_06/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_06/part_1.js)
+- One-Liner in both [Day_11/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_11/part_1.js) and [Day_11/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_11/part_2.js)
 
 <hr>
 
