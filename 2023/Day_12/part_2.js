@@ -6,11 +6,11 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { performance } = require("node:perf_hooks");
 
-const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n").map(l => l.split(" ")).map(l => ([ l[0], l[1].split(",").map(Number) ]));
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n");
 
 const pStart = performance.now();
 
-const res = INPUT.reduce((
+const res = INPUT.map(l => l.split(" ")).map(l => ([ l[0], l[1].split(",").map(Number) ])).reduce((
     acc, l, _, __,
     solve = (m, s, recs, si, ri, curr, key = `${si},${ri},${curr}`) => (key in m) ? m[key] : (si === s.length)
         ? (ri === recs.length && curr === 0) ? 1 : (ri === recs.length - 1 && recs[ri] === curr) ? 1 : 0
