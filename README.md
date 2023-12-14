@@ -117,7 +117,7 @@ I also tried to experiment with a couple of different things:
 - One-Liner in [Day_06/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_06/part_1.js)
 - One-Liner in both [Day_11/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_11/part_1.js) and [Day_11/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_11/part_2.js)
 - One-Liner in both [Day_12/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_12/part_1.js) and [Day_12/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_12/part_2.js)
-- One-Liner in both [Day_13/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_13/part_1.js) and [Day_13/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_13/part_2.js)
+- One-Liner in both [Day_13/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_13/part_1.js) and [Day_13/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_13/part_2.js) - both using Binary Matrices
 - One-Liner in [Day_14/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_14/part_1.js)
 
 <hr>
