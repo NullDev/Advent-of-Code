@@ -4,16 +4,13 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { performance } = require("node:perf_hooks");
 
-const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n");
+const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim();
 
 const pStart = performance.now();
 
-//
-// YOUR CODE HERE
-//
-const result = "...";
+const res = INPUT.split(",").reduce((a, c) => a + [...c].reduce((v, s) => ((v + s.charCodeAt(0)) * 17) % 256, 0), 0);
 
 const pEnd = performance.now();
 
-console.log("<DESCRIPTION>: " + result);
+console.log("SUM OF RESULTS: " + res);
 console.log(pEnd - pStart);
