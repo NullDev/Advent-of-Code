@@ -60,3 +60,17 @@ The workflows are listed first, followed by a blank line, then the ratings of th
 Ultimately, three parts are **accepted**. Adding up the `x`, `m`, `a`, and `s` rating for each of the accepted parts gives `7540` for the part with `x=787`, `4623` for the part with `x=2036`, and `6951` for the part with `x=2127`. Adding all of the ratings for **all** of the accepted parts gives the sum total of **`19114`**.
 
 Sort through all of the parts you've been given; **what do you get if you add together all of the rating numbers for all of the parts that ultimately get accepted?**
+
+---
+
+## --- Part Two ---
+
+Even with your help, the sorting process **still** isn't fast enough.
+
+One of the Elves comes up with a new plan: rather than sort parts individually through all of these workflows, maybe you can figure out in advance which combinations of ratings will be accepted or rejected.
+
+Each of the four ratings (`x`, `m`, `a`, `s`) can have an integer value ranging from a minimum of `1` to a maximum of `4000`. Of **all possible distinct combinations** of ratings, your job is to figure out which ones will be **accepted**.
+
+In the above example, there are **`167409079868000`** distinct combinations of ratings that will be accepted.
+
+Consider only your list of workflows; the list of part ratings that the Elves wanted you to sort is no longer relevant. **How many distinct combinations of ratings will be accepted by the Elves' workflows?**
