@@ -10,7 +10,7 @@ lerna-debug.log*
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # config
-config.json
+config/config.custom.js
 
 # Runtime data
 pids

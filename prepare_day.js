@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import { exec } from "node:child_process";
 import * as cheerio from "cheerio";
+import { config } from "./config/config.js";
 
 // ========================= //
 // = Copyright (c) NullDev = //
@@ -15,7 +16,7 @@ if (!!process.argv[3]) session = process.argv[3];
 else {
     try {
         // eslint-disable-next-line prefer-destructuring
-        session = require("./config.json").session;
+        session = config.session;
     } // eslint-disable-next-line no-unused-vars
     catch (e){
         console.log("No config.json found! Copy-paste config.template.json to config.json and fill in your session cookie!");
