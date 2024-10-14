@@ -1,13 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { execSync } from "node:child_process";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("node:fs");
-const path = require("node:path");
-
-const { execSync } = require("node:child_process");
 
 /* eslint-disable curly */
 
