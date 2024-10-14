@@ -1,12 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
 
 let r = [...String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim()].map(Number);
 
@@ -23,7 +23,7 @@ for (let i = 0, c = 0; i < 100; i++){
         }
         c--;
     }
-    r.push(r.shift());
+    r.push(Number(r.shift()));
 }
 
 const RES = r.concat(r).slice(r.concat(r).indexOf(1) + 1, r.concat(r).indexOf(1) + r.length).join("");

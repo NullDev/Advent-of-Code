@@ -1,22 +1,21 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
 
-const fs = require("fs");
-const path = require("path");
-const { EOL } = require("os");
-const { performance } = require("perf_hooks");
-
-const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(EOL.repeat(2));
+const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n\n");
 
 const pStart = performance.now();
 
 const rules = [];
 const sets = [];
 
-CONTENT_READ[0].split(EOL).forEach(rawRule => {
+CONTENT_READ[0].split("\n").forEach(rawRule => {
     const [id, raw] = rawRule.split(": ");
     raw[0] === '"'
         ? (rules[id] = raw[1]) && (sets[id] = raw[1])
@@ -33,7 +32,7 @@ const r = new RegExp("^" + (function defineRules(ruleSet, s, id = 0){
     return (s[id] = "(?:" + ruleSet[id].map(g => "(?:" + g.map(i => defineRules(ruleSet, s, i)).join("") + ")").join("|") + ")");
 })(rules, sets) + "$");
 
-const RES = CONTENT_READ[1].split(EOL).filter(s => r.test(s)).length;
+const RES = CONTENT_READ[1].split("\n").filter(s => r.test(s)).length;
 
 const pEnd = performance.now();
 

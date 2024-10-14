@@ -1,15 +1,14 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
 
-const fs = require("fs");
-const path = require("path");
-const { EOL } = require("os");
-const { performance } = require("perf_hooks");
-
-const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd().split(`${EOL}${EOL}`);
+const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd().split("\n\n");
 
 const pStart = performance.now();
 

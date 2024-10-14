@@ -1,19 +1,20 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
 
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
-
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd();
 
 const pStart = performance.now();
 
+// @ts-ignore
 const cardDecks = CONTENT_READ.match(/(\n\d+)+/g).map(e => e.trim().split("\n").map(n => Number(n)).reverse());
-for (let i = 1, s = []; cardDecks[0].length && cardDecks[1].length; i++){
+for (let i = 1, s = []; cardDecks[0].length && cardDecks[1].length; i++){ // @ts-ignore
     s = [].concat(cardDecks[0].pop(), cardDecks[1].pop());
     s[0] > s[1] ? cardDecks[0].unshift(...s.reverse()) : cardDecks[1].unshift(...s);
 }

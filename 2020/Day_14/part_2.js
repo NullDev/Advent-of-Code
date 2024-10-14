@@ -1,12 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n").filter(e => !!e);
 
@@ -18,7 +18,7 @@ let mask;
 CONTENT_READ.forEach(line => {
     const match1 = /^mask.=.(\w+)$/.exec(line);
     if (match1) mask = match1[1];
-    else {
+    else { // @ts-ignore
         const [ , m1, m2 ] = /^mem\[(\d+)\].=.(\d+)$/.exec(line);
         let addr = [0n];
         [...mask].forEach((element, index) => {

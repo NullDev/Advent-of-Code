@@ -1,12 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd();
 
@@ -40,8 +40,8 @@ const walker = function(d1, d2, first = false){
     return first ? (gameWinner ? d2 : d1).reduce((sum, c, i) => sum + c * (i + 1), 0) : gameWinner;
 };
 
-const cardDecks = CONTENT_READ.match(/(\n\d+)+/g).map(s => s.trim().split("\n").map(n => Number(n)).reverse());
-const RES = walker(cardDecks[0], cardDecks[1], true);
+const cardDecks = CONTENT_READ.match(/(\n\d+)+/g)?.map(s => s.trim().split("\n").map(n => Number(n)).reverse());
+const RES = walker(cardDecks?.[0], cardDecks?.[1], true);
 
 const pEnd = performance.now();
 

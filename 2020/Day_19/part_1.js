@@ -1,4 +1,8 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
@@ -6,13 +10,7 @@
 
 /* eslint-disable no-nested-ternary */
 
-const fs = require("fs");
-const path = require("path");
-const { EOL } = require("os");
-
-const { performance } = require("perf_hooks");
-
-const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split(EOL.repeat(2));
+const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n\n");
 
 const pStart = performance.now();
 
@@ -20,7 +18,7 @@ let RES = 0;
 
 const rules = new Map();
 
-CONTENT_READ[0].split(EOL).map(e => rules.set(Number(e.split(": ")[0]), e.split(": ")[1]));
+CONTENT_READ[0].split("\n").map(e => rules.set(Number(e.split(": ")[0]), e.split(": ")[1]));
 
 const r = new RegExp("^" + (function defineRules(ruleSet, rule, n = 0){
     return n > 4 ? "" : rule.startsWith('"')
@@ -35,7 +33,7 @@ const r = new RegExp("^" + (function defineRules(ruleSet, rule, n = 0){
 // directly here. However due to the additional computations,
 // the total execution time increases from about ~13ms to ~365ms!
 // Thus, I left it split up...
-CONTENT_READ[1].split(EOL).forEach(e => (r.test(e) && (RES++)));
+CONTENT_READ[1].split("\n").forEach(e => (r.test(e) && (RES++)));
 
 const pEnd = performance.now();
 

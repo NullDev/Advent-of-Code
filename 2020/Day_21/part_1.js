@@ -1,12 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
 
 const CONTENT_READ = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trimEnd().split("\n");
 
@@ -16,8 +16,8 @@ const entries = [];
 const problematic = new Map();
 const known = new Map();
 
-CONTENT_READ.forEach(line => {
-    const { i, a } = line.match(/(?<i>(?:\w+\s?)+)( \(contains (?<a>.+)\))?$/).groups;
+CONTENT_READ.forEach(line => { // @ts-ignore
+    const { i, a } = line.match(/(?<i>(?:\w+\s?)+)( \(contains (?<a>.+)\))?$/)?.groups;
     const ingredients = i.trim().split(" ");
     const allergens = a.trim().split(", ");
     entries.push({ingredients, allergens});

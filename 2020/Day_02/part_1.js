@@ -1,13 +1,13 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import readline from "node:readline";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("fs");
-const path = require("path");
-const readline = require("readline");
-const { performance } = require("perf_hooks");
 
 const pStart = performance.now();
 

@@ -1,10 +1,8 @@
-"use strict";
+import { performance } from "node:perf_hooks";
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const { performance } = require("perf_hooks");
 
 const pStart = performance.now();
 
