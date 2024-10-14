@@ -1,13 +1,10 @@
-"use strict";
+import fs from "node:fs";
+import { exec } from "node:child_process";
+import * as cheerio from "cheerio";
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("node:fs");
-
-const cheerio = require("cheerio");
-const {exec} = require("child_process");
 
 let year;
 let day;
@@ -19,7 +16,7 @@ else {
     try {
         // eslint-disable-next-line prefer-destructuring
         session = require("./config.json").session;
-    }
+    } // eslint-disable-next-line no-unused-vars
     catch (e){
         console.log("No config.json found! Copy-paste config.template.json to config.json and fill in your session cookie!");
         process.exit(1);
@@ -127,11 +124,15 @@ Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (${year})
 
     fs.writeFileSync(`${dir}/input.txt`, input, { flag: "w" });
 
-    const CODE = `"use strict";
+    const CODE = `import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const fs = require("node:fs");
-const path = require("node:path");
-const { performance } = require("node:perf_hooks");
+// ========================= //
+// = Copyright (c) NullDev = //
+// ========================= //
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\\n");
 
