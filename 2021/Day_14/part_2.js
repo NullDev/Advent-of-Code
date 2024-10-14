@@ -1,15 +1,14 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
 
-const fs = require("fs");
-const path = require("path");
-const { EOL } = require("os");
-const { performance } = require("perf_hooks");
-
-const [INPUT, OPS] = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(EOL.repeat(2));
+const [INPUT, OPS] = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n\n");
 const OPERATIONS = [{}, [ INPUT.charAt(0), INPUT.charAt(INPUT.length - 1) ]];
 OPS.split("\n").forEach(inst => (OPERATIONS[0][inst.split(" -> ")[0]] = inst.split(" -> ")[1]));
 

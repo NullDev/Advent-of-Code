@@ -1,12 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n");
 
@@ -26,7 +26,7 @@ const map = Array.from(Array(length), () => Array(graph[length - 1].length).fill
 
 map[0][0] = 0;
 
-while (!!queue.length){
+while (!!queue.length){ // @ts-ignore
     const { a, p } = queue.shift();
     a.forEach(([x, y], _, __, d = (map[p[0]][p[1]] + graph[x][y].w)) => (d < map[x][y]) && (map[x][y] = d) && queue.push(graph[x][y]));
 }

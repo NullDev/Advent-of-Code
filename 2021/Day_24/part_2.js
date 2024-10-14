@@ -1,14 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-/* eslint-disable no-param-reassign */
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
 
 const INPUT = [
     String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n").filter(e => !!e),
@@ -21,8 +19,8 @@ for (let i = 0; i < INPUT[0].length; i += 18) INPUT[1].push([4, 5, 15].map(j => 
 
 for (const [i, [a, b, c]] of Object.entries(INPUT[1])){ // @ts-ignore
     if (Number(a) === 1) INPUT[2].push([i, c]);
-    else {
-        const [prevI, prevC] = INPUT[2].pop();
+    else { // @ts-ignore
+        const [prevI, prevC] = INPUT[2].pop(); // @ts-ignore
         (INPUT[3][prevI] = Math.max(1, 1 - Number(Number(prevC) + b))) && (INPUT[3][i] = Number(INPUT[3][prevI]) + Number(Number(prevC) + b));
     }
 }

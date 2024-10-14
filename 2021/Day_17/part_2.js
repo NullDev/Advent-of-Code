@@ -1,4 +1,8 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
@@ -6,14 +10,11 @@
 
 /* eslint-disable curly */
 
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
-
+// @ts-ignore
 const [ minX, maxX, minY, maxY ] = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
     .match(/target area: x=(-?\d+)\.\.(-?\d+), y=(-?\d+)..(-?\d+)/)
-    .slice(1)
+    ?.slice(1)
     .map(Number);
 
 const pStart = performance.now();

@@ -1,12 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n").map((l, _, __, [cmd, bounds] = l.split(" ")) => ({
     cmd,
@@ -16,8 +16,9 @@ let splitter;
 
 const pStart = performance.now();
 
+// @ts-ignore
 const RES = INPUT.slice(0, 20).reduce((cub, instr) => [
-    ...cub.flatMap(c => (
+    ...cub.flatMap(c => ( // @ts-ignore
         (cuboid, other, intersect = cuboid.map((lim, i) => [Math.max(other[i][0], lim[0]), Math.min(other[i][1], lim[1])]).filter(([l, h]) => h >= l)) => (
             (intersect.length === 3)
                 ? (splitter = (tmpCuboid, tmpIntersect, tmpC = 0) => [
@@ -28,7 +29,7 @@ const RES = INPUT.slice(0, 20).reduce((cub, instr) => [
                 ])(cuboid, intersect)
                 : [cuboid]
         )
-    )(c, instr.cuboid)), ...(instr.cmd === "on" ? [instr.cuboid] : []),
+    )(c, instr.cuboid)), ...(instr.cmd === "on" ? [instr.cuboid] : []), // @ts-ignore
 ], []).map(c => c.reduce((r, [l, h]) => r * (h - l + 1), 1)).reduce((r, c) => c + r, 0);
 
 const pEnd = performance.now();

@@ -1,20 +1,19 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
 
-const fs = require("fs");
-const path = require("path");
-const { EOL } = require("os");
-const { performance } = require("perf_hooks");
-
 // LOT of pre-setup
 
 const INPUT = [];
-INPUT[0] = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split(EOL.repeat(2));
-INPUT[1] = (INPUT[0].shift()).split(",").map(Number);
-INPUT[2] = INPUT[0].map(board => board.trim().split(EOL).map(row => row.trim().split(/\ +/).map(Number)));
+INPUT[0] = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n\n");
+INPUT[1] = (INPUT[0].shift())?.split(",").map(Number);
+INPUT[2] = INPUT[0].map(board => board.trim().split("\n").map(row => row.trim().split(/\ +/).map(Number)));
 
 const pStart = performance.now();
 
@@ -27,6 +26,7 @@ const win = new Set();
 const last = new Set();
 let RES;
 
+// @ts-ignore
 for (const number of INPUT[1]){
     last.add(number);
     for (let i = 0; i < INPUT[2].length; i++){

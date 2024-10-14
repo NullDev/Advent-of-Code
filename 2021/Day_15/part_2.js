@@ -1,12 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n");
 
@@ -31,7 +31,6 @@ lgraph = lgraph.map((line, i) => line.map((e, j) => ({
         .filter(([x, y]) => (x >= 0 && y >= 0 && x < lgraph.length && y < line.length)),
     p: [i, j],
 })));
-
 
 const queue = [lgraph[0][0]];
 const map = Array.from(Array(lgraph.length), () => Array(lgraph[0].length).fill(Number.MAX_SAFE_INTEGER));

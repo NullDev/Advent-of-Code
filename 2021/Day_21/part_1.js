@@ -1,14 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
-
-/* eslint-disable no-param-reassign */
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
 
 const INPUT = [];
 INPUT[0] = String(fs.readFileSync(path.join(__dirname, "input.txt")))
@@ -19,7 +17,7 @@ INPUT[1] = 0;
 
 const pStart = performance.now();
 
-const solve = (
+const solve = ( // @ts-ignore
     p, cp, np, cs = 0, ns = 0, rp = ((cp + Array(3).fill().map(() => (INPUT[1]++ % 100) + 1).reduce((a, b) => a + b) - 1) % 10) + 1, rs = cs + rp,
 ) => rs < 1000 ? solve(1 - p, np, rp, ns, rs) : ns * INPUT[1];
 

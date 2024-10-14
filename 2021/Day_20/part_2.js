@@ -1,22 +1,21 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
 // ========================= //
 
-/* eslint-disable no-nested-ternary, curly */
-
-const fs = require("fs");
-const path = require("path");
-const { performance } = require("perf_hooks");
-const { EOL } = require("os");
+/* eslint-disable curly */
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim()
-    .split(EOL.repeat(2))
+    .split("\n")
     .map((e, i) => (i === 0)
         ? e.split("").map(c => Number(c === "#"))
-        : e.split(EOL).map(r => r.split("").map(c => Number(c === "#"))),
+        : e.split("\n").map(r => r.split("").map(c => Number(c === "#"))),
     );
 
 const pStart = performance.now();
