@@ -6,7 +6,6 @@
 
 const fs = require("node:fs");
 
-const fetch = require("node-fetch").default;
 const cheerio = require("cheerio");
 const {exec} = require("child_process");
 
