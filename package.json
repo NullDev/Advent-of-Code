@@ -28,12 +28,12 @@
     "url": "https://github.com/NullDev/Advent-of-Code/issues"
   },
   "homepage": "https://github.com/NullDev/Advent-of-Code#readme",
-  "devDependencies": {
-    "@babel/core": "^7.23.5",
-    "@babel/eslint-parser": "^7.23.3",
-    "eslint": "^8.55.0"
-  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/eslint-parser": "^7.25.8",
+    "eslint": "^9.12.0"
   }
 }
