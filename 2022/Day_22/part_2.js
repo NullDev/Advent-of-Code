@@ -1,10 +1,14 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// ========================= //
+// = Copyright (c) NullDev = //
+// ========================= //
 
 /* eslint-disable no-return-assign, one-var, curly, no-param-reassign */
-
-const fs = require("node:fs");
-const path = require("node:path");
-const { performance } = require("node:perf_hooks");
 
 const [mapIn, instIn] = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n\n");
 const map = mapIn.split("\n").map(row => row.split("")).map(row => ({

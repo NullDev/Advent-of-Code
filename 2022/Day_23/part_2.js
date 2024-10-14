@@ -1,10 +1,14 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// ========================= //
+// = Copyright (c) NullDev = //
+// ========================= //
 
 /* eslint-disable no-loop-func, no-constant-condition, one-var */
-
-const fs = require("node:fs");
-const path = require("node:path");
-const { performance } = require("node:perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n");
 const offsets = [
@@ -23,8 +27,8 @@ const chk = ([x, y], ofs) => !curPos.has(`${x + ofs[0][0]},${y + ofs[0][1]}`)
     && !curPos.has(`${x + ofs[1][0]},${y + ofs[1][1]}`) && !curPos.has(`${x + ofs[2][0]},${y + ofs[2][1]}`);
 
 const emp = ([x, y]) => !curPos.has(`${x - 1},${y - 1}`) && !curPos.has(`${x},${y - 1}`)
-     && !curPos.has(`${x + 1},${y - 1}`) && !curPos.has(`${x - 1},${y}`) && !curPos.has(`${x + 1},${y}`)
-     && !curPos.has(`${x - 1},${y + 1}`) && !curPos.has(`${x},${y + 1}`) && !curPos.has(`${x + 1},${y + 1}`);
+    && !curPos.has(`${x + 1},${y - 1}`) && !curPos.has(`${x - 1},${y}`) && !curPos.has(`${x + 1},${y}`)
+    && !curPos.has(`${x - 1},${y + 1}`) && !curPos.has(`${x},${y + 1}`) && !curPos.has(`${x + 1},${y + 1}`);
 
 let i = 0;
 while(1){

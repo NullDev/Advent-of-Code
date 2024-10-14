@@ -1,10 +1,14 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-/* eslint-disable no-loop-func, curly */
+// ========================= //
+// = Copyright (c) NullDev = //
+// ========================= //
 
-const fs = require("node:fs");
-const path = require("node:path");
-const { performance } = require("node:perf_hooks");
+/* eslint-disable no-loop-func */
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt")))
     .trim().split("\n")
@@ -24,14 +28,14 @@ let result = 0;
 for (let y = 0; y < 4000000; y++){
     INPUT.map(e => e.area(y))
         .filter(e => !!e)
-        .sort((a, b) => (a?.xS || 0) - (b?.xS || 0))
+        .sort((a, b) => (a?.xS || 0) - (b?.xS || 0)) // @ts-ignore
         .reduce((acc, e = { xS: -1, xE: -1}) => {
             if (!acc) return { count: 0, xS: e.xS, xE: e.xE };
-            if (poss && e.xS <= poss.x) poss = null;
+            if (poss && e.xS <= poss.x) poss = null; // @ts-ignore
             if (e.xS > acc.xE + 1){
-                poss = { y, x: e.xS - 1 };
+                poss = { y, x: e.xS - 1 }; // @ts-ignore
                 return { count: acc.count + (acc.xE - acc.xS), xS: e.xS, xE: e.xE };
-            }
+            } // @ts-ignore
             (acc.xS = Math.min(acc.xS, e.xS)) && (acc.xE = Math.max(acc.xE, e.xE));
             return acc;
         }, undefined);
