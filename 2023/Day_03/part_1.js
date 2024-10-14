@@ -1,8 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const fs = require("node:fs");
-const path = require("node:path");
-const { performance } = require("node:perf_hooks");
+// ========================= //
+// = Copyright (c) NullDev = //
+// ========================= //
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n");
 
@@ -17,8 +21,8 @@ const [ nPos, sPos ] = [/[0-9]+/g, /[^0-9,\.]/g] // @ts-ignore
 const res = /** @type {any} */ (nPos).reduce((sum, { l: nL, pos: nP, t: nb }) =>
     !! /** @type {any} */ (sPos).find(({ l: sL, pos: sP }) =>
         (sL === nL ||
-          (!!(nL - 1) && sL === (nL - 1))
-          || (!!(nL + 1) && sL === (nL + 1))
+            (!!(nL - 1) && sL === (nL - 1))
+            || (!!(nL + 1) && sL === (nL + 1))
         ) && (sP <= nP + nb.length && sP >= (nP - 1)),
     ) ? sum + (+nb) : sum, 0,
 );

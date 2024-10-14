@@ -1,8 +1,12 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const fs = require("node:fs");
-const path = require("node:path");
-const { performance } = require("node:perf_hooks");
+// ========================= //
+// = Copyright (c) NullDev = //
+// ========================= //
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n");
 
@@ -37,11 +41,16 @@ fetch("https://cocalc.com/api/v2/jupyter/execute", {
         input: sage,
         kernel: "sage-10.1",
     }),
-}).then(q => q.json()).then(q => q.output[0].data["text/plain"]).then(f => {
+}).then(q => q.json()).then(q => q.output[0].data["text/plain"]).catch(() => null).then(f => {
     const res = (Number(f.match(/x == (\d+)/)[1]) || 0) + (Number(f.match(/y == (\d+)/)[1]) || 0) + (Number(f.match(/z == (\d+)/)[1]) || 0);
 
     const pEnd = performance.now();
 
     console.log("SUM OF COORDINATES: " + res);
+    console.log(pEnd - pStart);
+}).catch(() => {
+    const pEnd = performance.now();
+
+    console.log("SUM OF COORDINATES: " + "NaN");
     console.log(pEnd - pStart);
 });

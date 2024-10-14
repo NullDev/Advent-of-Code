@@ -1,10 +1,14 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-/* eslint-disable one-var, curly, prefer-const, no-param-reassign */
+// ========================= //
+// = Copyright (c) NullDev = //
+// ========================= //
 
-const fs = require("node:fs");
-const path = require("node:path");
-const { performance } = require("node:perf_hooks");
+/* eslint-disable one-var, prefer-const, no-param-reassign */
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).split("\n").filter(Boolean);
 
@@ -23,7 +27,7 @@ ar[y][x] = s;
 
 do {
     t[y][x] = "P";
-    const ext = ar[y][x].replace(ent, "");
+    const ext = ar[y][x].replace(ent, ""); // @ts-ignore
     ([y, x] = [y + Number(ext === "s") - Number(ext === "n"), x + Number(ext === "e") - Number(ext === "w")] || 1) && (ent = inv[ext]);
 } while (mp[y][x] !== "S");
 

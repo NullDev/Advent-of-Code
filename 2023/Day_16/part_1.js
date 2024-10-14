@@ -1,17 +1,21 @@
-"use strict";
+import fs from "node:fs";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// ========================= //
+// = Copyright (c) NullDev = //
+// ========================= //
 
 /* eslint-disable one-var */
-
-const fs = require("node:fs");
-const path = require("node:path");
-const { performance } = require("node:perf_hooks");
 
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n").map(v => v.split(""));
 
 const pStart = performance.now();
 
 const seen = new Set(), rep = new Set(), b = [[0, 0, 1]];
-while (b.length){
+while (b.length){ // @ts-ignore
     const [r, c, d, pos = `${r}-${c}`, state = pos + d] = b.shift() || [];
     (!rep.has(state)) && rep.add(state) && seen.add(pos) && {
         ".": [[[-1, 0, 0]], [[0, 1, 1]], [[1, 0, 2]], [[0, -1, 3]]],
