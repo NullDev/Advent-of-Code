@@ -16,7 +16,8 @@
     "prepare-today": "node ./prepare_day.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "generate-config": "node ./generate-config.js"
   },
   "repository": {
     "type": "git",
