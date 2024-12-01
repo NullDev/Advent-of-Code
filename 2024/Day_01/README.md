@@ -55,7 +55,7 @@ Your analysis only confirmed what everyone feared: the two lists of location IDs
 
 Or are they?
 
-The Historians can't agree on which group made the mistakes **or** how to read most of the Chief's handwriting, but in the commotion you notice an interesting detail:  of location IDs appear in both lists! Maybe the other numbers aren't location IDs at all but rather misinterpreted handwriting.
+The Historians can't agree on which group made the mistakes **or** how to read most of the Chief's handwriting, but in the commotion you notice an interesting detail: a lot of location IDs appear in both lists! Maybe the other numbers aren't location IDs at all but rather misinterpreted handwriting.
 
 This time, you'll need to figure out exactly how often each number from the left list appears in the right list. Calculate a total **similarity score** by adding up each number in the left list after multiplying it by the number of times that number appears in the right list.
 
