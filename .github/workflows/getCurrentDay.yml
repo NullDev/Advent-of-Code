@@ -2,8 +2,8 @@ name: GetCurrentDay
 
 on:
   schedule:
-    # Run at 00:05 UTC-5 from 1-25 december. Note that github actions are UTC
-    - cron:  '5 5 1-25 12 *'
+    # Run at 00:01 UTC-5 from 1-25 december. Note that github actions are UTC
+    - cron:  '1 5 1-25 12 *'
   workflow_dispatch:
 
 jobs:
