@@ -64,7 +64,7 @@ const headers = {
         $(el).replaceWith($(el).text());
     });
 
-    $("span").remove();
+    $("span:not([title])").remove();
     $("pre em, pre code").each((_, el) => {
         $(el).replaceWith($(el).text());
     });
@@ -97,6 +97,8 @@ const headers = {
             .replace(/<\/pre>/g, "\n```")
             .replace(/(<em>)|(<em class=".*">)|(<\/em>)/g, "**")
             .replace(/(<p>)|(<\/p>)/g, "\n")
+            .replace(/<span title=".*?">/g, "")
+            .replace(/<\/span>/g, "")
             .replace(/\n{3,}/g, "\n\n");
 
         sanitized.match(/<a href=".*?">.*?<\/a>/g)?.forEach(link => {
