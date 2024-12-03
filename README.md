@@ -121,7 +121,8 @@ I also tried to experiment with a couple of different things:
 
 **2024** <a name="best-2024"></a>
 
-- One-Liner in [Day_02/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_02/part_1.js) and [Day_02/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_02/part_2.js)
+- One-Liner in both [Day_02/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_02/part_1.js) and [Day_02/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_02/part_2.js)
+- One-Liner in [Day_03/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_03/part_1.js) and [Day_03/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_03/part_2.js)
 
 <hr>
 
