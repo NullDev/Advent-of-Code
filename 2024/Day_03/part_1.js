@@ -12,12 +12,11 @@ const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().
 
 const pStart = performance.now();
 
-//
-// YOUR CODE HERE
-//
-const result = "...";
+const n = INPUT.reduce((acc, line) =>
+    (acc + [...line.matchAll(/mul\((\d{1,3}),(\d{1,3})\)/g)].reduce((_acc, m) =>
+        (_acc + Number(m[1]) * Number(m[2])), 0)), 0);
 
 const pEnd = performance.now();
 
-console.log("<DESCRIPTION>: " + result);
+console.log("UNCORRUPTED: " + n);
 console.log(pEnd - pStart);
