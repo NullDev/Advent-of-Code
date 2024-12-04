@@ -60,7 +60,9 @@ Each script can be run stand-alone / separatly but I've also created a `start_al
 ## :trophy: Goal
 
 I attempted to solve every problem as functional as possible and with as little code as possible while still being performant. <br>
-Some solutions could be one-liners but I left them splitted up for the sake of readability. 
+Some solutions could be one-liners¹ but I left them splitted up for the sake of readability. 
+
+<sub>¹: One-Liner as in one semantical instruction (e.g. chained higher order functions. putting semicolons in one line does not count)</sub>
 
 I also tried to experiment with a couple of different things:
 
