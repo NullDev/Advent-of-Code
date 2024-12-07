@@ -8,12 +8,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // = Copyright (c) NullDev = //
 // ========================= //
 
+/* eslint-disable no-sequences */
+
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n");
 
 const pStart = performance.now();
 
 const reach = (
-    tar, num, idx = 0, curr = num[0], memo = {}, key = `${idx}:${curr}`, nx = num[idx + 1]
+    tar, num, idx = 0, curr = num[0], memo = {}, key = `${idx}:${curr}`, nx = num[idx + 1],
 ) => {
     if (key in memo) return memo[key];
     if (idx === num.length - 1) return (memo[key] = curr === tar), memo[key];
@@ -24,7 +26,7 @@ const reach = (
 };
 
 const res = INPUT.reduce((
-    acc, line, _, __, [tar, nStr] = line.split(": "), num = nStr.split(" ").map(Number)
+    acc, line, _, __, [tar, nStr] = line.split(": "), num = nStr.split(" ").map(Number),
 ) => (acc + (reach(Number(tar), num) ? Number(tar) : 0)), 0);
 
 const pEnd = performance.now();
