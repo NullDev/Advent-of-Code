@@ -129,6 +129,8 @@ I also tried to experiment with a couple of different things:
 - One-Liner in [Day_05/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_05/part_1.js)
 - Dependency Graph with topological sorting _almost_ One-Liner in [Day_05/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_05/part_2.js)
 - One-Liner in [Day_06/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_06/part_1.js)
+- One-Liner in [Day_07/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_07/part_1.js)
+- [DFS](https://en.wikipedia.org/wiki/Depth-first_search) with Memoization in [Day_07/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_07/part_2.js)
 
 <hr>
 
