@@ -5,7 +5,7 @@ Author: Eric Wastl ([@ericwastl](https://twitter.com/ericwastl)) (2024)
 
 ## --- Day 11: Plutonian Pebbles ---
 
-The ancient civilization on [Pluto](/2019/day/20) was known for its ability to manipulate spacetime, and while the Historians explore their infinite corridors, you've noticed a strange set of physics-defying stones.
+The ancient civilization on [Pluto](https://adventofcode.com/2019/day/20) was known for its ability to manipulate spacetime, and while The Historians explore their infinite corridors, you've noticed a strange set of physics-defying stones.
 
 At first glance, they seem like normal stones: they're arranged in a perfectly **straight line**, and each stone has a **number** engraved on it.
 
@@ -61,3 +61,11 @@ After 6 blinks:
 In this example, after blinking six times, you would have `22` stones. After blinking 25 times, you would have **`55312`** stones!
 
 Consider the arrangement of stones in front of you. **How many stones will you have after blinking 25 times?**
+
+---
+
+## --- Part Two ---
+
+The Historians sure are taking a long time. To be fair, the infinite corridors **are** very large.
+
+**How many stones would you have after blinking a total of 75 times?**
