@@ -135,6 +135,7 @@ I also tried to experiment with a couple of different things:
 - _Almost_ One-Liner [DFS](https://en.wikipedia.org/wiki/Depth-first_search) in both [Day_10/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_10/part_1.js) and [Day_10/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_10/part_2.js)
 - Recursive memoized _almost_ One-Liner in [Day_11/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_11/part_1.js) and [Day_11/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_11/part_2.js)
 - One-Liner in both [Day_13/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_13/part_1.js) and [Day_13/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_13/part_2.js)
+- One-Liner in [Day_14/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_14/part_1.js)
 
 <hr>
 
