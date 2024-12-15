@@ -1,5 +1,4 @@
 import fs from "node:fs";
-import { exec } from "node:child_process";
 import * as cheerio from "cheerio";
 import { config } from "./config/config.js";
 
@@ -154,5 +153,4 @@ console.log(pEnd - pStart);
 
     if (!fs.existsSync(`${dir}/part_1.js`)) fs.writeFileSync(`${dir}/part_1.js`, CODE);
     if (!fs.existsSync(`${dir}/part_2.js`)) fs.writeFileSync(`${dir}/part_2.js`, CODE);
-    exec(`git add ${dir}/*`);
 })();
