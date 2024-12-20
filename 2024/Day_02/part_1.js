@@ -13,7 +13,7 @@ const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().
 const pStart = performance.now();
 
 const res = INPUT.filter(
-    (line, _, __, levels = line.split(" ").map(str => Number(str)),
+    (line, _, __, levels = line.split(" ").map(Number),
     ) => levels.every(
         (level, i, arr, dir = levels[1] - levels[0]) => i === 0 ||
             (Math.abs(level - arr[i - 1]) >= 1 &&
