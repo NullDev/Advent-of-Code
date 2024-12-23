@@ -139,6 +139,8 @@ I also tried to experiment with a couple of different things:
 - Sloppy, hacky, small, quick & dirty dijkstra in [Day_16/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_16/part_1.js)
 - _Almost_ One-Liner [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) in [Day_18/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_18/part_1.js)
 - [DP](https://en.wikipedia.org/wiki/Dynamic_programming) One-Liner with memoization in both [Day_19/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_19/part_1.js) and [Day_19/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_19/part_2.js)
+- One-Liner in [Day_23/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_23/part_1.js)
+- Single-Line [Bron–Kerbosch algorithm](https://en.wikipedia.org/wiki/Bron%E2%80%93Kerbosch_algorithm) in [Day_23/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_23/part_2.js)
 
 <hr>
 
