@@ -6,9 +6,9 @@ import { performance } from "node:perf_hooks";
 
 const pStart = performance.now();
 
-const MSG = "WE DID IT!!! HAPPY HOLIDAYS! :)";
+const result = "Merry Christmas c:";
 
 const pEnd = performance.now();
 
-console.log(MSG);
+console.log("WE ARE DONE: " + result);
 console.log(pEnd - pStart);
