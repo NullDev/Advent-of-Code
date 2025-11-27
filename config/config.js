@@ -21,12 +21,14 @@ const isObject = item => item && typeof item === "object" && !Array.isArray(item
  */
 const deepMerge = function(target, source){
     if (isObject(target) && isObject(source)){
-        for (const key in source){
-            if (isObject(source[key])){
-                if (!target[key]) target[key] = {};
-                deepMerge(target[key], source[key]);
+        const src = /** @type {any} */ (source);
+        const tgt = /** @type {any} */ (target);
+        for (const key in src){
+            if (isObject(src[key])){
+                if (!tgt[key]) tgt[key] = {};
+                deepMerge(tgt[key], src[key]);
             }
-            else target[key] = source[key];
+            else tgt[key] = src[key];
         }
     }
     return /** @type {T & T2} */ (target);
