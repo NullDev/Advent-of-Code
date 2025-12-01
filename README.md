@@ -143,6 +143,10 @@ I also tried to experiment with a couple of different things:
 - Single-Line [Bron–Kerbosch algorithm](https://en.wikipedia.org/wiki/Bron%E2%80%93Kerbosch_algorithm) in [Day_23/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_23/part_2.js)
 - Final One-Liner in [Day_25/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2024/Day_25/part_1.js)
 
+**2025** <a name="best-2025"></a>
+
+- One-Liner in both [Day_01/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_01/part_1.js) and [Day_01/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_01/part_2.js)
+
 <hr>
 
 ## :rocket: Benchmarks Preview
