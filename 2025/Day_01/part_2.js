@@ -12,12 +12,18 @@ const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().
 
 const pStart = performance.now();
 
-//
-// YOUR CODE HERE
-//
-const result = "...";
+const res = INPUT.reduce((
+    [pos, count], row, _x, _y,
+    num = Number(row.slice(1)) % 100,
+    curr = row[0] === "L" ? -num : num,
+    xed = ((pos + curr) < 1 && pos !== 0) || ((pos + curr) > 99),
+) => [
+    (100 + (pos + curr)) % 100, count + (Math.floor(Number(row.slice(1)) / 100)) + Number(xed),
+], [50, 0])[1];
 
 const pEnd = performance.now();
 
-console.log("<DESCRIPTION>: " + result);
+// 0 x 43 4C 49 43 4B
+//     C  L  I  C  K
+console.log("CLICK DOOR PASSWORD: " + res);
 console.log(pEnd - pStart);
