@@ -120,6 +120,7 @@ I also tried to experiment with a couple of different things:
 - One-Liner in [Day_14/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_14/part_1.js)
 - One-Liner in both [Day_15/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_15/part_1.js) and [Day_15/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_15/part_2.js)
 - One-Liner in [Day_24/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_24/part_1.js)
+- Sending a system of linear equations to SageMath because I'm lazy in [Day_24/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2023/Day_24/part_2.js)
 
 **2024** <a name="best-2024"></a>
 
