@@ -13,6 +13,7 @@ const [r, i] = String(fs.readFileSync(path.join(__dirname, "input.txt")))
 
 const pStart = performance.now();
 
+// This could have been a binary search, but oh well
 const res = (ranges => i
     .split("\n")
     .map(l => l.trim())
