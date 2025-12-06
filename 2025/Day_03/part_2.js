@@ -9,6 +9,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // = Copyright (c) NullDev = //
 // ========================= //
 
+/* eslint-disable no-param-reassign, no-sequences */
+
 const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().split("\n");
 
 const pStart = performance.now();
@@ -16,16 +18,20 @@ const pStart = performance.now();
 // Should be O(n) methinks
 const result = INPUT.reduce((
     acc, line, _, __, digits = line.trim().split("").map(Number),
-) => {
-    let rem = digits.length - 12;
-    const stack = digits.reduce((stk, d) => {
-        while (rem > 0 && stk.length && stk[stk.length - 1] < d) stk.pop() && rem--;
-        stk.push(d);
-        return stk;
-    }, []);
-    while (rem > 0) stack.pop() && rem--;
-    return acc + Number(stack.slice(0, 12).join(""));
-}, 0);
+    rem = digits.length - 12,
+) => acc + Number(
+    ((stack) => Array.from({ length: rem })
+        .reduce(s => (s.pop(), s), stack)
+        .slice(0, 12)
+        .join("")
+    )(digits.reduce((stk, d) => (
+        ((f) => f(f))((f) => (
+            rem > 0 && stk.length && stk.at(-1) < d
+                ? (stk.pop(), rem--, f(f))
+                : 0
+        )), stk.push(d), stk
+    ), [])),
+), 0);
 
 const pEnd = performance.now();
 
