@@ -150,6 +150,7 @@ I also tried to experiment with a couple of different things:
 - One-Liner in both [Day_02/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_02/part_1.js) and [Day_02/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_02/part_2.js)
 - Cursed One-Liners in both [Day_04/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_04/part_1.js) and [Day_04/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_04/part_2.js) ([Curried](https://en.wikipedia.org/wiki/Currying) recursive anonymous [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE))
 - One-Liner in both [Day_05/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_05/part_1.js) and [Day_05/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_05/part_2.js)
+- Very cursed One-Liner in both [Day_06/part_1.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_06/part_1.js) and [Day_06/part_2.js](https://github.com/NullDev/Advent-of-Code/blob/master/2025/Day_06/part_2.js)
 
 <hr>
 
