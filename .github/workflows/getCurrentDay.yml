@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Generate config
-        run: node ./generate_config.js
+        run: node ./generate-config.js
       - name: Prepare day
         # Yes its hacky but idc
         run: node ./prepare_day.js today ${{ secrets.SESSION_COOKIE }}
