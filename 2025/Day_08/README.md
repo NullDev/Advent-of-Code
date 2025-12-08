@@ -57,3 +57,13 @@ This process continues for a while, and the Elves are concerned that they don't 
 After making the ten shortest connections, there are 11 circuits: one circuit which contains **5** junction boxes, one circuit which contains **4** junction boxes, two circuits which contain **2** junction boxes each, and seven circuits which each contain a single junction box. Multiplying together the sizes of the three largest circuits (5, 4, and one of the circuits of size 2) produces **`40`**.
 
 Your list contains many junction boxes; connect together the **1000** pairs of junction boxes which are closest together. Afterward, **what do you get if you multiply together the sizes of the three largest circuits?**
+
+---
+
+## --- Part Two ---
+
+The Elves were right; they **definitely** don't have enough extension cables. You'll need to keep connecting junction boxes together until they're all in **one large circuit**.
+
+Continuing the above example, the first connection which causes all of the junction boxes to form a single circuit is between the junction boxes at `216,146,977` and `117,168,530`. The Elves need to know how far those junction boxes are from the wall so they can pick the right extension cable; multiplying the X coordinates of those two junction boxes (`216` and `117`) produces **`25272`**.
+
+Continue connecting the closest unconnected pairs of junction boxes together until they're all in the same circuit. **What do you get if you multiply together the X coordinates of the last two junction boxes you need to connect?**
