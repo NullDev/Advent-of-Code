@@ -10,18 +10,19 @@
   },
   "packageManager": "bun@1.3.0",
   "scripts": {
-    "start:2024": "bun ./start_all.js 2024",
-    "start:2023": "bun ./start_all.js 2023",
-    "start:2022": "bun ./start_all.js 2022",
-    "start:2021": "bun ./start_all.js 2021",
+    "start:2025": "bun ./scripts/start_all.js 2025",
+    "start:2024": "bun ./scripts/start_all.js 2024",
+    "start:2023": "bun ./scripts/start_all.js 2023",
+    "start:2022": "bun ./scripts/start_all.js 2022",
+    "start:2021": "bun ./scripts/start_all.js 2021",
     "start:2020": "bun ./start_all.js 2020",
-    "start:2019": "bun ./start_all.js 2019",
-    "start:all": "bun ./start_all.js",
-    "start:today": "bun ./start_all.js today",
-    "prepare-today": "bun ./prepare_day.js",
+    "start:2019": "bun ./scripts/start_all.js 2019",
+    "start:all": "bun ./scripts/start_all.js",
+    "start:today": "bun ./scripts/start_all.js today",
+    "prepare-today": "bun ./scripts/prepare_day.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "generate-config": "bun ./generate-config.js"
+    "generate-config": "bun ./scripts/generate-config.js"
   },
   "repository": {
     "type": "git",

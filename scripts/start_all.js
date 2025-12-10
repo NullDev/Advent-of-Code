@@ -1,8 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
-import { fileURLToPath } from "url";
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
 // = Copyright (c) NullDev = //
@@ -18,7 +16,7 @@ if (YEARS[0] === "today"){
     DAY = String(new Date().getDate());
 }
 
-if (!YEARS.length) YEARS = fs.readdirSync(__dirname, { withFileTypes: true })
+if (!YEARS.length) YEARS = fs.readdirSync(".", { withFileTypes: true })
     .filter(d => d.isDirectory() && d.name.startsWith("2"))
     .map(d => d.name);
 
@@ -36,7 +34,7 @@ YEARS.forEach(y => {
  -----------------------------\x1b[0m\n`,
     );
 
-    const dirs = fs.readdirSync(path.join(__dirname, y), { withFileTypes: true })
+    const dirs = fs.readdirSync(path.join(".", y), { withFileTypes: true })
         .filter(dirEnt => dirEnt.isDirectory() && String(dirEnt.name).toLowerCase().includes("day_"))
         .map(dirEnt => dirEnt.name);
 
@@ -50,8 +48,8 @@ YEARS.forEach(y => {
     DIRECTORIES.forEach(element => {
         const day = element.replace("Day_", "");
 
-        const PART1 = path.join(__dirname, y, element, "part_1.js");
-        const PART2 = path.join(__dirname, y, element, "part_2.js");
+        const PART1 = path.join(".", y, element, "part_1.js");
+        const PART2 = path.join(".", y, element, "part_2.js");
 
         console.log(`\x1b[36m---====[ DAY ${day} ]====---\x1b[0m\n`);
 

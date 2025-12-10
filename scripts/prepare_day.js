@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import * as cheerio from "cheerio";
-import { config } from "./config/config.js";
+import { config } from "../config/config.js";
 
 // ========================= //
 // = Copyright (c) NullDev = //

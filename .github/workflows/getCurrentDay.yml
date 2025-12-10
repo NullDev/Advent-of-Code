@@ -20,10 +20,10 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Generate config
-        run: node ./generate-config.js
+        run: node ./scripts/generate-config.js
       - name: Prepare day
         # Yes its hacky but idc
-        run: node ./prepare_day.js today ${{ secrets.SESSION_COOKIE }}
+        run: node ./scripts/prepare_day.js today ${{ secrets.SESSION_COOKIE }}
       - name: Commit changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
