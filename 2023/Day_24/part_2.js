@@ -21,7 +21,6 @@ const [b1, b2] = INPUT[1].split(" @ ").map(x => x.split(", ").map(Number));
 const [c1, c2] = INPUT[2].split(" @ ").map(x => x.split(", ").map(Number));
 
 // We have a system of 9 equations and 9 variables, so we can just solve for x, y and z.
-
 const sage = `
 var('u v w x y z a b c')
 eq1 = ${a1[0]} + ${a2[0]}*u == x + a*u
@@ -33,14 +32,12 @@ eq6 = ${b1[2]} + ${b2[2]}*v == z + c*v
 eq7 = ${c1[0]} + ${c2[0]}*w == x + a*w
 eq8 = ${c1[1]} + ${c2[1]}*w == y + b*w
 eq9 = ${c1[2]} + ${c2[2]}*w == z + c*w
-solve([eq1, eq2, eq3, eq4, eq5, eq6, eq7, eq8, eq9], u, v, w, x, y, z, a, b, c)
-`.trim();
-
+solve([eq1, eq2, eq3, eq4, eq5, eq6, eq7, eq8, eq9], u, v, w, x, y, z, a, b, c)`.trim();
 
 client.askSage(sage)
     .then(r => {
         const f = r.result["text/plain"].trim();
-        const res = (Number(f.match(/x == (\d+)/)[1]) || 0) + (Number(f.match(/y == (\d+)/)[1]) || 0) + (Number(f.match(/z == (\d+)/)[1]) || 0);
+        const res = Number(f.match(/x == (\d+)/)[1]) + Number(f.match(/y == (\d+)/)[1]) + Number(f.match(/z == (\d+)/)[1]);
 
         const pEnd = performance.now();
 
