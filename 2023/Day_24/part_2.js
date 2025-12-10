@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { performance } from "node:perf_hooks";
 import { fileURLToPath } from "url";
-import SageCell from "../../utils/SageCell";
+import SageCell from "../../utils/SageCell.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
