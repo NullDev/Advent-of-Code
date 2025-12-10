@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { performance } from "node:perf_hooks";
 import { fileURLToPath } from "url";
+import SageCell from "../../utils/SageCell";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ========================= //
@@ -13,6 +14,7 @@ const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().
 const pStart = performance.now();
 
 // I aint gonna implement a Z3 Solver in JS, so I'm sending it to SageMath.
+const client = new SageCell({ timeoutMs: 20000 });
 
 const [a1, a2] = INPUT[0].split(" @ ").map(x => x.split(", ").map(Number));
 const [b1, b2] = INPUT[1].split(" @ ").map(x => x.split(", ").map(Number));
@@ -34,23 +36,19 @@ eq9 = ${c1[2]} + ${c2[2]}*w == z + c*w
 solve([eq1, eq2, eq3, eq4, eq5, eq6, eq7, eq8, eq9], u, v, w, x, y, z, a, b, c)
 `.trim();
 
-fetch("https://cocalc.com/api/v2/jupyter/execute", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-        input: sage,
-        kernel: "sage-10.1",
-    }),
-}).then(q => q.json()).then(q => q.output[0].data["text/plain"]).catch(() => null).then(f => {
-    const res = (Number(f.match(/x == (\d+)/)[1]) || 0) + (Number(f.match(/y == (\d+)/)[1]) || 0) + (Number(f.match(/z == (\d+)/)[1]) || 0);
 
-    const pEnd = performance.now();
+client.askSage(sage)
+    .then(r => {
+        const f = r.result["text/plain"].trim();
+        const res = (Number(f.match(/x == (\d+)/)[1]) || 0) + (Number(f.match(/y == (\d+)/)[1]) || 0) + (Number(f.match(/z == (\d+)/)[1]) || 0);
 
-    console.log("SUM OF COORDINATES: " + res);
-    console.log(pEnd - pStart);
-}).catch(() => {
-    const pEnd = performance.now();
+        const pEnd = performance.now();
 
-    console.log("SUM OF COORDINATES: " + "NaN");
-    console.log(pEnd - pStart);
-});
+        console.log("SUM OF COORDINATES: " + res);
+        console.log(pEnd - pStart);
+    }).catch(() => {
+        const pEnd = performance.now();
+
+        console.log("SUM OF COORDINATES: " + "NaN");
+        console.log(pEnd - pStart);
+    });
