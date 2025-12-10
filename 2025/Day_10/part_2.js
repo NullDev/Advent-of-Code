@@ -20,27 +20,15 @@ const pStart = performance.now();
 
 const client = new SageCell({ timeoutMs: 20000 });
 
-const machines = INPUT
+const sageMachines = INPUT
     .filter(Boolean)
-    .map(line => {
-        const buttons = [...line.matchAll(/\(([0-9,]+)\)/g)]
-            .map(m => m[1].split(",").map(Number));
-
-        const target = line
-            .match(/\{([0-9,]+)\}/)?.[1]
-            .split(",")
-            .map(Number);
-
-        return { buttons, target };
-    });
-
-const sageMachines = machines
-    .map(({ buttons, target }) => {
-        const btnStr = buttons
-            .map(b => `[${b.join(",")}]`)
-            .join(",");
-        return `{ 'buttons': [${btnStr}], 'target': [${target?.join(",")}] }`;
-    })
+    .map(line => ({
+        buttons: [...line.matchAll(/\(([0-9,]+)\)/g)].map(m => m[1].split(",").map(Number)),
+        target: line.match(/\{([0-9,]+)\}/)?.[1].split(",").map(Number),
+    }))
+    .map((
+        { buttons, target },
+    ) => `{ 'buttons': [${buttons.map(b => `[${b.join(",")}]`).join(",")}], 'target': [${target?.join(",")}] }`)
     .join(",\n");
 
 const sage = `
@@ -57,15 +45,13 @@ for M in machines:
     p = MixedIntegerLinearProgram(maximization=False)
     x = p.new_variable(nonnegative=True, integer=True)
 
-    # constraints: for each counter i,
-    # sum_b x[b] * A[i,b] == target[i]
+    # constraints: for each counter i, sum_b x[b] * A[i,b] == target[i]
     for i in range(len(target)):
         p.add_constraint(
             sum(x[b] * (1 if i in buttons[b] else 0) for b in range(len(buttons)))
             == target[i]
         )
 
-    # objective: minimize total button presses
     p.set_objective(sum(x[b] for b in range(len(buttons))))
 
     p.solve()
