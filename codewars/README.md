@@ -1,6 +1,6 @@
 ## This isn't a full list of my Codewars solutions. Just the ones I really like :3
 
-1 Kyu = Hardest
+1 Kyu = Hardest <br>
 5 Kyu = Easiest
 
 | Title | Kyu | Solution | Link |
