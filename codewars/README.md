@@ -3,6 +3,10 @@
 1 Kyu = Hardest <br>
 5 Kyu = Easiest
 
+<p align="center">
+<a href="https://www.codewars.com/users/NLDev" target="_blank"><img alt="codewars" src="https://www.codewars.com/users/NLDev/badges/large"></img></a>
+</p>
+
 | Title | Kyu | Solution | Link |
 |-------|-----|----------|------|
 | Game of Life in Reverse | 1 | [Link](./game_of_life_in_reverse.js) | [Codewars](https://www.codewars.com/kata/5ea6a8502186ab001427809e) |
