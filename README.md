@@ -2,6 +2,7 @@
 
 <p align="center"><img height="250" width="auto" src="https://i.imgur.com/1zABhbB.png" /></p>
 <p align="center"><b>My solutions for the Advent of Code in JS (Bun)</b></p>
+<p align="center"><sub>And some of my Codewars solutions I really like :3</sub></p>
 <hr>
 
 ## :information_source: About Advent of Code
