@@ -1,3 +1,8 @@
+// @ts-nocheck
+/* eslint-disable */
+
+// https://www.codewars.com/kata/5a331ea7ee1aae8f24000175
+
 function triangle(row){
   const n = row.length - 1, dig = [];
   let val = n, power = 1;
