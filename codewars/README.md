@@ -20,3 +20,4 @@
 | Tail Call Optimization | 2 | [Link](./tail_call_optimization.js) | [Codewars](https://www.codewars.com/kata/59e1ee463d09a75a4400003b) |
 | Square sums | 1 | [Link](./square_sums.js) | [Codewars](https://www.codewars.com/kata/5a667236145c462103000091) |
 | Pisano Period - Performance Edition | 2 | [Link](./pisano_period.js) | [Codewars](https://www.codewars.com/kata/65de16794ccda6356de32bfa) |
+| Insane Coloured Triangles | 2 | [Link](./insane_coloured_triangles.js) | [Codewars](https://www.codewars.com/kata/5a331ea7ee1aae8f24000175) |
